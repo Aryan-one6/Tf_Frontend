@@ -1,0 +1,72 @@
+ 
+import { Link } from "react-router-dom";
+
+
+const ServiceHomeTwo = () => {
+  return (
+    <>
+      <section className="service-section-three">
+        <div className="container">
+          <div className="main-title">
+            <h3>Our Services</h3>
+            <h2>Complete Brand Development, <br /><span className="gradient-color">From Strategy to Design</span></h2>
+          </div>
+          <div className="row">
+             <div className="col-lg-6 col-md-12 col-sm-12 block-column">
+              <div className="service-block-three">
+                <div className="shape" style={{ backgroundImage: `url(/assets/images/shape/shape-47.png)` }}></div>
+                <h3><Link to="/service-details">Web Design</Link></h3>
+                <p>
+                  We craft responsive, SEO-optimized websites using React, Next.js, or WordPress, with performance tuning, accessibility compliance, and headless CMS integrations for seamless content management.
+
+                  </p>
+                <div className="icon-box"><img src="assets/images/icons/icon-15.png" alt="" /></div>
+                <div className="link-box"><Link to="/service-details"><i className="icon-13"></i></Link></div>
+              </div>
+            </div>
+            <div className="col-lg-6 col-md-12 col-sm-12 block-column">
+              <div className="service-block-three">
+                <div className="shape" style={{ backgroundImage: `url(/assets/images/shape/shape-47.png)` }}></div>
+                <h3><Link to="/service-details">Ai Automations </Link></h3>
+                <p>
+                  We design and deploy custom AI workflows—data ingestion, model training, containerized deployment, continuous monitoring—to automate complex business processes and drive intelligent decision-making.
+
+                </p>
+                <div className="icon-box"><img src="assets/images/icons/icon-12.png" alt="" /></div>
+                <div className="link-box"><Link to="/service-details"><i className="icon-13"></i></Link></div>
+              </div>
+            </div>
+            <div className="col-lg-6 col-md-12 col-sm-12 block-column">
+              <div className="service-block-three">
+                <div className="shape" style={{ backgroundImage: `url(/assets/images/shape/shape-47.png)` }}></div>
+                <h3><Link to="/service-details">Chatbot Development</Link></h3>
+                <p>
+                  We build omnichannel chatbots with NLP, intent recognition, and seamless human handoff—available on web, WhatsApp, Messenger, and Slack—to streamline support and qualify leads 24/7.
+                  </p>
+                <div className="icon-box"><img src="assets/images/icons/icon-13.png" alt="" /></div>
+                <div className="link-box"><Link to="/service-details"><i className="icon-13"></i></Link></div>
+              </div>
+            </div>
+            <div className="col-lg-6 col-md-12 col-sm-12 block-column">
+              <div className="service-block-three">
+                <div className="shape" style={{ backgroundImage: `url(/assets/images/shape/shape-47.png)` }}></div>
+                <h3><Link to="/service-details">Mobile Applications</Link></h3>
+                <p>
+                  We deliver cross-platform (React Native, Flutter) and native (Swift, Kotlin) applications featuring secure authentication, push notifications, in-app analytics, and App Store/Play Store deployment.
+                  </p>
+                <div className="icon-box"><img src="assets/images/icons/icon-14.png" alt="" /></div>
+                <div className="link-box"><Link to="/service-details"><i className="icon-13"></i></Link></div>
+              </div>
+            </div>
+           
+          </div>
+          <div className="extra-btn text-center">
+            <Link to="/service" className="primary-btn one gradient-bg white-color border-btn">See All Services</Link>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
+
+export default ServiceHomeTwo;

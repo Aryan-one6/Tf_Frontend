@@ -1,0 +1,131 @@
+/* Section */
+.tf-tech-section { padding: 70px 15px; background-color: transparent;}
+.tf-tech-header .tf-title { font-family: var(--title-font); font-weight: normal; line-height: 60px; color: #fff; }
+.tf-tech-header .tf-subtitle { color: #B0B0B0; margin-top: 6px; }
+
+/* Controls */
+.tf-tech-controls { display: flex; flex-wrap: wrap; gap: 12px; justify-content: flex-end; align-items: center; }
+
+.tf-search { min-width: 280px; }
+.tf-search .form-control { background-color: #354953; border: 0; color: #E6E6E6; }
+.tf-search .form-control::placeholder { color: #E6E6E6; opacity: .75; }
+.tf-search .input-group-text { background: #354953; border: 0; }
+
+/* Tabs */
+.tf-tabs { display: flex; gap: 8px; margin: 8px 0 0; padding: 0; list-style: none; overflow-x: auto; }
+.tf-tab { 
+  font: 500 14px/1 var(--text-font);
+  color: #B0B0B0;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 999px;
+  padding: 8px 14px;
+  transition: all .25s ease;
+}
+.tf-tab:hover { color: #fff; border-color: rgba(255,255,255,.35); }
+.tf-tab.is-active {
+  color: #fff;
+  border-color: transparent;
+  background-image: linear-gradient(270deg, #4CD38B 0%, #33A4E1 100%);
+}
+
+/* Cards */
+.tf-tech-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 24px;
+  background-color: #1E2228;
+  overflow: hidden;
+}
+.tf-tech-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  padding: 2px;
+  background-image: linear-gradient(270deg, rgba(234,192,84,.30) 0%, rgba(243,151,181,.30) 100%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude; /* keeps inner surface dark */
+}
+.tf-tech-card:hover::before {
+  background-image: linear-gradient(270deg, rgba(234,192,84,.60) 0%, rgba(243,151,181,.60) 100%);
+}
+
+.tf-tech-card__media {
+  width: 56px; height: 56px; border-radius: 14px; 
+  background: #181E25; display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+}
+.tf-tech-card__media img { width: auto; height: 100%; object-fit: contain; display: block; }
+.tf-tech-fallback { display: none; width: 100%; height: 100%; align-items: center; justify-content: center; color: #fff; font-weight: 800; font-size: 20px; }
+
+.tf-tech-name { font: 700 16px/1.2 var(--title-font); color: #fff; }
+.tf-tech-badge { display: block; margin-top: 4px; font-size: 12px; color: #B0B0B0; }
+
+.tf-result-count { margin-top: 16px; font-size: 14px; color: #B0B0B0; }
+
+/* --- Tabs: keep interactive & smooth on touch --- */
+.tf-tabs { -webkit-overflow-scrolling: touch; scroll-snap-type: x proximity; }
+.tf-tabs > li { scroll-snap-align: start; }
+.tf-tab { pointer-events: auto; user-select: none; }
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
+
+
+/* --- Mobile responsiveness --- */
+@media (max-width: 575.98px) {
+  /* Hide the big section heading on phones */
+  /* .tf-tech-header { display: none; }
+
+  /* Hide the category text chip under each card on phones */
+  /* .tf-tech-badge { display: none; } */ */
+
+  /* Tighter mobile rhythm */
+  .tf-tech-section { padding: 40px 12px; }
+  .tf-tabs { gap: 6px; }
+  .tf-tab { padding: 7px 12px; font-size: 13px; }
+
+  .tf-tech-card { padding: 12px; border-radius: 16px; }
+  .tf-tech-card__media { width: 48px; height: 48px; }
+  .tf-tech-name { font-size: 14px; }
+}
+/* Prevent the gradient border layer from blocking clicks */
+.tf-tech-card { position: relative; }
+.tf-tech-card::before {
+  pointer-events: none;  /* <-- key line */
+  z-index: 0;            /* keep it under the content */
+}
+.tf-tech-card > * {
+  position: relative;
+  z-index: 1;            /* ensure card content sits above ::before */
+}
+
+/* Make tabs feel snappy on mobile and avoid sticky active/focus */
+.tf-tab { -webkit-tap-highlight-color: transparent; }
+
+/* Mobile: show short label for AI & Automation */
+@media (max-width: 575.98px) {
+  /* Only tabs that have a data-label-short will switch text */
+  .tf-tab[data-label-short] .tf-tab-label {
+    color: transparent;          /* hide original text visually */
+  }
+  .tf-tab[data-label-short]::after {
+    content: attr(data-label-short);
+    color: #fff;                 /* active color; adjust if needed */
+    font: 500 13px/1 var(--text-font);
+  }
+  .tf-tab:not(.is-active)[data-label-short]::after {
+    color: #B0B0B0;              /* idle color */
+  }
+}
+/* Decorative shapes from other sections must never eat taps */
+.brands-section { position: relative; overflow: hidden; }
+.brands-section .pattern {
+  pointer-events: none;   /* key line */
+  z-index: 0;             /* keep it beneath content */
+}
