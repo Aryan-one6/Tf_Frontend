@@ -22,15 +22,17 @@ const HomeTwo = () => {
 				<Header />
         <HeroHomeTwo />
         <AboutHomeTwo />
-        <Technologies/>
+                <ClientsHomeTwo />
+
         <BrandsHomeTwo />
         <ServiceHomeTwo />
         <ChoooseusHomeTwo />
+                <Technologies/>
+
         <PortfolioHomeTwo />
         {/* <TeamHomeTwo /> */}
         <TestimonialHomeTwo />
         {/* <BlogHomeTwo /> */}
-        <ClientsHomeTwo />
         <ContactHomeTwo />
         <FooterFour />
 			</div>

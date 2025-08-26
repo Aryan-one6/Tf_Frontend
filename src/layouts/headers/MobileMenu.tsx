@@ -1,72 +1,127 @@
- 
-import { useState } from "react";
-import menu_data from "../../data/menu-data";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import menu_data from "../../data/menu-data";
+import { PhoneCall } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
-const MobileMenu = ({ isOpen, setIsOpen }: any) => {
+type Props = { isOpen: boolean; setIsOpen: (v: boolean) => void };
 
-    const [navTitle, setNavTitle] = useState("");
-  //openMobileMenu
-  const openMobileMenu = (menu: string) => {
-    if (navTitle === menu) {
-      setNavTitle("");
+const MobileMenu = ({ isOpen, setIsOpen }: Props) => {
+  const [open, setOpen] = useState<string | null>(null);
+  const toggle = (t: string) => setOpen(open === t ? null : t);
+  const closeMenu = () => setIsOpen(false);
+
+  // 👉 Open "Services" by default on MOBILE each time the menu opens
+  useEffect(() => {
+    if (!isOpen) return;
+    if (typeof window === "undefined") return;
+    const isMobile = window.matchMedia("(max-width: 767px)").matches;
+
+    if (isMobile) {
+      const servicesTitle =
+        menu_data.find((m) => m.has_dropdown && /service/i.test(m.title))?.title ?? null;
+      setOpen(servicesTitle);
     } else {
-      setNavTitle(menu);
+      // on larger screens, don't pre-open anything
+      setOpen(null);
     }
-  };
+  }, [isOpen]);
 
+  return (
+    <div id="mobileMenu" className="mobile-menu">
+      {/* Backdrop */}
+      <div className="menu-backdrop" onClick={closeMenu} />
 
+      {/* Panel */}
+      <div className="menu-box">
+        {/* Close Button */}
+        <div className="close-btn" onClick={closeMenu}>
+          <span className="icon fa fa-times" />
+        </div>
 
-	return (
-		<>
-			<div className={`mobile-menu ${isOpen ? "visibles" : ""}`}>
-				<div className="menu-backdrop" onClick={() => setIsOpen(false)}></div>
-				<div className="close-btn" onClick={() => setIsOpen(false)}>
-					<i className="fas fa-times"></i>
-				</div>
-				<nav className="menu-box">
-					<div className="nav-logo">
-						<Link to="/">
-							<img src="assets/images/triadflair_logo.webp" alt="" title="" />
-						</Link>
-					</div>
-					<div className="menu-outer">
-						<div
-							className="collapse navbar-collapse show"
-							id="navbarSupportedContent"
-						>
-							<ul className="navigation clearfix">
-								{menu_data.map((item, i) => (
-									<li
-										key={i}
-										className={`${item.has_dropdown && "current dropdown"}`}
-									>
-										<Link to={item.link}>{item.title}</Link>
-										{item.has_dropdown && (
-											<ul style={{
-                      display: navTitle === item.title ? "block" : "none",
-                    }}>
-												{item?.sub_menus?.map((sub_item, j) => (
-													<li key={j}>
-														<Link to={sub_item.link}>{sub_item.title}</Link>
-													</li>
-												))}
-											</ul>
-										)}
-										{item.has_dropdown && (
-											<div className={`dropdown-btn  ${navTitle === item.title ? "open" : ""}`}>
-												<span className="fas fa-angle-down" onClick={() => openMobileMenu(item.title)}></span>
-											</div>
-										)}
-									</li>
-								))} 
-							</ul>
-						</div>
-					</div>
-				</nav>
-			</div>
-		</>
-	);
+        {/* Logo */}
+        <div className="nav-logo">
+          <Link to="/" onClick={closeMenu}>
+            <img src="assets/images/triadflair_logo.webp" alt="Triad Flair" />
+          </Link>
+        </div>
+
+        {/* Navigation */}
+        <nav className="menu-outer">
+          <ul className="navigation clearfix">
+            {menu_data.map((item, idx) => (
+              <li
+                key={item.title}
+                className={`dropdown ${open === item.title ? "current" : ""}`}
+              >
+                {!item.has_dropdown ? (
+                  <Link to={item.link} onClick={closeMenu}>
+                    {item.title}
+                  </Link>
+                ) : (
+                  <>
+                    {/* Make the title toggle the submenu */}
+                    <a
+                      onClick={() => toggle(item.title)}
+                      aria-expanded={open === item.title}
+                      aria-controls={`submenu-${idx}`}
+                      role="button"
+                    >
+                      {item.title}
+                    </a>
+
+                    {/* Theme expects .dropdown-btn; keep it in sync */}
+                    <div
+                      className={`dropdown-btn ${open === item.title ? "open" : ""}`}
+                      onClick={() => toggle(item.title)}
+                      aria-label="Toggle submenu"
+                      aria-controls={`submenu-${idx}`}
+                      aria-expanded={open === item.title}
+                    >
+                      <span className="fa fa-angle-right" />
+                    </div>
+
+                    <ul
+                      id={`submenu-${idx}`}
+                      className="submenu"
+                      style={{ display: open === item.title ? "block" : "none" }}
+                    >
+                      {item.sub_menus?.map((sm) => (
+                        <li key={sm.title}>
+                          <Link to={sm.link} onClick={closeMenu}>
+                            {sm.title}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                )}
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        {/* Bottom CTAs (one row, pinned to bottom) */}
+        <div className="cta-row">
+          <a
+            href="https://wa.me/919354249191"
+            className="primary-btn one gradient-bg white-color border-btn d-flex align-items-center justify-content-center gap-2 flex-fill text-center"
+          >
+            <FaWhatsapp className="text-white h-5 w-5" />
+            WhatsApp
+          </a>
+
+          <a
+            href="tel:+919354249191"
+            className="primary-btn one gradient-bg white-color d-flex align-items-center justify-content-center gap-2 flex-fill text-center"
+          >
+            <PhoneCall className="text-white h-4 w-4" />
+            Call Now
+          </a>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default MobileMenu;

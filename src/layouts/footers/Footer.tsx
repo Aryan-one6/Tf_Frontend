@@ -51,11 +51,11 @@ We help brands transform ideas into growth. our team delivers systems that are c
                         </div>
                         <div className="widget-content">
                           <ul className="links-list clearfix">
-                            <li><a href="#">Consulting</a></li>
-                            <li><a href="#">Development</a></li>
-                            <li><a href="#">Brand Strategy</a></li>
-                            <li><a href="#">Design</a></li>
-                            <li><a href="#">Communication</a></li>
+                            <li><a href="#">Ai Automation & WorkFlow</a></li>
+                            <li><a href="#">Website Development</a></li>
+                            <li><a href="#">Mobile Applications</a></li>
+                            <li><a href="#">Digital Marketing (SEO, SMO, PPC)</a></li>
+                            <li><a href="#">Chatbot Integration</a></li>
                           </ul>
                         </div>
                       </div>
@@ -68,7 +68,7 @@ We help brands transform ideas into growth. our team delivers systems that are c
                         <div className="widget-content">
                           <ul className="info-list clearfix">
                             <li><i className="icon-19"></i><span>235 Park Ave S, New York, NY 10010 United States</span></li>
-                            <li><i className="icon-20"></i><a href="mailto:Infobranding@gmail.com">Connect@triadfalir.com</a></li>
+                            <li><i className="icon-20"></i><a href="mailto:Connect@triadfalir.com">Connect@triadfalir.com</a></li>
                             <li><i className="icon-21"></i><a href="tel:000123456789">000 (123) 456 789</a></li>
                           </ul>
                         </div>

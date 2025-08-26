@@ -16,12 +16,12 @@ const ContactHomeTwo = () => {
                   <div className="single-item">
                     <div className="icon-box"><i className="icon-55"></i></div>
                     <h3>Say Hello</h3>
-                    <p><a href="mailto:support@gmail.com">support@gmail.com</a><br /><a href="tel:123456789">+123 456 789</a></p>
+                    <p><a href="mailto:Connect@triadfalir.com">Connect@triadfalir.com</a><br /><a href="tel:+91 93542 49191">+91 93542 49191</a></p>
                   </div>
                   <div className="single-item">
                     <div className="icon-box"><i className="icon-56"></i></div>
                     <h3>Location</h3>
-                    <p>123 king Street, London W8 9JG <br />United Kingdom</p>
+                    <p>235 Park Ave S, New York, NY 10010  <br />United States</p>
                   </div>
                 </div>
               </div>
