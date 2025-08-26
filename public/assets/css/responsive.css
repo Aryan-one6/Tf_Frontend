@@ -1145,10 +1145,10 @@
   position: absolute;
   right: 0;               /* anchor to the right */
   left: auto;
-  width: 100vw;            /* comfortable width */
+  width: 80vw;            /* comfortable width */
   max-width: 420px;
   height: 100%;
-  background: #0b1220;    /* theme-friendly dark */
+  background: #191e24;    /* theme-friendly dark */
   transform: translateX(100%);
   transition: transform .3s ease;
   will-change: transform;

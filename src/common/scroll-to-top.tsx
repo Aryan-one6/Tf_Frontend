@@ -80,13 +80,16 @@ export default function ScrollToTop() {
   return (
     <>
       {/* Launcher — reuse original circle + visibility/animation classes */}
-      <div
-        className={`scroll-to-top chatbot ${isVisible ? 'scroll-top-active' : ''}`}
-        onClick={() => setOpen(true)}
-        role="button"
-        aria-label="Open chat"
-        style={{ cursor: 'pointer' }}
-      >
+      {/* // replace the launcher wrapper div onClick: */}
+<div
+  className={`scroll-to-top chatbot ${isVisible ? 'scroll-top-active' : ''}`}
+  onClick={() => setOpen((o) => !o)}   // <-- toggles open/close now
+  role="button"
+  aria-label={open ? 'Close chat' : 'Open chat'}
+  aria-expanded={open}
+  style={{ cursor: 'pointer' }}
+>
+
         <svg className="scroll-top-inner" viewBox="-1 -1 102 102" aria-hidden>
           <path
             ref={pathRef}

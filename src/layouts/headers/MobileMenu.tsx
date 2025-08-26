@@ -107,8 +107,8 @@ const MobileMenu = ({ isOpen, setIsOpen }: Props) => {
             href="https://wa.me/919354249191"
             className="primary-btn one gradient-bg white-color border-btn d-flex align-items-center justify-content-center gap-2 flex-fill text-center"
           >
-            <FaWhatsapp className="text-white h-5 w-5" />
-            WhatsApp
+            <FaWhatsapp className="text-white h-8 w-8" />
+            
           </a>
 
           <a
@@ -116,7 +116,6 @@ const MobileMenu = ({ isOpen, setIsOpen }: Props) => {
             className="primary-btn one gradient-bg white-color d-flex align-items-center justify-content-center gap-2 flex-fill text-center"
           >
             <PhoneCall className="text-white h-4 w-4" />
-            Call Now
           </a>
         </div>
       </div>
