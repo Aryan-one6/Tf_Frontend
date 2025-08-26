@@ -38,7 +38,7 @@
 
 
 :root{
-  --theme-color: linear-gradient(90deg, #4BB6EF 16.75%, #DD933E 50.1%, #DD933E 50.1%, #D82E5A 138.04%);
+  --theme-color: linear-gradient(270deg, #4CD38B 0%, #33A4E1 100%)!important;
   --title-color: #fff;
   --text-color: #B0B0B0;
   --text-font: "Inter", serif;
@@ -396,7 +396,8 @@ img {
   width: 50px;
   cursor: pointer;
   display: block;
-  box-shadow: inset 0 0 0 2px rgba(0,46,65,0.2);
+  /* box-shadow: inset 0 0 0 2px rgba(0,46,65,0.2); */
+  background-color: var(--theme-color);;
   border-radius: 50%;
   z-index: 90000;
   opacity: 0;
@@ -445,10 +446,10 @@ img {
 }
 
 .scroll-to-top .scroll-top-inner path {
-  stroke-width: 4;
-  fill: transparent;
+  stroke-width: 5;
+  fill:#4CD38B;
   box-sizing: border-box;
-  stroke: #fff;
+  stroke: white ;
   -webkit-transition: all 200ms linear;
   transition: all 200ms linear;
 }
@@ -9741,3 +9742,127 @@ div#mCSB_1_container{
   .hero-section-three .content-box h2 { font-size: 30px; line-height: 20px; }
 }
 /* Desktop remains the original 80/90px from style.css */
+
+
+
+
+/* === Chatbot Launcher tweaks (reuse existing circle) === */
+.scroll-to-top.chatbot::after { content: none; }          /* remove old arrow glyph */
+.scroll-to-top.chatbot .chat-icon {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: white;
+  pointer-events: none;
+}
+
+/* keep existing ring stroke styles from .scroll-top-inner path */
+
+/* === Chat window === */
+.vv-chatbot {
+  position: fixed;
+  right: 30px;
+  bottom: 96px; /* clears the launcher */
+  z-index: 100000;
+}
+.vv-chatbot__card {
+  width: 360px;
+  max-height: min(70vh, 640px);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background: #1A1F25;
+  color: #fff;
+  border: 1px solid #333;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+/* header with gradient accent that matches your theme */
+.vv-chatbot__hdr {
+  position: relative;
+  padding: 14px 14px;
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.vv-chatbot__brand {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-weight: 700; letter-spacing: 0.2px;
+}
+.vv-dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  background-image: var(--theme-color);
+  display: inline-block;
+}
+.vv-chatbot__hdr-actions { position: absolute; right: 8px; top: 8px; }
+.vv-icon-btn {
+  background: transparent; 
+  border: 0; 
+  color: #fff; 
+  font-size: 18px;
+  width: 36px; 
+  height: 36px; 
+  border-radius: 10px;
+  cursor: pointer;
+}
+.vv-icon-btn:hover { background: rgba(255,255,255,0.06); }
+
+/* messages */
+.vv-chatbot__msgs {
+  padding: 16px;
+  overflow: auto;
+  display: grid;
+  gap: 10px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.02), transparent 30%),
+    #181E25;
+}
+.vv-msg { display: flex; }
+.vv-msg.user { justify-content: flex-end; }
+.vv-bubble {
+  max-width: 78%;
+  padding: 10px 12px;
+  border-radius: 14px;
+  line-height: 1.35;
+  font-size: 14px;
+}
+.vv-msg.user .vv-bubble {
+  background-image: var(--theme-color); color: #1A1F25; font-weight: 600;
+}
+.vv-msg.bot .vv-bubble {
+  background: #212830; border: 1px solid #2b323a; color: #E6E6E6;
+}
+
+/* input row */
+.vv-chatbot__input {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  padding: 12px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  background: #1A1F25;
+}
+.vv-chatbot__input input {
+  border: 1px solid #2b323a;
+  border-radius: 12px;
+  padding: 12px 12px;
+  color: #fff;
+}
+.vv-chatbot__input input::placeholder { color: #8A8A8A; }
+.vv-send-btn {
+  border: 0;
+  border-radius: 12px;
+  padding: 0 14px;
+  font-weight: 600;
+  cursor: pointer;
+  background-image: linear-gradient(270deg, #4CD38B 0%, #33A4E1 100%);
+  color: #1A1F25;
+}
+
+/* responsive fit (you already have a rich responsive.css; this is just for the chat) */
+@media (max-width: 599px) {
+  .vv-chatbot { right: 15px; bottom: 90px; }
+  .vv-chatbot__card { width: min(92vw, 430px); }
+}
