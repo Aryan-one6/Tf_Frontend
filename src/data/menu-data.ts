@@ -26,8 +26,8 @@ const menu_data = [
   
   {
     id: 5,
-    title: "Blog & News",
-    link: "/blog",
+    title: "Pricing Plan ",
+    link: "/pricing",
     
   },  
 
@@ -37,7 +37,7 @@ const menu_data = [
     link: "#",
     has_dropdown: true, 
     sub_menus: [
-      { link: "/pricing",              title: "Pricing Plan" },
+      { link: "/blog",              title: "Blog & News" },
       { link: "/contact",                title: "Contact Us" },
       { link: "/terms",              title: "Terms of Service" },
       { link: "/privacy",      title: "Privacy Policy" },
