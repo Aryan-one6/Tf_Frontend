@@ -15,7 +15,7 @@ const About = () => {
 		<Wrapper>
 			<div className="boxed_wrapper home_three">
 				<Header />
-				<Breacrumb title="About Our Agency" subtitle="Creative Agency" />
+				<Breacrumb title="About Triad Flair " subtitle=" AI Marketing Company USA" />
 				<AboutArea />
 				<IntroHomeTwo style_2={true} />
 				<ClientsHomeTwo style_2={true} />

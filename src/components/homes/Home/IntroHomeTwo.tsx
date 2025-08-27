@@ -1,6 +1,6 @@
 
 
-const IntroHomeTwo = ({style_2} : any) => {
+const IntroHomeTwo = ({ style_2 }: any) => {
   return (
     <>
       <section className={`intro-section ${style_2 ? 'about-intro' : ''}`}>
@@ -9,25 +9,28 @@ const IntroHomeTwo = ({style_2} : any) => {
             <div className="col-lg-4 col-md-6 col-sm-12 intro-block">
               <div className="intro-block-one">
                 <div className="decore"></div>
-                <h3><a href="#">Over 1336+ Success World wide Projects.</a></h3>
-                <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and pain.</p>
+                <h3>2012 – Our Beginning</h3>
+                <p>Triad Flair was founded with a vision to empower businesses through creative digital solutions. What started as a small idea quickly turned into a mission to redefine branding and technology.</p>
               </div>
             </div>
+
             <div className="col-lg-4 col-md-6 col-sm-12 intro-block">
               <div className="intro-block-one">
                 <div className="decore"></div>
-                <h3><a href="#">Over 756+ happy Clients <br />and Counting.</a></h3>
-                <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and pain.</p>
+                <h3>2023 – Expanding Horizons</h3>
+                <p>With growing trust from our clients, we expanded our services to include advanced web development, mobile applications, and AI-driven automation to meet global business needs.</p>
               </div>
             </div>
+
             <div className="col-lg-4 col-md-6 col-sm-12 intro-block">
               <div className="intro-block-one">
                 <div className="decore"></div>
-                <h3><a href="#">Over Presence in over <br />11+ Countries.</a></h3>
-                <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and pain.</p>
+                <h3>2025 – Going Global</h3>
+                <p>Our presence extended to 11+ countries, delivering over 1300+ projects and serving 750+ happy clients. Today, we continue to grow as a trusted digital partner worldwide.</p>
               </div>
             </div>
           </div>
+
         </div>
       </section>
     </>

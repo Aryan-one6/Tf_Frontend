@@ -54,7 +54,7 @@ const Footer = () => {
                             <li><a href="#">Ai Automation & WorkFlow</a></li>
                             <li><a href="#">Website Development</a></li>
                             <li><a href="#">Mobile Applications</a></li>
-                            <li><a href="#">Digital Marketing (SEO, SMO, PPC)</a></li>
+                            <li><a href="#">Digital Marketing </a></li>
                             <li><a href="#">Chatbot Integration</a></li>
                           </ul>
                         </div>

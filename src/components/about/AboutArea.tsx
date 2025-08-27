@@ -11,7 +11,7 @@ const AboutArea = () => {
           <div className="rotate-text-box">
             <div className="shape-1" style={{ backgroundImage: `url(/assets/images/shape/shape-4.png)` }}></div>
             <div className="shape-2" style={{ backgroundImage: `url(/assets/images/shape/shape-5.png)` }}></div>
-            <h2>15</h2>
+            <h2>5</h2>
             <span className="curved-text"
               style={{
                 position: 'absolute',
@@ -47,14 +47,15 @@ const AboutArea = () => {
             <div className="col-lg-10 col-md-12 col-sm-12 content-column">
               <div className="about-content">
                 <div className="main-title">
-                  <h3>About us Branding Agency</h3>
+                  <h3>About us Triad Flair</h3>
                   <h2>Strategies For Building Growing <span className="gradient-color color-two">And Managing Your Brand’d Identity</span></h2>
                 </div>
                 <div className="about-text">
-                  <p>Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.</p>
+                  <p>
+                    At Triad Flair, we believe every brand has a story worth telling. Our mission is to craft strategies that not only help businesses grow but also create lasting impressions. With a blend of creativity, technology, and innovation, we deliver tailor-made branding, web development, and digital solutions that position your business for long-term success. For us, it’s not just about building brands—it’s about building trust, value, and sustainable growth in an ever-evolving digital world.                    </p>
                 </div>
                 <div className="btn-box">
-                  <Link to="/about" className="primary-btn one gradient-bg white-color border-btn"><span>Learn More</span><i className="icon-1 gradient-color"></i></Link>
+                  <Link to="tel:number" className="primary-btn one gradient-bg white-color border-btn"><span>Get in touch</span><i className="icon-1 gradient-color"></i></Link>
                 </div>
               </div>
             </div>

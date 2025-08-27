@@ -1,128 +1,288 @@
-/* === Chatbot Launcher (independent of old scroll-to-top) === */
-.tf-chat-launcher {
+/* =====================================================================
+   Vacation Vista â€” Chatbot (Compact)
+   Same visuals as Pro, but smaller + tighter for desktops.
+   Drop-in replacement for chatbot.pro.css
+   ===================================================================== */
+:root{
+  --vv-bg: #12161B;
+  --vv-surface: #171C22;
+  --vv-panel: #1B212A;
+  --vv-border: #2A3034;
+  --vv-text: #E7ECF3;
+  --vv-muted: #9AA7B3;
+  --vv-success: #3DDC97;
+  --vv-shadow: 0 16px 44px rgba(0, 0, 0, .5);
+  --vv-radius-lg: 16px;
+  --vv-radius-md: 12px;
+  --vv-radius-sm: 10px;
+  --vv-accent: linear-gradient(135deg, #4CD38B, #2FC6FF);
+  --vv-accent-solid: #4CD38B;
+
+  /* sizing variables (smaller than pro) */
+  --vv-width: clamp(280px, 26vw, 360px);
+  --vv-height: clamp(360px, 58dvh, 520px);
+  --vv-pad: 12px;
+}
+
+/* Overlay */
+.vv-overlay{
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(2px);
+  z-index: 100000;
+}
+
+/* Launcher */
+.scroll-to-top{
+  position: fixed; right: 24px; bottom: 24px;
+  height: 60px; width: 60px;
+  cursor: pointer; display: block;
+  background: var(--theme-color, var(--vv-accent));
+  border-radius: 50%; z-index: 100002;
+  opacity: 0; visibility: hidden; transform: translateY(14px);
+  transition: all 200ms linear;
+  box-shadow: 0 8px 22px rgba(0,0,0,.26);
+}
+.scroll-to-top.scroll-top-active{ opacity: 1; visibility: visible; transform: translateY(0); }
+.scroll-to-top::after{ content: none !important; }
+.scroll-to-top .scroll-top-inner{ position: absolute; inset: 0; }
+.scroll-to-top .scroll-top-inner path{ stroke-width: 4; fill: transparent; stroke: rgba(255,255,255,.85); }
+.scroll-to-top .chat-icon{ position: absolute; inset: 0; display: grid; place-items: center; color: white; }
+.scroll-to-top.chatbot.is-open{ opacity: 0; pointer-events: none; }
+
+/* Chat window position */
+#vv-root .vv-chatbot, #vv-root.vv-chatbot{
   position: fixed;
-  right: calc(env(safe-area-inset-right, 0px) + 30px);
-  bottom: calc(env(safe-area-inset-bottom, 0px) + 30px);
-  width: 56px;
-  height: 56px;
-  border: 0;
-  border-radius: 50%;
-  background: #1A1F25;
-  box-shadow: inset 0 0 0 2px rgba(0,46,65,0.2), 0 8px 30px rgba(0,0,0,0.35);
-  color: #fff;
-  cursor: pointer;
-  z-index: 100002; /* stays tappable even when chat is open */
-  display: grid;
-  place-items: center;
-  padding: 0;
-}
-
-/* circular progress ring */
-.tf-chat-ring {
-  position: absolute;
-  inset: 0;
-}
-.tf-chat-ring path {
-  stroke-width: 4;
-  fill: transparent;
-  stroke: #fff;           /* ring color; adjust if needed */
-  transition: stroke-dashoffset 10ms linear;
-}
-
-.tf-chat-icon {
-  position: relative;
-  z-index: 2;
-  display: grid;
-  place-items: center;
-  pointer-events: none;
-}
-
-/* === Chat panel === */
-.tf-chatbot {
-  position: fixed;
-  right: calc(env(safe-area-inset-right, 0px) + 30px);
-  bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
+  right: calc(env(safe-area-inset-right, 0px) + 20px);
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 84px);
   z-index: 100001;
-}
-.tf-chatbot__card {
-  width: 360px;
-  height: min(86dvh, 640px);
-  max-height: min(86dvh, 640px);
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  background: #1A1F25;
-  color: #fff;
-  border: 1px solid #333;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  overscroll-behavior: contain;
 }
 
-.tf-chatbot__hdr {
-  position: relative;
-  padding: 14px;
-  background: rgba(255,255,255,0.04);
-  backdrop-filter: blur(6px);
+/* Card */
+#vv-root .vv-chatbot__card{
+  width: var(--vv-width);
+  height: var(--vv-height);
+  display: grid; grid-template-rows: auto 1fr auto;
+  background: var(--vv-surface); color: var(--vv-text);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--vv-radius-lg);
+  overflow: hidden; box-shadow: var(--vv-shadow);
+}
+
+/* Header */
+#vv-root .vv-chatbot__hdr{
+  position: relative; padding: 10px 12px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
   border-bottom: 1px solid rgba(255,255,255,0.06);
-  min-height: 48px;
+  min-height: 46px;
 }
-.tf-chatbot__brand { display: inline-flex; gap: 10px; align-items: center; font-weight: 700; }
-.tf-dot { width: 10px; height: 10px; border-radius: 50%; background-image: var(--theme-color); display: inline-block; }
-.tf-chatbot__hdr-actions { position: absolute; right: 8px; top: 6px; }
-.tf-icon-btn {
-  background: transparent; border: 0; color: #fff; font-size: 22px;
-  width: 44px; height: 44px; border-radius: 12px; cursor: pointer;
-}
-.tf-icon-btn:hover { background: rgba(255,255,255,0.08); }
+#vv-root .vv-chatbot__brand{ display: inline-flex; gap: 8px; align-items: center; font-weight: 800; font-size: 16px; }
+#vv-root .vv-dot{ width: 9px; height: 9px; border-radius: 999px; background: var(--vv-success); box-shadow: 0 0 0 3px rgba(61,220,151,.15); display: inline-block; }
+#vv-root .vv-chatbot__hdr-actions{ position: absolute; right: 4px; top: 4px; }
+#vv-root .vv-icon-btn{ background: transparent; border: 0; color: #fff; font-size: 20px; width: 38px; height: 38px; border-radius: 10px; cursor: pointer; }
+#vv-root .vv-icon-btn:hover{ background: rgba(255,255,255,0.08); }
 
-/* messages */
-.tf-chatbot__msgs {
-  padding: 16px;
+/* Messages */
+#vv-root .vv-chatbot__msgs{
+  padding: var(--vv-pad);
   overflow-y: auto;
-  display: grid;
-  gap: 10px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent 30%), #181E25;
+  display: grid; gap: 10px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.015), transparent 30%), #1B212A;
 }
-.tf-msg { display: flex; }
-.tf-msg.user { justify-content: flex-end; }
-.tf-bubble {
-  max-width: 78%;
+
+/* Bubbles */
+#vv-root .vv-msg{ display: flex; }
+#vv-root .vv-msg.user{ justify-content: flex-end; }
+#vv-root .vv-bubble{
+  max-width: min(86%, 480px);
   padding: 10px 12px;
   border-radius: 14px;
-  line-height: 1.35;
+  line-height: 1.45;
   font-size: 14px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.14);
+  border: 1px solid var(--vv-border);
 }
-.tf-msg.user .tf-bubble { background-image: var(--theme-color); color: #1A1F25; font-weight: 600; }
-.tf-msg.bot  .tf-bubble { background: #212830; border: 1px solid #2b323a; color: #E6E6E6; }
+#vv-root .vv-msg.user .vv-bubble{
+  background: #202734;
+   border-color: transparent; font-weight: 600;
+}
+#vv-root .vv-msg.bot .vv-bubble{
+  background: #202734; border-color: #2b3240; color: #E6EAF0;
+}
 
-/* input row */
-.tf-chatbot__input {
+/* Input */
+#vv-root .vv-chatbot__input{
   position: sticky; bottom: 0;
-  display: grid; grid-template-columns: 1fr auto; gap: 10px;
-  padding: 12px;
-  padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+  display: grid; grid-template-columns: 1fr auto; gap: 8px;
+  padding: 10px;
+  padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px));
   border-top: 1px solid rgba(255,255,255,0.06);
-  background: #1A1F25;
+  background: var(--vv-surface);
 }
-.tf-chatbot__input input {
-  border: 1px solid #2b323a; border-radius: 12px; padding: 12px;
-  color: #fff; min-height: 44px;
+#vv-root .vv-chatbot__input textarea{
+  border: 1px solid var(--vv-border); background: #12161C;
+  border-radius: 10px; padding: 10px 12px;
+  color: var(--vv-text); min-height: 40px; max-height: 140px;
+  font-size: 14px; resize: none; outline: none;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
+  transition: box-shadow .15s ease, border-color .15s ease;
 }
-.tf-chatbot__input input::placeholder { color: #8A8A8A; }
-.tf-send-btn {
-  border: 0; border-radius: 12px; padding: 0 16px; height: 44px;
-  font-weight: 700; cursor: pointer;
-  background-image: var(--theme-color);
-  color: #1A1F25; min-width: 88px;
+#vv-root .vv-chatbot__input textarea::placeholder{ color: var(--vv-muted); }
+#vv-root .vv-chatbot__input textarea:focus{ border-color: #3E92FF; box-shadow: 0 0 0 3px rgba(62,146,255,.22); }
+#vv-root .vv-send-btn{
+  border: 0; border-radius: 10px; padding: 0 16px;
+  font-weight: 800; cursor: pointer; height: 40px; min-width: 88px;
+  background: var(--theme-color, var(--vv-accent)); color: #0C1220; font-size: 15px;
+  box-shadow: 0 8px 22px rgba(0,0,0,.24); transition: transform .05s ease, box-shadow .2s ease, opacity .15s ease;
+}
+#vv-root .vv-send-btn:hover{ box-shadow: 0 10px 26px rgba(0,0,0,.28); }
+#vv-root .vv-send-btn:active{ transform: translateY(1px); }
+#vv-root .vv-send-btn[disabled]{ opacity: .6; cursor: not-allowed; }
+
+/* Mobile */
+@media (max-width: 680px){
+  #vv-root .vv-chatbot, #vv-root.vv-chatbot{
+    inset: auto 0 0 0; display: grid; place-items: end center;
+  }
+  #vv-root .vv-chatbot__card{
+    width: 100vw;
+    height: calc(82dvh - env(safe-area-inset-bottom, 0px));
+    border-radius: 16px 16px 0 0;
+    box-shadow: 0 -12px 36px rgba(0,0,0,0.5);
+    animation: vv-slide-up 160ms ease-out;
+  }
+  #vv-root .vv-chatbot__msgs{ padding: 12px; }
+}
+@keyframes vv-slide-up{ from{ transform: translateY(10px); opacity: 0; } to{ transform: translateY(0); opacity: 1; } }
+
+
+/* =====================================================================
+   Chatbot Message Box Patch
+   Purpose: prevent bubble from stretching tall; remove default <p> margins;
+   ensure bubbles size to their content and align correctly.
+   Usage: import this *after* your main chatbot CSS.
+   ===================================================================== */
+
+#vv-root .vv-chatbot__msgs{
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
 }
 
-/* mobile fit */
-@media (max-width: 599px) {
-  .tf-chatbot {
-    right: calc(env(safe-area-inset-right, 0px) + 15px);
-    bottom: calc(env(safe-area-inset-bottom, 0px) + 84px);
+#vv-root .vv-msg{
+  align-items: flex-start !important; /* don't stretch bubbles vertically */
+}
+
+#vv-root .vv-msg.user{
+  justify-content: flex-end !important;
+  align-items: flex-end !important;
+}
+
+#vv-root .vv-bubble{
+  display: inline-block !important;
+  width: auto !important;
+  max-width: min(86%, 480px) !important;
+  align-self: flex-start !important;
+  white-space: pre-wrap !important;
+  word-break: break-word !important;
+}
+
+#vv-root .vv-msg.user .vv-bubble{
+  align-self: flex-end !important;
+}
+
+#vv-root .vv-bubble p{
+  margin: 0 !important;  /* kill large default margins */
+}
+
+/* =====================================================================
+   Chatbot â€” Mobile Fullscreen Patch
+   Apply AFTER your main chatbot CSS (pro/compact).
+   Forces the chat window to open full screen on small viewports.
+   ===================================================================== */
+
+@media (max-width: 680px){
+  /* Make the chat container occupy the whole viewport */
+  #vv-root .vv-chatbot,
+  #vv-root.vv-chatbot{
+    position: fixed !important;
+    inset: 0 !important;   /* top/right/bottom/left: 0 */
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    top: 0 !important;
+    display: grid !important;
+    place-items: stretch !important;
+    z-index: 100001 !important;
   }
-  .tf-chatbot__card {
-    width: min(96vw, 480px);
+
+  /* Card becomes edge-to-edge full height */
+  #vv-root .vv-chatbot__card{
+    width: 100vw !important;
+    height: 100dvh !important;   /* respect browser UI on mobile */
+    max-height: 100dvh !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
   }
+
+  /* Safe-area insets for notch devices */
+  #vv-root .vv-chatbot__hdr{
+    padding-top: calc(14px + env(safe-area-inset-top, 0px)) !important;
+  }
+  #vv-root .vv-chatbot__input{
+    padding-bottom: calc(14px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+
+  /* Slightly increase inner padding for comfort on mobile */
+  #vv-root .vv-chatbot__msgs{ padding: 16px 16px 12px !important; }
+
+  /* Optional: the overlay is redundant in fullscreen; keep it behind */
+  .vv-overlay{ z-index: 100000 !important; }
+}
+
+/* Tip: Add <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"> in <head> */
+
+
+
+/* --- Quick Replies (theme-consistent pills) --- */
+#vv-root .vv-quick-replies{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 4px var(--vv-pad) 0;
+}
+#vv-root .vv-quick-replies .vv-chip{
+  border: 1px solid var(--vv-border);
+  background: #12161C;
+  color: var(--vv-text);
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background .15s ease, border-color .15s ease, transform .05s ease;
+}
+#vv-root .vv-quick-replies .vv-chip:hover{ background: #18202A; border-color: #324050; }
+#vv-root .vv-quick-replies .vv-chip:active{ transform: translateY(1px); }
+
+/* --- Typing indicator (subtle, compact) --- */
+#vv-root .vv-bubble.vv-typing{
+  display: inline-flex !important;
+  align-items: center;
+  gap: 6px;
+}
+#vv-root .vv-bubble.vv-typing .dot{
+  width: 6px; height: 6px; border-radius: 999px;
+  background: rgba(231,236,243,.8);
+  animation: vv-bounce 1s infinite;
+  display: inline-block;
+}
+#vv-root .vv-bubble.vv-typing .dot:nth-child(2){ animation-delay: .12s; }
+#vv-root .vv-bubble.vv-typing .dot:nth-child(3){ animation-delay: .24s; }
+#vv-root .vv-bubble.vv-typing .typing-label{
+  font-size: 12px; color: var(--vv-muted);
+}
+@keyframes vv-bounce{
+  0%, 80%, 100% { transform: translateY(0); opacity: .7; }
+  40% { transform: translateY(-3px); opacity: 1; }
 }
