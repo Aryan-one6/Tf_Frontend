@@ -47,12 +47,12 @@ const AboutArea = () => {
             <div className="col-lg-10 col-md-12 col-sm-12 content-column">
               <div className="about-content">
                 <div className="main-title">
-                  <h3>About us Triad Flair</h3>
-                  <h2>Strategies For Building Growing <span className="gradient-color color-two">And Managing Your Brand’d Identity</span></h2>
+                  <h3>Welcome to Triad Flair</h3>
+                  <h1>About Triad Flair |  <span className="gradient-color color-two">AI Marketing Company USA</span></h1>
                 </div>
                 <div className="about-text">
                   <p>
-                    At Triad Flair, we believe every brand has a story worth telling. Our mission is to craft strategies that not only help businesses grow but also create lasting impressions. With a blend of creativity, technology, and innovation, we deliver tailor-made branding, web development, and digital solutions that position your business for long-term success. For us, it’s not just about building brands—it’s about building trust, value, and sustainable growth in an ever-evolving digital world.                    </p>
+                    At Triad Flair, we believe every brand has a story worth telling. Our mission is to craft strategies that not only help businesses grow but also create lasting impressions. With a blend of creativity, technology, and innovation, we deliver tailor-made branding, web development, and digital solutions that position your business for long-term success. For us, it’s not just about building brands—it’s about building trust, value, and sustainable growth in an ever-evolving digital world.   <a href="/">About Triad Flair | AI Marketing Company USA</a>                 </p>
                 </div>
                 <div className="btn-box">
                   <Link to="tel:number" className="primary-btn one gradient-bg white-color border-btn"><span>Get in touch</span><i className="icon-1 gradient-color"></i></Link>

@@ -369,7 +369,7 @@ img {
 
 .gradient-color::before,
 .gradient-color{
-  background: linear-gradient(90deg, #4BB6EF -8.7%, #DD933E 31.66%, #DD933E 31.66%, #D82E5A 138.04%);
+  background: linear-gradient(270deg, #4CD38B 0%, #33A4E1 100%);
   color: transparent !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
@@ -377,7 +377,7 @@ img {
 
 .home_two .gradient-color::before,
 .home_two .gradient-color{
-  background: linear-gradient(270deg, #EAC054 0%, #F397B5 100%);
+  background: linear-gradient(270deg, #4CD38B 0%, #33A4E1 100%);
 }
 
 .home_three .gradient-color::before,
@@ -1438,11 +1438,11 @@ div#mCSB_1_container{
 }
 
 .about-content .main-title h2 .color-one{
-  background: linear-gradient(90deg, #DD933E 50.1%, #DD933E 50.1%, #D82E5A 138.04%);
+  background: linear-gradient(270deg, #4CD38B 0%, #33A4E1 100%);
 }
 
 .about-content .main-title h2 .color-two{
-  background: linear-gradient(90deg, #4BB6EF 16.75%, #DD933E 50.1%, #DD933E 50.1%, #D82E5A 138.04%);
+  background: linear-gradient(270deg, #4CD38B 0%, #33A4E1 100%);
 }
 
 .about-content .main-title{
@@ -1641,7 +1641,7 @@ div#mCSB_1_container{
 .intro-block-one .decore::after{
   position: absolute;
   content: '';
-  background-image: linear-gradient(90deg, #4BB6EF 16.75%, #DD933E 50.1%, #DD933E 50.1%, #D82E5A 138.04%);
+  background-image: linear-gradient(270deg, #4CD38B 0%, #33A4E1 100%);
   width: 1px;
   height: 45px;
   left: 12px;
@@ -5394,7 +5394,7 @@ div#mCSB_1_container{
   align-items: center;
   width: max-content;
   gap: 24px;
-  animation: 120s marqueslide infinite linear;
+  animation: 240s marqueslide infinite linear;
 }
 
 .hero-section-three .hero-lower-content .slide-text li{
@@ -6728,6 +6728,11 @@ div#mCSB_1_container{
   font-size: 16px;
 }
 
+@media only screen and (max-width: 767px) {
+    .page-title-content .bread-crumb li {
+        font-size: 10px;
+    }
+}
 .page-title .image{
   position: absolute;
   left: 0px;
@@ -6907,11 +6912,11 @@ div#mCSB_1_container{
 }
 
 .gradient-color.color-two{
-  background: linear-gradient(90deg, #4BB6EF 16.75%, #DD933E 50.1%, #DD933E 50.1%, #D82E5A 138.04%);
+  background: linear-gradient(270deg, #4CD38B 0%, #33A4E1 100%);
 }
 
 .about-chooseus .chooseus-block-one .icon-box i:before {
-  background: linear-gradient(90deg, #4BB6EF 16.75%, #DD933E 50.1%, #DD933E 50.1%, #D82E5A 138.04%);
+  background: linear-gradient(270deg, #4CD38B 0%, #33A4E1 100%);
   color: transparent !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
@@ -9647,6 +9652,11 @@ div#mCSB_1_container{
     line-height: 36px;
   }
   .hero-section-three .content-box h2  {
+        font-size: 25px;
+        line-height: 40px;
+        padding-left: 20px;
+    }
+     .hero-section-three .content-box h1  {
         font-size: 25px;
         line-height: 40px;
         padding-left: 20px;

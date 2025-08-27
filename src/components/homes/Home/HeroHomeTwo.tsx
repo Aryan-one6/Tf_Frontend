@@ -20,16 +20,15 @@ const HeroHomeTwo = () => {
                   <div className="inner-box">
                     <h3 className="title-box !text-[32px] !leading-[36px] md:!text-[56px] md:!leading-[60px] lg:!text-[80px] lg:!leading-[81px]">
                       We Are <span className=" triadflairname gradient-color !text-[32px] !leading-[36px] md:!text-[56px] md:!leading-[60px] lg:!text-[80px] lg:!leading-[81px]">
-Triad Flair!
+                        Triad Flair!
                       </span>
                     </h3>
 
 
                   </div>
 
-                  <h2 className="title-box herokeywords !text-[20px] !leading-[24px] md:!text-[60px] md:!leading-[68px] lg:!text-[90px] lg:!leading-[104px]">
-                     AI Automation & Web Development Company 
-                  </h2>
+                  <h1 className="title-box herokeywords !text-[20px] !leading-[24px] md:!text-[60px] md:!leading-[68px] lg:!text-[90px] lg:!leading-[104px]">
+                    AI Automation & Web Development agency in USA                  </h1>
 
                   {/* <h2>Branding Agency</h2> */}
                   <div className="text-box">
@@ -91,7 +90,7 @@ Triad Flair!
               <li><img src="assets/images/icons/icon-11.png" alt="Chatbot Development Icon" /><span>Custom Chatbots </span></li>
               <li><img src="assets/images/icons/icon-11.png" alt="Website Development Icon" /><span>Web App Development</span></li>
               <li><img src="assets/images/icons/icon-11.png" alt="WordPress Plugin Icon" /><span>WordPress & Plugin</span></li>
-           
+
 
             </ul>
           </div>
