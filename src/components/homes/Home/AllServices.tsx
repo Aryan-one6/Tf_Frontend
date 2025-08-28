@@ -12,7 +12,7 @@ const ServiceHomeTwo = () => {
             <h2>Complete Brand Development, <br /><span className="gradient-color">From Strategy to Design</span></h2>
           </div>
           <div className="row">
-
+            
             <div className="col-lg-6 col-md-12 col-sm-12 block-column">
               <div className="service-block-three">
                 <div className="shape" style={{ backgroundImage: `url(/assets/images/shape/shape-47.png)` }}></div>
@@ -60,10 +60,35 @@ const ServiceHomeTwo = () => {
                 <div className="link-box"><Link to="/chatbot-development"><i className="icon-13"></i></Link></div>
               </div>
             </div>
+
+            <div className="col-lg-6 col-md-12 col-sm-12 block-column">
+              <div className="service-block-three">
+                <div className="shape" style={{ backgroundImage: `url(/assets/images/shape/shape-47.png)` }}></div>
+                <h3><Link to="/digital-marketing">Digital Marketing</Link></h3>
+                <p>
+                  We craft tailored digital marketing strategies to boost your online presence through SEO, SMO, PPC, and Content marketing. Our goal is to maximize visibility and conversions for your brand across all digital platforms.
+                </p>
+                <div className="icon-box"><img src="assets/images/icons/icon-14.png" alt="Digital Marketing Icon" /></div>
+                <div className="link-box"><Link to="/digital-marketing"><i className="icon-13"></i></Link></div>
+              </div>
+            </div>
+            <div className="col-lg-6 col-md-12 col-sm-12 block-column">
+              <div className="service-block-three">
+                <div className="shape" style={{ backgroundImage: `url(/assets/images/shape/shape-47.png)` }}></div>
+                <h3><Link to="/mobile-application-development">Mobile Application Development</Link></h3>
+                <p>
+                  We craft tailored digital marketing strategies to boost your online presence through SEO, SMO, PPC, and Content marketing. Our goal is to maximize visibility and conversions for your brand across all digital platforms.
+                </p>
+                <div className="icon-box"><img src="assets/images/icons/icon-12.png" alt="" /></div>
+                <div className="link-box"><Link to="/mobile-application-development"><i className="icon-13"></i></Link></div>
+              </div>
+            </div>
+           
+            
+
+
           </div>
-          <div className="extra-btn text-center">
-            <Link to="/service" className="primary-btn one gradient-bg white-color border-btn">See All Services</Link>
-          </div>
+        
         </div>
       </section>
     </>

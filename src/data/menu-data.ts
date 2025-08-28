@@ -11,10 +11,10 @@ const menu_data = [
     has_dropdown: true, 
     sub_menus: [
       { link: "/ai-automation",              title: "Ai Auomation" },
+      { link: "/ai-agent-development",      title: "AI Agent Development" },
       { link: "/web-development",      title: "Website Development" },
       { link: "/chatbot-development",      title: "Chatbot Integration" },
-      { link: "/digital-marketing",      title: "Digital Marketing" },
-      { link: "/monile-application-development",      title: "Mobile Apps" },
+      // { link: "/monile-application-development",      title: "Mobile Apps" },
     ],
   },
    {

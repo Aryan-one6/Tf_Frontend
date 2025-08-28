@@ -1,6 +1,6 @@
  
 import CtaHomeTwo from "../homes/Home/CtaHomeTwo"; 
-import ServiceHomeTwo from "../homes/Home/ServiceHomeTwo";
+import AllService from "../homes/Home/AllServices";
 // import ProcessHomeTwo from "../homes/ProcessHomeTwo";
 import TestimonialHomeTwo from "../homes/Home/TestimonialHomeTwo";
 import Wrapper from "../../layouts/Wrapper";
@@ -16,7 +16,7 @@ const Service = () => {
       <div className="boxed_wrapper home_three">
         <Header />
         <Breacrumb title="Automation Agency Services" subtitle="Our Services" /><br></br><br></br><br></br>
-        <ServiceHomeTwo />
+        <AllService />
         {/* <ProcessHomeTwo /> */}
         <TestimonialHomeTwo />
         <CtaHomeTwo />

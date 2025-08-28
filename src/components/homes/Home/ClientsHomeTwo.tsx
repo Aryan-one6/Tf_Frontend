@@ -30,7 +30,7 @@ const ClientsHomeTwo = ({ style_2 }: any) => {
           {logos.map((logo, i) => (
             <li key={i} className="flex items-center justify-center">
               <a
-                href="#"
+                
                 aria-label={logo.alt}
                 className="block opacity-100 hover:opacity-100 transition-transform duration-200 hover:scale-105"
                 style={{ opacity: 1 }} // ensure no theme dimming

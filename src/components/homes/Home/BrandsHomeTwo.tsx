@@ -34,7 +34,7 @@ const BrandsHomeTwo = ({style_2} : any) => {
               <p>We prioritize clarity, performance, and maintainability—launching quickly, then hardening for scale with analytics, testing, and continuous improvement.
 
 C</p>
-              <div className="btn-box"><a href="mailto:connect@triadflair.com" className="primary-btn one gradient-bg white-color border-btn">Start a Project</a></div>
+              <div className="btn-box"><a href="mailto:connect@triadflair.com" className="primary-btn one gradient-bg white-color border-btn">Start Project</a></div>
             </div>
             <div className="fact-content">
               {counter_data.map((item, i) => (

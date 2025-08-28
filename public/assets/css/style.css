@@ -2876,7 +2876,7 @@ div#mCSB_1_container{
 
 .cta-section{
   position: relative;
-  padding: 120px 0px;
+  padding: 40px 0px;
 }
 
 .cta-content{
@@ -2900,13 +2900,13 @@ div#mCSB_1_container{
 }
 
 .cta-content h3{
-  font-size: 30px;
-  line-height: 35px;
-  margin-bottom: 32px;
+     font-size: 15px;
+    line-height: 30px;
+    margin-bottom: 5px;
 }
 
 .cta-content h2{
-  font-size: 70px;
+  font-size: 20px;
   line-height: 81px;
   margin-bottom: 24px;
 }
@@ -2916,8 +2916,8 @@ div#mCSB_1_container{
   line-height: 27px;
   font-family: var(--title-font);
   color: #fff;
-  font-weight: 600;
-  margin-bottom: 32px;
+  font-weight: normal;
+  margin-bottom: 20px;
 }
 
 .cta-content .btn-box{
@@ -7202,6 +7202,7 @@ div#mCSB_1_container{
   position: relative;
   display: inline-block;
   width: 100%;
+  padding-bottom: 70px;
 }
 
 .service-details-content .top-image{
