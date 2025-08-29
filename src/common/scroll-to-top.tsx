@@ -1,7 +1,7 @@
-
-
 'use client';
 import { useEffect, useRef, useState } from 'react';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import './chatbot.css';
 
 type Sender = 'user' | 'bot';
@@ -31,10 +31,10 @@ export default function ScrollToTop() {
   // input & messages
   const [input, setInput] = useState('');
   const [messages, setMessages] = useState<ChatMessage[]>([
-    { id: 'hello', from: 'bot', text: 'Hi! 👋 How can I help you today?', ts: Date.now() },
+    { id: 'hello', from: 'bot', text: 'Hi! 👋 **How can I help you today?**\n\n- You can ask *anything*\n- I support `code` and lists\n\n[Open docs](#)', ts: Date.now() },
   ]);
 
-  // === Imported logic from ChatWidget.jsx ===
+  // session + quick replies + loading
   const [sessionId, setSessionId] = useState<string | null>(null);
   const [quickReplies, setQuickReplies] = useState<string[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
@@ -55,7 +55,7 @@ export default function ScrollToTop() {
     }
   }, []);
 
-  // progress ring + show earlier (existing)
+  // progress ring + visibility
   useEffect(() => {
     const path = pathRef.current;
     if (!path) return;
@@ -77,7 +77,7 @@ export default function ScrollToTop() {
     return () => window.removeEventListener('scroll', updatePath);
   }, []);
 
-  // lock background when open + esc to close (existing)
+  // lock background when open + esc to close
   useEffect(() => {
     const root = document.documentElement;
     if (open) root.style.overflow = 'hidden';
@@ -90,14 +90,14 @@ export default function ScrollToTop() {
     };
   }, [open]);
 
-  // focus textarea on open (from ChatWidget)
+  // focus textarea on open
   useEffect(() => {
     if (!open) return;
     const id = setTimeout(() => textareaRef.current?.focus(), 150);
     return () => clearTimeout(id);
   }, [open]);
 
-  // autoresize textarea (existing)
+  // autoresize textarea
   useEffect(() => {
     const ta = textareaRef.current;
     if (!ta) return;
@@ -105,13 +105,13 @@ export default function ScrollToTop() {
     ta.style.height = Math.min(160, ta.scrollHeight) + 'px';
   }, [input, open]);
 
-  // scroll to bottom on new messages / loading/quickReplies change
+  // scroll to bottom on changes
   useEffect(() => {
     const el = msgsRef.current;
     if (el) el.scrollTop = el.scrollHeight;
   }, [messages, open, loading, quickReplies]);
 
-  // === send message (ChatWidget logic, adapted to your message shape/UI) ===
+  // send message
   const sendMessage = async (text?: string) => {
     const value = (text ?? input).trim();
     if (!value) return;
@@ -134,7 +134,6 @@ export default function ScrollToTop() {
       if (!res.ok) throw new Error(`Server ${res.status}: ${await res.text()}`);
       const data = await res.json();
 
-      // update sessionId if backend returns a new one
       if (data.sessionId && data.sessionId !== sessionId) {
         setSessionId(data.sessionId as string);
         try {
@@ -223,23 +222,40 @@ export default function ScrollToTop() {
               <div className="vv-chatbot__msgs" ref={msgsRef} aria-live="polite">
                 {messages.map((m) => (
                   <div key={m.id} className={`vv-msg ${m.from}`}>
-                    <div className="vv-bubble"><p>{m.text}</p></div>
+                    <div className="vv-bubble">
+                      {m.from === 'bot' ? (
+                        <ReactMarkdown
+                          remarkPlugins={[remarkGfm]}
+                          components={{
+                            ul: (props) => (
+                              <ul className="list-disc list-inside ml-4 mb-2 space-y-1" {...props} />
+                            ),
+                            ol: (props) => (
+                              <ol className="list-decimal list-inside ml-4 mb-2 space-y-1" {...props} />
+                            ),
+                            p:  (props) => <p className="mb-2 leading-relaxed" {...props} />,
+                            a:  (props) => <a className="text-indigo-600 underline" target="_blank" rel="noreferrer noopener" {...props} />,
+                            code: (props) => <code className="vv-inline-code" {...props} />,
+                            pre:  (props) => <pre className="vv-codeblock" {...props} />,
+                          }}
+                        >
+                          {m.text}
+                        </ReactMarkdown>
+                      ) : (
+                        <p className="mb-2 whitespace-pre-line">{m.text}</p>
+                      )}
+                    </div>
                   </div>
                 ))}
 
-                {/* Typing indicator (kept minimal to preserve visuals) */}
+                {/* Typing indicator */}
                 {loading && (
                   <div className="vv-msg bot">
-                    <div className="vv-bubble vv-typing">
-                      <span className="dot" />
-                      <span className="dot" />
-                      <span className="dot" />
-                      <span className="typing-label">Typing…</span>
-                    </div>
+                    <div className="vv-bubble vv-typing" />
                   </div>
                 )}
 
-                {/* Quick replies (lightweight chips that match theme) */}
+                {/* Quick replies */}
                 {quickReplies.length > 0 && (
                   <div className="vv-quick-replies">
                     {quickReplies.map((opt, i) => (

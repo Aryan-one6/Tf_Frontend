@@ -1,13 +1,11 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./components/homes/Home";
 import About from "./components/about";
-import Team from "./components/team";
 import Pricing from "./components/pricing";
 import Faq from "./components/faq";
 import NotFound from "./error";
 import Service from "./components/service";
 import AiAutomationsDetailsArea from "./components/ai-automations";
-import Portfolio from "./components/portfolio";
 import Blog from "./components/blog";
 // import BlogTwo from "./components/blog-2";
 import BlogDetails from "./components/blog-details";
