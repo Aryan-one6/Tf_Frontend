@@ -5216,13 +5216,16 @@ div#mCSB_1_container{
 }
 
 .hero-section-three .content-box h3{
-  font-size: 35px;
+  font-size: 25px;
   line-height: 51px;
   font-weight: normal;
 }
+.hero-section-three .content-box h3 .triadflairname{
+  font-size: 25px;
+}
 
 .hero-section-three .content-box h3 .triadflairname{
-  font-size: 35px;
+  font-size: 25px;
   line-height: 48px;
   font-weight: normal;
 }
@@ -5233,7 +5236,7 @@ div#mCSB_1_container{
   display: flex;
   align-items: center;
   gap: 4px;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 }
 
 .hero-section-three .content-box .inner-box .image{
@@ -5263,7 +5266,7 @@ div#mCSB_1_container{
   font-size: 18px;
   line-height: 27px;
   font-family: var(--title-font);
-  color: #fff;
+  color: #bdbbbb;
   font-weight: normal;
   margin-bottom: 40px;
   max-width: 450px; 
@@ -9646,11 +9649,11 @@ div#mCSB_1_container{
 /* Hero heading sizes for small screens */
 @media (max-width: 767px) {
   .hero-section-three .content-box h3 {
-    font-size: 25px;
+    font-size: 20px;
     line-height: 36px;
   }
   .hero-section-three .content-box h3 .triadflairname{
-    font-size: 25px;
+    font-size: 20px;
     line-height: 36px;
   }
   .hero-section-three .content-box h2  {
@@ -9659,11 +9662,12 @@ div#mCSB_1_container{
         padding-left: 20px;
     }
      .hero-section-three .content-box h1  {
-        font-size: 25px;
-        line-height: 40px;
+        font-size: 22px;
+        line-height: 35px;
         padding-left: 20px;
     }
   .hero-section-three .content-box .text-box p{
+    font-size: 15px;
     padding-left: 12px;
   }
   .hero-section-three .content-box .inner-box { gap: 8px; padding-left: 20px;}
