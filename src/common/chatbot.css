@@ -287,6 +287,6 @@
   40% { transform: translateY(-3px); opacity: 1; }
 }
 
-/* .vv-inline-code { padding: 0 .25rem; border-radius: 4px; background: #f6f8fa; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+.vv-inline-code { padding: 0 .25rem; border-radius: 4px; background: #f6f8fa; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
 .vv-codeblock { padding: .75rem; border-radius: 8px; background: #0f172a0d; overflow: auto; }
- */
+
