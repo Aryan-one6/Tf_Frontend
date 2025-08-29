@@ -55,9 +55,9 @@ const MobileMenu = ({ isOpen, setIsOpen }: Props) => {
                 className={`dropdown ${open === item.title ? "current" : ""}`}
               >
                 {!item.has_dropdown ? (
-                  <Link to={item.link} onClick={closeMenu}>
-                    {item.title}
-                  </Link>
+                  <Link to={item.link ?? "/"} onClick={closeMenu}>
+  {item.title}
+</Link>
                 ) : (
                   <>
                     {/* Make the title toggle the submenu */}
@@ -88,9 +88,9 @@ const MobileMenu = ({ isOpen, setIsOpen }: Props) => {
                     >
                       {item.sub_menus?.map((sm) => (
                         <li key={sm.title}>
-                          <Link to={sm.link} onClick={closeMenu}>
-                            {sm.title}
-                          </Link>
+                          <Link to={sm.link ?? "/"} onClick={closeMenu}>
+  {sm.title}
+</Link>
                         </li>
                       ))}
                     </ul>

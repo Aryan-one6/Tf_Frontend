@@ -49,6 +49,7 @@ const TermsOfServiceDetailsArea: FC = () => {
             <div className="container">
               <div className="service-details-content">
 
+                <title><em> {h1}</em></title>
 
                 <p><em>Last updated: {lastUpdated}</em></p>
 
