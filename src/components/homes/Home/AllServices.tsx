@@ -80,7 +80,7 @@ const ServiceHomeTwo = () => {
                   We craft tailored digital marketing strategies to boost your online presence through SEO, SMO, PPC, and Content marketing. Our goal is to maximize visibility and conversions for your brand across all digital platforms.
                 </p>
                 <div className="icon-box"><img src="assets/images/icons/icon-12.png" alt="" /></div>
-                <div className="link-box"><Link to="/mobile-application-development"><i className="icon-13"></i></Link></div>
+                <div className="link-box"><Link to="/mobile-app-development"><i className="icon-13"></i></Link></div>
               </div>
             </div>
            

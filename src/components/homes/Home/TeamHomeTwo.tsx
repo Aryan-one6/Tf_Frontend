@@ -23,8 +23,8 @@ At Triad Flair, our strength lies in our people. Each member brings deep experti
                 <div className="shape" style={{ backgroundImage: `url(/assets/images/shape/shape-49.png)` }}></div>
                 <figure className="image"><img src="/Team/Aryan.webp" alt="" /></figure>
                 <div className="content-box">
-                  <div className="icon-box"><Link to="/team-details"><img src="assets/images/icons/icon-16.png" alt="" /></Link></div>
-                  <h5><Link to="/team-details">Aryan Parashar</Link></h5>
+                  <div className="icon-box"><img src="assets/images/icons/icon-16.png" alt="" /></div>
+                  <h5>Aryan Parashar</h5>
                   <span className="designation">Full Stack Dev | Founder</span>
                 </div>
               </div>
@@ -34,8 +34,8 @@ At Triad Flair, our strength lies in our people. Each member brings deep experti
                 <div className="shape" style={{ backgroundImage: `url(/assets/images/shape/shape-49.png)` }}></div>
                 <figure className="image"><img src="/Team/Suryansh.webp" alt="" /></figure>
                 <div className="content-box">
-                  <div className="icon-box"><Link to="/team-details"><img src="assets/images/icons/icon-16.png" alt="" /></Link></div>
-                  <h5><Link to="/team-details">Suryansh Mishra</Link></h5>
+                  <div className="icon-box"><img src="assets/images/icons/icon-16.png" alt="" /></div>
+                  <h5>Suryansh Mishra</h5>
                   <span className="designation">Backend Dev Lead</span>
                 </div>
               </div>
@@ -45,8 +45,8 @@ At Triad Flair, our strength lies in our people. Each member brings deep experti
                 <div className="shape" style={{ backgroundImage: `url(/assets/images/shape/shape-49.png)` }}></div>
                 <figure className="image"><img src="/Team/Vinayak.webp" alt="" /></figure>
                 <div className="content-box">
-                  <div className="icon-box"><Link to="/team-details"><img src="assets/images/icons/icon-16.png" alt="" /></Link></div>
-                  <h5><Link to="/team-details">Vinayak Pratap</Link></h5>
+                  <div className="icon-box"><img src="assets/images/icons/icon-16.png" alt="" /></div>
+                  <h5>Vinayak Pratap</h5>
                   <span className="designation">AI Engineer Lead</span>
                 </div>
               </div>
@@ -56,8 +56,8 @@ At Triad Flair, our strength lies in our people. Each member brings deep experti
                 <div className="shape" style={{ backgroundImage: `url(/assets/images/shape/shape-49.png)` }}></div>
                 <figure className="image"><img src="/Team/Saumya.webp" alt="" /></figure>
                 <div className="content-box">
-                  <div className="icon-box"><Link to="/team-details"><img src="assets/images/icons/icon-16.png" alt="" /></Link></div>
-                  <h5><Link to="/team-details">Saumya Srijan</Link></h5>
+                  <div className="icon-box"><img src="assets/images/icons/icon-16.png" alt="" /></div>
+                  <h5>Saumya Srijan</h5>
                   <span className="designation">Software Er.</span>
                 </div>
               </div>
@@ -67,8 +67,8 @@ At Triad Flair, our strength lies in our people. Each member brings deep experti
                 <div className="shape" style={{ backgroundImage: `url(/assets/images/shape/shape-49.png)` }}></div>
                 <figure className="image"><img src="/Team/Ayush.webp" alt="" /></figure>
                 <div className="content-box">
-                  <div className="icon-box"><Link to="/team-details"><img src="assets/images/icons/icon-16.png" alt="" /></Link></div>
-                  <h5><Link to="/team-details">Ayush Sharma</Link></h5>
+                  <div className="icon-box"><img src="assets/images/icons/icon-16.png" alt="" /></div>
+                  <h5>Ayush Sharma</h5>
                   <span className="designation">Digital Marketer Lead</span>
                 </div>
               </div>
@@ -78,8 +78,8 @@ At Triad Flair, our strength lies in our people. Each member brings deep experti
                 <div className="shape" style={{ backgroundImage: `url(/assets/images/shape/shape-49.png)` }}></div>
                 <figure className="image"><img src="/Team/Sumit.webp" alt="" /></figure>
                 <div className="content-box">
-                  <div className="icon-box"><Link to="/team-details"><img src="assets/images/icons/icon-16.png" alt="" /></Link></div>
-                  <h5><Link to="/team-details">Sumit Singh</Link></h5>
+                  <div className="icon-box"><img src="assets/images/icons/icon-16.png" alt="" /></div>
+                  <h5>Sumit Singh</h5>
                   <span className="designation">Mobile App Lead</span>
                 </div>
               </div>

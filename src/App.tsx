@@ -38,14 +38,10 @@ const router = createBrowserRouter([
 	{ path: "/privacy", element: <PrivacyPolicyDetailsArea /> },
 	{ path: "/disclaimer", element: <DisclaimerDetailsArea /> },
 	{ path: "/contact", element: <Contact /> },
-		{ path: "/about", element: <About /> },
-
-
-    //  Blogs pages 
+	{ path: "/about", element: <About /> },
+	//  Blogs pages 
 	{ path: "/blog", element: <Blog /> },
 	{ path: "/blog-details", element: <BlogDetails /> },
-
-
 
 	//  not found page
 	{ path: "*", element: <NotFound /> },

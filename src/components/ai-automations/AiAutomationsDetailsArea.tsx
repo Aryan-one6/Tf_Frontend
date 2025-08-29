@@ -139,7 +139,7 @@ const AiAutomationsDetailsArea: FC = () => {
               <a href="/ai-automation">
                 AI Automation Services for U.S. Businesses | Triad Flair
               </a>{" "}
-              · <a href="/ai-chatbots">AI Chatbots</a> ·{" "}
+              · <a href="/chatbot-development">AI Chatbots</a> ·{" "}
             
               <a href="/contact">Contact</a>
             </p>

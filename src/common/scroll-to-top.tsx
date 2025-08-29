@@ -31,7 +31,7 @@ export default function ScrollToTop() {
   // input & messages
   const [input, setInput] = useState('');
   const [messages, setMessages] = useState<ChatMessage[]>([
-    { id: 'hello', from: 'bot', text: 'Hi! 👋 **How can I help you today?**\n\n- You can ask *anything*\n- I support `code` and lists\n\n[Open docs](#)', ts: Date.now() },
+    { id: 'hello', from: 'bot', text: 'Hi! 👋 How can I help you today?', ts: Date.now() },
   ]);
 
   // session + quick replies + loading
