@@ -1,4 +1,4 @@
-import DigitalMarketingDetailsArea from "./AiAutomationsDetailsArea";
+import DigitalMarketingDetailsArea from "./DigitalMarketingDetailsArea";
 import Wrapper from "../../layouts/Wrapper";
 import Header from "../../layouts/headers/Header";
 import Breacrumb from "../../common/Breacrumb";

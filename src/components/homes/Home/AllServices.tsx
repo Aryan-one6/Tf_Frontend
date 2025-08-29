@@ -75,7 +75,7 @@ const ServiceHomeTwo = () => {
             <div className="col-lg-6 col-md-12 col-sm-12 block-column">
               <div className="service-block-three">
                 <div className="shape" style={{ backgroundImage: `url(/assets/images/shape/shape-47.png)` }}></div>
-                <h3><Link to="/mobile-application-development">Mobile Application Development</Link></h3>
+                <h3><Link to="/mobile-app-development">Mobile Application Development</Link></h3>
                 <p>
                   We craft tailored digital marketing strategies to boost your online presence through SEO, SMO, PPC, and Content marketing. Our goal is to maximize visibility and conversions for your brand across all digital platforms.
                 </p>

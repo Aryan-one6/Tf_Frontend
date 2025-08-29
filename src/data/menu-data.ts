@@ -7,14 +7,14 @@ const menu_data = [
   {
     id: 3,
     title: "Services",
-    link: "/service",
+    
     has_dropdown: true, 
     sub_menus: [
       { link: "/ai-automation",              title: "Ai Auomation" },
       { link: "/ai-agent-development",      title: "AI Agent Development" },
       { link: "/web-development",      title: "Website Development" },
       { link: "/chatbot-development",      title: "Chatbot Integration" },
-      // { link: "/monile-application-development",      title: "Mobile Apps" },
+      { link: "/service",      title: "Know More" },
     ],
   },
    {
