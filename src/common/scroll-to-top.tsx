@@ -254,7 +254,7 @@ export default function ScrollToTop() {
                       <span className="dot" />
                       <span className="dot" />
                       <span className="dot" />
-                      <span className="typing-label">Typing…</span>
+                      
                     </div>
                   </div>
                 )}
@@ -302,3 +302,4 @@ export default function ScrollToTop() {
     </>
   );
 }
+
