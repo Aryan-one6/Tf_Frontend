@@ -252,6 +252,9 @@ export default function ScrollToTop() {
                 {loading && (
                   <div className="vv-msg bot">
                     <div className="vv-bubble vv-typing" />
+                    <span className="dot" />
+                    <span className="dot" />
+                    <span className="dot" />
                   </div>
                 )}
 
@@ -298,3 +301,4 @@ export default function ScrollToTop() {
     </>
   );
 }
+
