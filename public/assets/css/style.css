@@ -2900,13 +2900,14 @@ div#mCSB_1_container{
 }
 
 .cta-content h3{
-     font-size: 15px;
+     font-size: 22px;
     line-height: 30px;
     margin-bottom: 5px;
+    font-weight: normal;
 }
 
 .cta-content h2{
-  font-size: 20px;
+  font-size: 50px;
   line-height: 81px;
   margin-bottom: 24px;
 }
