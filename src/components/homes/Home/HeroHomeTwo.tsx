@@ -54,7 +54,7 @@ const HeroHomeTwo = () => {
                     </div>
                     <div className="curve-text video-btn">
                       <a
-                        href="tel:+91 9354249191"
+                        href="tel:+91 935424 9191"
                         style={{ cursor: "pointer" }}
                         className="lightbox-image" data-caption=""><PhoneCall className="text-black" /></a>
                     </div>

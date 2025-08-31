@@ -74,7 +74,7 @@ const Header = () => {
                 </nav>
               </div>
               <div className="btn-box">
-                <a href="tel:+91 9354249191" className="primary-btn one gradient-bg white-color"><PhoneCall className="text-white h-4 w-4" />Call Now </a>
+                <a href="tel:+91 935424 9191" className="primary-btn one gradient-bg white-color"><PhoneCall className="text-white h-4 w-4" />Call Now </a>
                 <a href="mailto:connect@triadflair.com" className="primary-btn one gradient-bg white-color border-btn"><Mail className="text-white h-4 w-4" />Get in touch</a>
               </div>
             </div>
