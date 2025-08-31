@@ -13,7 +13,7 @@ const Footer = () => {
               <div className="col-lg-5 col-md-12 col-sm-12 footer-column">
                 <div className="small-column">
                   <div className="shape" style={{ backgroundImage: `url(/assets/images/shape/shape-26.png)` }}></div>
-                  <figure className="footer-logo"><a href="#"><img src="assets/images/triadflair_logo.webp" alt="" /></a></figure>
+                  <figure className="footer-logo"><a href="#"><img src="/assets/images/triadflair_logo.webp" alt="" /></a></figure>
                   <p>
                     We help brands transform ideas into growth. our team delivers systems that are creative, reliable, and built to scale. Let’s build the future of your business—together.                    </p>
                   <h6>Follow Us:</h6>

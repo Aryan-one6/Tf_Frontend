@@ -42,7 +42,7 @@ const MobileMenu = ({ isOpen, setIsOpen }: Props) => {
         {/* Logo */}
         <div className="nav-logo">
           <Link to="/" onClick={closeMenu}>
-            <img src="assets/images/triadflair_logo.webp" alt="Triad Flair" />
+            <img src="/assets/images/triadflair_logo.webp" alt="Triad Flair" />
           </Link>
         </div>
 

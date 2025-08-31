@@ -9,7 +9,7 @@ const CtaHomeTwo = () => {
         <div className="container">
           <div className="cta-content">
             <div className="shape" style={{ backgroundImage: `url(/assets/images/shape/shape-22.png)` }}></div>
-            <figure className="image"><img src="assets/images/icons/loud-1.png" alt="" /></figure>
+            <figure className="image"><img src="/assets/images/icons/loud-1.png" alt="" /></figure>
             <h3>Hire Triad Flair Now</h3>
             <h2>Let’s Get In Touch.</h2>
             <p>Your Laboratory Instruments Should Serve you. Not the other way <br />around. We’re happy to help you.</p>

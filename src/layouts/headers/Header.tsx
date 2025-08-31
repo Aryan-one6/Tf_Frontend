@@ -38,7 +38,7 @@ const Header = () => {
         <div className="container">
           <div className="header-nav">
             <div className="logo-box">
-              <figure className="logo h-12 w-12"><Link to="/"><img src="assets/images/triadflair_logo.webp" alt="" /></Link></figure>
+              <figure className="logo h-12 w-12"><Link to="/"><img src="/assets/images/triadflair_logo.webp" alt="" /></Link></figure>
             </div>
             <div className="menu-area">
               <div className="mobile-nav-toggler" onClick={() => setIsOpen(true)}>
@@ -63,7 +63,7 @@ const Header = () => {
           <div className="container">
             <div className="header-nav">
               <div className="logo-box">
-                <figure className="logo"><Link to="/"><img src="assets/images/triadflair_logo.webp" alt="" /></Link></figure>
+                <figure className="logo"><Link to="/"><img src="/assets/images/triadflair_logo.webp" alt="" /></Link></figure>
               </div>
               <div className="menu-area">
                 <nav className="main-menu">
