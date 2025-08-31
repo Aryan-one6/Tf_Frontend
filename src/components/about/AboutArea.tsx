@@ -55,7 +55,7 @@ const AboutArea = () => {
                     At Triad Flair, we believe every brand has a story worth telling. Our mission is to craft strategies that not only help businesses grow but also create lasting impressions. With a blend of creativity, technology, and innovation, we deliver tailor-made branding, web development, and digital solutions that position your business for long-term success. For us, it’s not just about building brands—it’s about building trust, value, and sustainable growth in an ever-evolving digital world.   <a href="/">About Triad Flair | AI Marketing Company USA</a>                 </p>
                 </div>
                 <div className="btn-box">
-                  <Link to="tel:number" className="primary-btn one gradient-bg white-color border-btn"><span>Get in touch</span><i className="icon-1 gradient-color"></i></Link>
+                  <Link to="tel:+91 9354249191" className="primary-btn one gradient-bg white-color border-btn"><span>Get in touch</span><i className="icon-1 gradient-color"></i></Link>
                 </div>
               </div>
             </div>

@@ -19,7 +19,7 @@ const AboutHomeTwo = () => {
               </div>
               <div className="video-btn">
                 <a
-                  href="tel:number"
+                  href="tel:+91 9354249191"
                   style={{ cursor: "pointer" }}
                   className="lightbox-image" data-caption=""><PhoneCall className="text-black" /></a>
               </div>

@@ -33,7 +33,7 @@ const HeroHomeTwo = () => {
                   {/* <h2>Branding Agency</h2> */}
                   <div className="text-box">
                     <p >We work closely with you to create a brand that feels authentic, resonates with your audience, and sets you apart from the competition. Your vision is at the heart of everything we do.</p>
-                    <a href="#" className="primary-btn one gradient-bg white-color border-btn">Explore More</a>
+                    <a href="/service" className="primary-btn one gradient-bg white-color border-btn">Explore More</a>
                   </div>
                 </div>
 
@@ -54,7 +54,7 @@ const HeroHomeTwo = () => {
                     </div>
                     <div className="curve-text video-btn">
                       <a
-                        href="tel:number"
+                        href="tel:+91 9354249191"
                         style={{ cursor: "pointer" }}
                         className="lightbox-image" data-caption=""><PhoneCall className="text-black" /></a>
                     </div>
@@ -90,6 +90,7 @@ const HeroHomeTwo = () => {
               <li><img src="assets/images/icons/icon-11.png" alt="Chatbot Development Icon" /><span>Custom Chatbots </span></li>
               <li><img src="assets/images/icons/icon-11.png" alt="Website Development Icon" /><span>Web App Development</span></li>
               <li><img src="assets/images/icons/icon-11.png" alt="WordPress Plugin Icon" /><span>WordPress & Plugin</span></li>
+              
 
 
             </ul>
