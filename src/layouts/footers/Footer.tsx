@@ -59,7 +59,7 @@ const Footer = () => {
                           </ul>
                         </div>
                       </div>
-                    </div>
+                    </div> 
                     <div className="col-lg-4 col-md-6 col-sm-12 block-column">
                       <div className="footer-widget contact-widget">
                         <div className="widget-title">

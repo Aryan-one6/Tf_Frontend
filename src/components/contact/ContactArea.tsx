@@ -16,7 +16,7 @@ const ContactArea = () => {
                   <div className="single-item">
                     <div className="icon-box"><i className="icon-55"></i></div>
                     <h3>Say Hello</h3>
-                    <p><a href="mailto:support@gmail.com">support@gmail.com</a><br /><a href="tel:123456789">+123 456 789</a></p>
+                    <p><a href="mailto:connect@triadflair.com">connect@triadflair.com</a><br /><a href="tel:+91 935424 9191">+91 935424 9191</a></p>
                   </div>
                   <div className="single-item">
                     <div className="icon-box"><i className="icon-56"></i></div>
