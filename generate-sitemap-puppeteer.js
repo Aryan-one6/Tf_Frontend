@@ -5,7 +5,7 @@ import { resolve } from 'path';
 import fetch from 'node-fetch';
 import https from 'https';
 
-const BASE_URL = 'https://www.triadflair.com';
+const BASE_URL = 'https://triadflair.com';
 const sitemapPath = resolve('public', 'sitemap.xml');
 
 const visited = new Set();
@@ -65,11 +65,11 @@ async function generateSitemap() {
 
   // 🔁 Inject dynamic blog pages BEFORE writing the sitemap
   try {
-    const res = await fetch('https://www.triadflair.com/api/blogs');
+    const res = await fetch('https://triadflair.com/blog');
     const blogs = await res.json();
 
     blogs.forEach(blog => {
-      const blogUrl = `${BASE_URL}/blogs/${blog.slug}`;
+      const blogUrl = `${BASE_URL}/blog/${blog.slug}`;
       if (!visited.has(blogUrl)) {
         visited.add(blogUrl);
         console.log('📄 Injected blog:', blogUrl);
