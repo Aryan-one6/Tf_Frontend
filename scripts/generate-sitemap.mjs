@@ -6,7 +6,7 @@ import https from 'https';
 
 const BASE_URL = 'https://triadflair.com';
 mkdirSync('public', { recursive: true }); // ensure output dir exists
-const sitemapPath = resolve('public', 'sitemap.xml');
+const sitemapPath = resolve('public', 'newsitemap.xml');
 
 const visited = new Set();
 const queue = [
@@ -15,7 +15,7 @@ const queue = [
 ];
 
 function pingGoogle() {
-  const sitemapUrl = encodeURIComponent(`${BASE_URL}/sitemap.xml`);
+  const sitemapUrl = encodeURIComponent(`${BASE_URL}/newsitemap.xml`);
   https.get(`https://www.google.com/ping?sitemap=${sitemapUrl}`, res => {
     console.log(`📣 Pinged Google: ${res.statusCode}`);
   });
