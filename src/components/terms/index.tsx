@@ -10,7 +10,7 @@ const TermsOfServiceDetailsArea: FC = () => {
   const title = "Terms of Service | Triad Flair";
   const description =
     "Read Triad Flair's Terms of Service covering eligibility, acceptable use, intellectual property, payments, termination, and dispute resolution.";
-  const canonical = "https://www.triadflair.com/terms";
+  const canonical = "https://triadflair.com/terms";
   const h1 = "Terms of Service";
   const lastUpdated = "August 29, 2025";
 

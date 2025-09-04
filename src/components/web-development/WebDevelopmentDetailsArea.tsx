@@ -6,7 +6,7 @@ const WebDevelopmentDetailsArea: FC = () => {
   const description =
     "Create responsive web apps with React & Next.js, robust back-ends, headless CMS and e-commerce integrations—optimized for performance and SEO.";
   const h1 = "Web App Development services in USA | React, Next.js & CMS";
-  const canonical = "https://www.triadflair.com/web-development"; // update if needed
+  const canonical = "https://triadflair.com/web-development"; // update if needed
 
   const serviceJsonLd = {
     "@context": "https://schema.org",

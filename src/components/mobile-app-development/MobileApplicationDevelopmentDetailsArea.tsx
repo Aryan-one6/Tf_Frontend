@@ -8,7 +8,7 @@ const MobileApplicationDevelopmentDetailsArea: FC = () => {
     "Triad Flair designs cross-platform apps with React Native & Flutter and native apps for iOS & Android, featuring secure authentication, notifications and analytics.";
   const h1 =
     "Mobile App Development services in USA | Cross-Platform & Native";
-  const canonical = "https://www.triadflair.com/mobile-app-development"; // update if needed
+  const canonical = "https://triadflair.com/mobile-app-development"; // update if needed
 
   const serviceJsonLd = {
     "@context": "https://schema.org",

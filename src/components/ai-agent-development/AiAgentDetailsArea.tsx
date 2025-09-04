@@ -52,7 +52,7 @@ const AiAgentDetailsArea: FC = () => {
   const description =
     "Build autonomous AI agents for workflow automation, tool use/function calling, CRM/ERP integrations, and RAG—production-ready, secure, and measurable for U.S. companies.";
   const h1 = "AI Agents Development Services in USA | Custom AI Agents";
-  const canonical = "https://www.triadflair.com/ai-agents"; // update if your route differs
+  const canonical = "https://triadflair.com/ai-agents"; // update if your route differs
 
   const serviceJsonLd = {
     "@context": "https://schema.org",

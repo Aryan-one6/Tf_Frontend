@@ -9,7 +9,7 @@ const DisclaimerDetailsArea: FC = () => {
   const title = "Website Disclaimer | Triad Flair";
   const description =
     "Read Triad Flair’s website disclaimer regarding informational content, external links, warranties, liability limits, and testimonials.";
-  const canonical = "https://www.triadflair.com/disclaimer";
+  const canonical = "https://triadflair.com/disclaimer";
   const h1 = "Website Disclaimer";
   const lastUpdated = "August 29, 2025";
 

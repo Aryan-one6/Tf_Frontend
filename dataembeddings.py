@@ -60,21 +60,21 @@ def embed_with_gemini(content):
 
 # URLs to scrape
 urls = [
-  "https://www.triadflair.com/",
-  "https://www.triadflair.com/about",
-  "https://www.triadflair.com/ai-agent-development",
-  "https://www.triadflair.com/ai-automation",
-  "https://www.triadflair.com/blog",
-  "https://www.triadflair.com/chatbot-development",
-  "https://www.triadflair.com/contact",
-  "https://www.triadflair.com/digital-marketing",
-  "https://www.triadflair.com/disclaimer",
-  "https://www.triadflair.com/mobile-app-development",
-  "https://www.triadflair.com/pricing",
-  "https://www.triadflair.com/privacy",
-  "https://www.triadflair.com/service",
-  "https://www.triadflair.com/terms",
-  "https://www.triadflair.com/web-development"
+  "https://triadflair.com/",
+  "https://triadflair.com/about",
+  "https://triadflair.com/ai-agent-development",
+  "https://triadflair.com/ai-automation",
+  "https://triadflair.com/blog",
+  "https://triadflair.com/chatbot-development",
+  "https://triadflair.com/contact",
+  "https://triadflair.com/digital-marketing",
+  "https://triadflair.com/disclaimer",
+  "https://triadflair.com/mobile-app-development",
+  "https://triadflair.com/pricing",
+  "https://triadflair.com/privacy",
+  "https://triadflair.com/service",
+  "https://triadflair.com/terms",
+  "https://triadflair.com/web-development"
 ]
 
 # Scrape content

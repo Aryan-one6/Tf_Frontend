@@ -6,7 +6,7 @@ const ChatbotDetailsArea: FC = () => {
   const description =
     "Build AI-powered chatbots for web, WhatsApp, Messenger and Slack with NLP, CRM integrations and analytics—engage customers 24/7 across the U.S.";
   const h1 = "Chatbot Development Services in USA | Multichannel AI Bots";
-  const canonical = "https://www.triadflair.com/chatbot-development"; // update if needed
+  const canonical = "https://triadflair.com/chatbot-development"; // update if needed
 
   const serviceJsonLd = {
     "@context": "https://schema.org",

@@ -10,7 +10,7 @@ const NotFoundPage: FC = () => {
   const title = "404 Not Found | Triad Flair";
   const description =
     "The page you’re looking for doesn’t exist or may have been moved. Try the links below or return to the homepage.";
-  const canonical = "https://www.triadflair.com/404";
+  const canonical = "https://triadflair.com/404";
 
   return (
     <>

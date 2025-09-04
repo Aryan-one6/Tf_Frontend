@@ -18,7 +18,7 @@ const About: FC = () => {
 	const description =
 		"Discover how Triad Flair, founded in 2022, combines AI marketing, web and mobile expertise to build innovative digital solutions for businesses across the U.S.";
 
-	const canonical = "https://www.triadflair.com/about"; // adjust if your live URL differs
+	const canonical = "https://triadflair.com/about"; // adjust if your live URL differs
 	return (
 		<Wrapper>
 

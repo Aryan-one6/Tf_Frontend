@@ -6,7 +6,7 @@ const DigitalMarketingDetailsArea: FC = () => {
   const description =
     "Boost your U.S. brand with comprehensive digital marketing: keyword-driven SEO, social media campaigns, PPC ads, graphic design and automated email marketing";
   const h1 = "Digital Marketing Services in USA | SEO, PPC & Social";
-  const canonical = "https://www.triadflair.com/digital-marketing"; // update if needed
+  const canonical = "https://triadflair.com/digital-marketing"; // update if needed
 
   const serviceJsonLd = {
     "@context": "https://schema.org",

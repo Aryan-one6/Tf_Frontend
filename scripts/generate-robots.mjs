@@ -1,7 +1,7 @@
 import { writeFileSync, mkdirSync } from 'fs';
 
 const PROD = process.env.NODE_ENV === 'production';
-const BASE = 'https://www.triadflair.com';
+const BASE = 'https://triadflair.com';
 
 const lines = [
   'User-agent: *',

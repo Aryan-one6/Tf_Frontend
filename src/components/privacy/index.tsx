@@ -9,7 +9,7 @@ const PrivacyPolicyDetailsArea: FC = () => {
   const title = "Privacy Policy | Triad Flair";
   const description =
     "Learn how Triad Flair collects, uses, shares, and protects your personal information, and review your privacy choices and rights.";
-  const canonical = "https://www.triadflair.com/privacy";
+  const canonical = "https://triadflair.com/privacy";
   const h1 = "Privacy Policy";
   const lastUpdated = "August 29, 2025";
 

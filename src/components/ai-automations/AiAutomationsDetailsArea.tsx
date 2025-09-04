@@ -6,7 +6,7 @@ const AiAutomationsDetailsArea: FC = () => {
   const description =
     "Streamline operations with custom AI pipelines, robotic process automation, real-time analytics and scalable cloud solutions tailored for U.S. companies.";
   const h1 = "AI Automation Services for U.S. Businesses | Triad Flair";
-  const canonical = "https://www.triadflair.com/ai-automation"; // update if needed
+  const canonical = "https://triadflair.com/ai-automation"; // update if needed
 
   const serviceJsonLd = {
     "@context": "https://schema.org",
