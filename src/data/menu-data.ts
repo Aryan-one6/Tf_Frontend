@@ -14,7 +14,7 @@ const menu_data = [
       { link: "/ai-agent-development",      title: "AI Agent Development" },
       { link: "/web-development",      title: "Website Development" },
       { link: "/chatbot-development",      title: "Chatbot Integration" },
-      { link: "/service",      title: "Know More" },
+      { link: "/digital-marketing",      title: "Digital Marketing" },
     ],
   },
    {

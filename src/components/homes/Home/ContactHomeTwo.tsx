@@ -21,7 +21,7 @@ const ContactHomeTwo = () => {
                   <div className="single-item">
                     <div className="icon-box"><i className="icon-56"></i></div>
                     <h3>Location</h3>
-                    <p>235 Park Ave S, New York, NY 10010  United States</p>
+                    <p>Sector 62, Noida, India</p>
                   </div>
                 </div>
               </div>

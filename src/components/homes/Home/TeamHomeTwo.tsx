@@ -20,11 +20,11 @@ At Triad Flair, our strength lies in our people. Each member brings deep experti
             <div className="col-lg-3 col-md-6 col-sm-12 block-column"> 
               <div className="team-block-two">
                 <div className="shape" style={{ backgroundImage: `url(/assets/images/shape/shape-49.png)` }}></div>
-                <figure className="image"><img src="/Team/Aryan.webp" alt="" /></figure>
+                <figure className="image"><img src="/Team/Aryan1.webp" alt="" /></figure>
                 <div className="content-box">
-                  <div className="icon-box"><img src="assets/images/icons/icon-16.png" alt="" /></div>
+                  {/* <div className="icon-box"><img src="assets/images/icons/icon-16.png" alt="" /></div> */}
                   <h5>Aryan Parashar</h5>
-                  <span className="designation">Full Stack Dev | Founder</span>
+                  <span className="designation">Full Stack AI Engineer | Founder</span>
                 </div>
               </div>
             </div>
@@ -33,7 +33,6 @@ At Triad Flair, our strength lies in our people. Each member brings deep experti
                 <div className="shape" style={{ backgroundImage: `url(/assets/images/shape/shape-49.png)` }}></div>
                 <figure className="image"><img src="/Team/Suryansh.webp" alt="" /></figure>
                 <div className="content-box">
-                  <div className="icon-box"><img src="assets/images/icons/icon-16.png" alt="" /></div>
                   <h5>Suryansh Mishra</h5>
                   <span className="designation">Backend Dev Lead</span>
                 </div>
@@ -42,31 +41,8 @@ At Triad Flair, our strength lies in our people. Each member brings deep experti
             <div className="col-lg-3 col-md-6 col-sm-12 block-column">
               <div className="team-block-two">
                 <div className="shape" style={{ backgroundImage: `url(/assets/images/shape/shape-49.png)` }}></div>
-                <figure className="image"><img src="/Team/Vinayak.webp" alt="" /></figure>
-                <div className="content-box">
-                  <div className="icon-box"><img src="assets/images/icons/icon-16.png" alt="" /></div>
-                  <h5>Vinayak Pratap</h5>
-                  <span className="designation">AI Engineer Lead</span>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-6 col-sm-12 block-column">
-              <div className="team-block-two">
-                <div className="shape" style={{ backgroundImage: `url(/assets/images/shape/shape-49.png)` }}></div>
-                <figure className="image"><img src="/Team/Saumya.webp" alt="" /></figure>
-                <div className="content-box">
-                  <div className="icon-box"><img src="assets/images/icons/icon-16.png" alt="" /></div>
-                  <h5>Saumya Srijan</h5>
-                  <span className="designation">Software Er.</span>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-6 col-sm-12 block-column">
-              <div className="team-block-two">
-                <div className="shape" style={{ backgroundImage: `url(/assets/images/shape/shape-49.png)` }}></div>
                 <figure className="image"><img src="/Team/Ayush.webp" alt="" /></figure>
                 <div className="content-box">
-                  <div className="icon-box"><img src="assets/images/icons/icon-16.png" alt="" /></div>
                   <h5>Ayush Sharma</h5>
                   <span className="designation">Digital Marketer Lead</span>
                 </div>
@@ -75,14 +51,24 @@ At Triad Flair, our strength lies in our people. Each member brings deep experti
             <div className="col-lg-3 col-md-6 col-sm-12 block-column">
               <div className="team-block-two">
                 <div className="shape" style={{ backgroundImage: `url(/assets/images/shape/shape-49.png)` }}></div>
-                <figure className="image"><img src="/Team/Sumit.webp" alt="" /></figure>
+                <figure className="image"><img src="/Team/Saumya.webp" alt="" /></figure>
                 <div className="content-box">
-                  <div className="icon-box"><img src="assets/images/icons/icon-16.png" alt="" /></div>
-                  <h5>Sumit Singh</h5>
-                  <span className="designation">Mobile App Lead</span>
+                  <h5>Saumya Srijan</h5>
+                  <span className="designation">Software Er.</span>
                 </div>
               </div>
             </div>
+{/*            
+            <div className="col-lg-3 col-md-6 col-sm-12 block-column">
+              <div className="team-block-two">
+                <div className="shape" style={{ backgroundImage: `url(/assets/images/shape/shape-49.png)` }}></div>
+                <figure className="image"><img src="/Team/Sumit.webp" alt="" /></figure>
+                <div className="content-box">
+                  <h5>Sumit Singh</h5>
+                  <span className="designation">Mobile Application Lead</span>
+                </div>
+              </div>
+            </div> */}
           </div>
         </div>
       </section>
