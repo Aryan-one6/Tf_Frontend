@@ -35,11 +35,11 @@ const AboutHomeTwo = () => {
                   <div className="main-title">
                     <h3>About Us</h3>
                     <h2>We Build AI-Powered Experiences That Convert
- <br /><span className="gradient-color">Automation, chatbots, and design—working as one growth engine.</span></h2>
+                      <br /><span className="gradient-color">Automation, chatbots, and design—working as one growth engine.</span></h2>
                   </div>
                   <div className="inner-box">
                     <p>
-Triad Flair is a boutique automation & creative studio. We craft conversion-focused websites, build custom RAG chatbots trained on your content, and wire up CRM, WhatsApp, and Zapier/Make workflows so leads move from click to customer—automatically. Clear strategy, clean code, and measurable outcomes on every project.
+                      Triad Flair is a boutique automation & creative studio. We craft conversion-focused websites, build custom RAG chatbots trained on your content, and wire up CRM, WhatsApp, and Zapier/Make workflows so leads move from click to customer—automatically. Clear strategy, clean code, and measurable outcomes on every project.
                     </p>
                     <div className="list-box">
                       <ul className="text-list clearfix">

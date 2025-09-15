@@ -33,7 +33,7 @@ const HeroHomeTwo = () => {
                   {/* <h2>Branding Agency</h2> */}
                   <div className="text-box">
                     <p >We work closely with you to create a brand that feels authentic, resonates with your audience, and sets you apart from the competition. Your vision is at the heart of everything we do.</p>
-                    <a href="/service" className="primary-btn one gradient-bg white-color border-btn">Explore More</a>
+                    <a href="tel:+91 935424 9191" className="primary-btn one gradient-bg white-color border-btn">Book free Audit</a>
                   </div>
                 </div>
 

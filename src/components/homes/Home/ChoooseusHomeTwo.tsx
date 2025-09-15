@@ -51,7 +51,7 @@ Branding that works in the real world: a clear story, a distinctive look, and sy
                 <div className="col-lg-6 col-md-6 col-sm-12 block-column">
                   <div className="chooseus-block-one">
                     <div className="icon-box"><i className="icon-57"></i></div>
-                    <h3><a href="#">Startegy</a></h3>
+                    <h3><a href="#">Strategy</a></h3>
                     <p>A strategy-led branding partner delivering standout identities, fast websites, and automated customer journeys—built to scale.</p>
                   </div>
                 </div>

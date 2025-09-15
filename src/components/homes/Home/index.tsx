@@ -9,7 +9,7 @@ import PortfolioHomeTwo from "./PortfolioHomeTwo";
 import TestimonialHomeTwo from "./TestimonialHomeTwo";
 // import BlogHomeTwo from "./BlogHomeTwo";
 import ClientsHomeTwo from "./ClientsHomeTwo";
-import ContactHomeTwo from "./ContactHomeTwo";
+// import ContactHomeTwo from "./ContactHomeTwo";
 import Wrapper from "../../../layouts/Wrapper";
 import Header from "../../../layouts/headers/Header";
 import FooterFour from "../../../layouts/footers/Footer";
@@ -31,7 +31,7 @@ const HomeTwo = () => {
         {/* <TeamHomeTwo /> */}
         <TestimonialHomeTwo />
         {/* <BlogHomeTwo /> */}
-        <ContactHomeTwo />
+        {/* <ContactHomeTwo /> */}
         <FooterFour />
       </div>
     </Wrapper>

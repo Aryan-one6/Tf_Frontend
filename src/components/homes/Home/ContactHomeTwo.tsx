@@ -16,7 +16,7 @@ const ContactHomeTwo = () => {
                   <div className="single-item">
                     <div className="icon-box"><i className="icon-55"></i></div>
                     <h3>Say Hello</h3>
-                    <p><a href="mailto:Connect@triadfalir.com">Connect@triadfalir.com</a><br /><a href="tel:+91 935424 9191">+91 935424 9191</a></p>
+                    <p><a href="mailto:connect@triadfalir.com">connect@triadfalir.com</a><br /><a href="tel:+91 935424 9191">+91 935424 9191</a></p>
                   </div>
                   <div className="single-item">
                     <div className="icon-box"><i className="icon-56"></i></div>

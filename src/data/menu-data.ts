@@ -10,7 +10,7 @@ const menu_data = [
     
     has_dropdown: true, 
     sub_menus: [
-      { link: "/ai-automation",              title: "Ai Auomation" },
+      { link: "/ai-automation",              title: "AI Auomation" },
       { link: "/ai-agent-development",      title: "AI Agent Development" },
       { link: "/web-development",      title: "Website Development" },
       { link: "/chatbot-development",      title: "Chatbot Integration" },
@@ -41,7 +41,7 @@ const menu_data = [
       { link: "/contact",                title: "Contact Us" },
       { link: "/terms",              title: "Terms of Service" },
       { link: "/privacy",      title: "Privacy Policy" },
-      { link: "/disclaimer",      title: "Diclaimer" },
+      { link: "/disclaimer",      title: "Disclaimer" },
 
     ],
   },

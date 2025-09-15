@@ -68,7 +68,7 @@ const Footer = () => {
                         <div className="widget-content">
                           <ul className="info-list clearfix">
                             <li><i className="icon-19"></i><span>Sector 62, Noida, India</span></li>
-                            <li><i className="icon-20"></i><a href="mailto:Connect@triadfalir.com">Connect@triadfalir.com</a></li>
+                            <li><i className="icon-20"></i><a href="mailto:connect@triadfalir.com">connect@triadfalir.com</a></li>
                             <li><i className="icon-21"></i><a href="tel:+91 935424 9191">+91 935424 9191</a></li>
                           </ul>
                         </div>
@@ -83,7 +83,7 @@ const Footer = () => {
             <div className="footer-bottom-content">
               <div className="copyright"><p>Copyright &copy; {new Date().getFullYear()} by <a href="#">Triad Flair</a></p></div>
               <ul className="footer-nav">
-                <li><a href="/terms">Teams Of Services</a></li>
+                <li><a href="/terms">Terms Of Services</a></li>
                 <li><a href="/privacy">Privacy Policy</a></li>
                 <li><a href="/disclaimer">Disclaimer</a></li>
               </ul>
