@@ -69,7 +69,7 @@ const PricingHomeFour = ({ }: any) => {
             <div className="col-lg-4 col-md-6 col-sm-12 block-column">
               <div className="pricing-block-one">
                 <div className="shape" style={{ backgroundImage: `url(/assets/images/shape/shape-15.png)` }} />
-                <div className="icon-box"><i className="icon-9" /></div>
+                <div className="icon-box"><i className="icon-27" /></div>
 
                 <h3>Website Essentials</h3>
                 <p>Performance-first site that converts. Clean structure, on-page SEO, analytics—
@@ -125,7 +125,7 @@ const PricingHomeFour = ({ }: any) => {
             <div className="pricing-block-one">
                               <div className="shape" style={{ backgroundImage: `url(/assets/images/shape/shape-15.png)` }} />
 
-              <div className="icon-box"><i className="icon-6" /></div>
+              <div className="icon-box"><i className="icon-30" /></div>
               <h3>WhatsApp / SMS Automations</h3>
               <p>Twilio or WhatsApp Cloud for lead follow-ups, reminders, and alerts.</p>
               <ul className="pointers">
@@ -167,11 +167,26 @@ const PricingHomeFour = ({ }: any) => {
           </div>
         </div>
 
+
+{/* Extra note about other services */}
+<div className="row" style={{ marginTop: 20 }}>
+  <div className="col-12">
+    <div className="main-title" style={{ textAlign: "center" }}>
+      <p style={{ fontSize: "15px", color: "#ffffff" }}>
+        Looking for <strong>Digital Marketing</strong>, <strong>Mobile App Development</strong>, 
+        or other services? You can get detailed pricing information by 
+        <a href="/contact" style={{ textDecoration: "underline", marginLeft: 4 }}>Contacting us </a> directly. 
+        We’ll be happy to provide a tailored quote.
+      </p>
+    </div>
+  </div>
+</div>
+
         {/* Trust line */}
         <div className="row" style={{ marginTop: 30 }}>
           <div className="col-12">
             <div className="main-title" style={{ textAlign: "center" }}>
-              <h3>Transparent scopes • Flexible milestones • Reliability first</h3>
+              <h3><strong>Transparent scopes</strong> • <strong>Flexible milestones</strong> • <strong>Reliability first</strong></h3>
             </div>
           </div>
         </div>
