@@ -9,7 +9,7 @@ const IntroHomeTwo = ({ style_2 }: any) => {
             <div className="col-lg-4 col-md-6 col-sm-12 intro-block">
               <div className="intro-block-one">
                 <div className="decore"></div>
-                <h3>2012 – Our Beginning</h3>
+                <h3>2022 – Our Beginning</h3>
                 <p>Triad Flair was founded with a vision to empower businesses through creative digital solutions. What started as a small idea quickly turned into a mission to redefine branding and technology.</p>
               </div>
             </div>
