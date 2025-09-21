@@ -28,12 +28,13 @@ const HeroHomeTwo = () => {
                   </div>
 
                   <h1 className="title-box herokeywords !text-[20px] !leading-[24px] md:!text-[60px] md:!leading-[68px] lg:!text-[90px] lg:!leading-[104px]">
-                    AI Automation & Web Development agency in USA                  </h1>
+                   AI Automation & Web Development Agency for Growing Businesses                </h1>
 
                   {/* <h2>Branding Agency</h2> */}
                   <div className="text-box">
-                    <p >We work closely with you to create a brand that feels authentic, resonates with your audience, and sets you apart from the competition. Your vision is at the heart of everything we do.</p>
-                    <a href="tel:+91 935424 9191" className="primary-btn one gradient-bg white-color border-btn">Book free Audit</a>
+                    <p >
+Launch a custom chatbot, automate your workflows, and ship a high‑converting website—typically within 30 days.                      </p>
+                    <a href="tel:+91 935424 9191" className="primary-btn one gradient-bg white-color border-btn">Book an Audit</a>
                   </div>
                 </div>
 

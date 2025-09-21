@@ -67,7 +67,7 @@ const Footer = () => {
                         </div>
                         <div className="widget-content">
                           <ul className="info-list clearfix">
-                            <li><i className="icon-19"></i><span>Sector 62, Noida, India</span></li>
+                            <li><i className="icon-33"></i><a href="https://www.upwork.com/freelancers/~013af76fe94d3daa8a">Upwork</a></li>
                             <li><i className="icon-20"></i><a href="mailto:connect@triadfalir.com">connect@triadfalir.com</a></li>
                             <li><i className="icon-21"></i><a href="tel:+91 935424 9191">+91 935424 9191</a></li>
                           </ul>
