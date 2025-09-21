@@ -6,11 +6,11 @@ import Breacrumb from "../../common/Breacrumb";
 import FooterFour from "../../layouts/footers/Footer";
 
 const DisclaimerDetailsArea: FC = () => {
-  const title = "Website Disclaimer | Triad Flair";
+  const title = "Disclaimer | Triad Flair";
   const description =
     "Read Triad Flair’s website disclaimer regarding informational content, external links, warranties, liability limits, and testimonials.";
   const canonical = "https://triadflair.com/disclaimer";
-  const h1 = "Website Disclaimer";
+  const h1 = "Disclaimer";
   const lastUpdated = "August 29, 2025";
 
   const disclaimerJsonLd = {
