@@ -2,10 +2,10 @@ import { FC } from "react";
 import { Helmet } from "react-helmet-async";
 
 const WebDevelopmentDetailsArea: FC = () => {
-  const title = "Web App Development services in USA | React, Next.js & CMS";
+  const title = "Web App Development services | React, Next.js & CMS";
   const description =
     "Create responsive web apps with React & Next.js, robust back-ends, headless CMS and e-commerce integrations—optimized for performance and SEO.";
-  const h1 = "Web App Development services in USA | React, Next.js & CMS";
+  const h1 = "Web App Development services | React, Next.js & CMS";
   const canonical = "https://triadflair.com/web-development"; // update if needed
 
   const serviceJsonLd = {
@@ -135,7 +135,7 @@ const WebDevelopmentDetailsArea: FC = () => {
             <p style={{ marginTop: "10px" }}>
               Explore more:{" "}
               <a href="/web-development">
-                Web App Development services in USA | React, Next.js & CMS
+                Web App Development services | React, Next.js & CMS
               </a>{" "}
               · <a href="/ai-automation">AI Automation</a> ·{" "}
               <a href="/chatbot-development">Chatbot Development</a> ·{" "}

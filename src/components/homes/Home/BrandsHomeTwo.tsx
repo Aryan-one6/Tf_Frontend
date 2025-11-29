@@ -33,7 +33,7 @@ const BrandsHomeTwo = ({style_2} : any) => {
               <p>Strategy meets engineering to ship elegant brands, fast websites, and automation that measurably move the business.</p>
               <p>We prioritize clarity, performance, and maintainability—launching quickly, then hardening for scale with analytics, testing, and continuous improvement.
 
-C</p>
+</p>
               <div className="btn-box"><a href="mailto:connect@triadflair.com" className="primary-btn one gradient-bg white-color border-btn">Start Project</a></div>
             </div>
             <div className="fact-content">

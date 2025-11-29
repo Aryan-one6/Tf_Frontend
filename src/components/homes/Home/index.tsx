@@ -22,8 +22,8 @@ const HomeTwo = () => {
         <Header />
         <HeroHomeTwo />
         <AboutHomeTwo />
-        <ClientsHomeTwo />
         <BrandsHomeTwo />
+        <ClientsHomeTwo />
         <ServiceHomeTwo />
         <ChoooseusHomeTwo />
         <Technologies />

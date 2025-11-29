@@ -140,7 +140,7 @@ const TermsOfServiceDetailsArea: FC = () => {
 
                 <h3>13) Governing Law & Dispute Resolution</h3>
                 <p>
-                  These Terms are governed by the laws of the State of Delaware, USA, without
+                  These Terms are governed by the laws of the State of Delaware, without
                   regard to conflicts of law. Disputes shall be resolved in state or federal
                   courts located in Delaware unless otherwise agreed in writing.
                 </p>

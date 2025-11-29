@@ -2,10 +2,10 @@ import { FC } from "react";
 import { Helmet } from "react-helmet-async";
 
 const DigitalMarketingDetailsArea: FC = () => {
-  const title = "Digital Marketing Services in USA | SEO, PPC & Social";
+  const title = "Digital Marketing Services | SEO, PPC & Social";
   const description =
     "Boost your U.S. brand with comprehensive digital marketing: keyword-driven SEO, social media campaigns, PPC ads, graphic design and automated email marketing";
-  const h1 = "Digital Marketing Services in USA | SEO, PPC & Social";
+  const h1 = "Digital Marketing Services  | SEO, PPC & Social";
   const canonical = "https://triadflair.com/digital-marketing"; // update if needed
 
   const serviceJsonLd = {
@@ -130,7 +130,7 @@ const DigitalMarketingDetailsArea: FC = () => {
             <p style={{ marginTop: "10px" }}>
               Explore more:{" "}
               <a href="/digital-marketing">
-                Digital Marketing Services in USA | SEO, PPC & Social
+                Digital Marketing Services  | SEO, PPC & Social
               </a>{" "}
               · <a href="/web-development">Web Development</a> ·{" "}
               <a href="/ai-automation">AI Automation</a> ·{" "}

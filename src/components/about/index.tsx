@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 
 import AboutArea from "./AboutArea";
 import CtaHomeTwo from "../homes/Home/CtaHomeTwo";
-import TeamHomeTwo from "../homes/Home/TeamHomeTwo";
+// import TeamHomeTwo from "../homes/Home/TeamHomeTwo";
 import BrandsHomeTwo from "../homes/Home/BrandsHomeTwo";
 import IntroHomeTwo from "../homes/Home/IntroHomeTwo";
 import ClientsHomeTwo from "../homes/Home/ClientsHomeTwo";
@@ -14,7 +14,7 @@ import Breacrumb from "../../common/Breacrumb";
 import Footer from "../../layouts/footers/Footer";
 
 const About: FC = () => {
-	const title = "About Triad Flair | AI Marketing Company USA";
+	const title = "About Triad Flair | AI Marketing Company";
 	const description =
 		"Discover how Triad Flair, founded in 2022, combines AI marketing, web and mobile expertise to build innovative digital solutions for businesses across the U.S.";
 
@@ -48,7 +48,7 @@ const About: FC = () => {
 				<ChoooseusHomeTwo style_2={true} />
 
 				<BrandsHomeTwo style_2={true} />
-				<TeamHomeTwo />
+				{/* <TeamHomeTwo /> */}
 				<CtaHomeTwo />
 				<Footer />
 			</div>

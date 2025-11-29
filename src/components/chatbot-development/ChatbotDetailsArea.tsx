@@ -2,10 +2,10 @@ import { FC } from "react";
 import { Helmet } from "react-helmet-async";
 
 const ChatbotDetailsArea: FC = () => {
-  const title = "Chatbot Development Services in USA | Multichannel AI Bots";
+  const title = "Chatbot Development Services | Multichannel AI Bots";
   const description =
     "Build AI-powered chatbots for web, WhatsApp, Messenger and Slack with NLP, CRM integrations and analytics—engage customers 24/7 across the U.S.";
-  const h1 = "Chatbot Development Services in USA | Multichannel AI Bots";
+  const h1 = "Chatbot Development Services | Multichannel AI Bots";
   const canonical = "https://triadflair.com/chatbot-development"; // update if needed
 
   const serviceJsonLd = {
@@ -135,7 +135,7 @@ const ChatbotDetailsArea: FC = () => {
             <p style={{ marginTop: "10px" }}>
               Explore more:{" "}
               <a href="/chatbot-development">
-                Chatbot Development Services in USA | Multichannel AI Bots
+                Chatbot Development Services | Multichannel AI Bots
               </a>{" "}
               · <a href="/ai-automation">AI Automation</a> ·{" "}
               <a href="/contact">Contact</a>

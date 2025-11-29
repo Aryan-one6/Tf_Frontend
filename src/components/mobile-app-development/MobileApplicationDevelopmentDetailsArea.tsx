@@ -3,11 +3,11 @@ import { Helmet } from "react-helmet-async";
 
 const MobileApplicationDevelopmentDetailsArea: FC = () => {
   const title =
-    "Mobile App Development services in USA | Cross-Platform & Native";
+    "Mobile App Development services  | Cross-Platform & Native";
   const description =
     "Triad Flair designs cross-platform apps with React Native & Flutter and native apps for iOS & Android, featuring secure authentication, notifications and analytics.";
   const h1 =
-    "Mobile App Development services in USA | Cross-Platform & Native";
+    "Mobile App Development services  | Cross-Platform & Native";
   const canonical = "https://triadflair.com/mobile-app-development"; // update if needed
 
   const serviceJsonLd = {
@@ -134,7 +134,7 @@ const MobileApplicationDevelopmentDetailsArea: FC = () => {
             <p style={{ marginTop: "10px" }}>
               Explore more:{" "}
               <a href="/mobile-app-development">
-                Mobile App Development services in USA | Cross-Platform & Native
+                Mobile App Development services  | Cross-Platform & Native
               </a>{" "}
               · <a href="/web-development">Web Development</a> ·{" "}
               <a href="/chatbot-development">Chatbot Development</a> ·{" "}
