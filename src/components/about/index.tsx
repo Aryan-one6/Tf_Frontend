@@ -16,7 +16,7 @@ import Footer from "../../layouts/footers/Footer";
 const About: FC = () => {
 	const title = "About Triad Flair | AI Marketing Company";
 	const description =
-		"Discover how Triad Flair, founded in 2022, combines AI marketing, web and mobile expertise to build innovative digital solutions for businesses across the U.S.";
+		"Discover how Triad Flair, founded in 2022, combines AI marketing, web and mobile expertise to build innovative digital solutions for businesses across the Globe.";
 
 	const canonical = "https://triadflair.com/about"; // adjust if your live URL differs
 	return (

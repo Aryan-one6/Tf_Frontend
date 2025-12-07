@@ -2,10 +2,10 @@ import { FC } from "react";
 import { Helmet } from "react-helmet-async";
 
 const AiAutomationsDetailsArea: FC = () => {
-  const title = "AI Automation Services for U.S. Businesses | Triad Flair";
+  const title = "AI Automation Services for Businesses Worldwide | Triad Flair";
   const description =
     "Streamline operations with custom AI pipelines, robotic process automation, real-time analytics and scalable cloud solutions tailored for U.S. companies.";
-  const h1 = "AI Automation Services for U.S. Businesses | Triad Flair";
+  const h1 = "AI Automation Services for Businesses Worldwide | Triad Flair";
   const canonical = "https://triadflair.com/ai-automation"; // update if needed
 
   const serviceJsonLd = {
@@ -76,7 +76,7 @@ const AiAutomationsDetailsArea: FC = () => {
             </figure>
 
             {/* Keep original tags/structure; only text updated */}
-            <h2>AI Automation Services Tailored for U.S. Businesses</h2>
+            <h2>AI Automation Services Tailored for Businesses Worldwide</h2>
             <p>
               Triad Flair designs and integrates software-based{" "}
               <strong>AI automation</strong> to remove repetitive work in sales,
@@ -137,7 +137,7 @@ const AiAutomationsDetailsArea: FC = () => {
             <p style={{ marginTop: "10px" }}>
               Explore more:{" "}
               <a href="/ai-automation">
-                AI Automation Services for U.S. Businesses | Triad Flair
+                AI Automation Services for Businesses Worldwide | Triad Flair
               </a>{" "}
               · <a href="/chatbot-development">AI Chatbots</a> ·{" "}
             

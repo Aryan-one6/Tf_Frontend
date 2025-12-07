@@ -14,7 +14,7 @@ const AiAgentDetailsArea: FC = () => {
     name: "Triad Flair – AI Agents Development",
     url: canonical,
     description,
-    areaServed: "US",
+    areaServed: "IN",
     serviceType: [
       "Autonomous AI Agents (Agentic AI)",
       "Tool Use & Function Calling",
