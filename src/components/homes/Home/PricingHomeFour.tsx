@@ -26,7 +26,7 @@ const PricingHomeFour = ({ }: any) => {
 
                 <div className="price">
                   <span className="from">Starting from</span>
-                  <span className="amount">$899</span><span className="term">/sprint</span>
+                  <span className="amount">$699</span><span className="term">/sprint</span>
                 </div>
 
                 <a href="tel:+91 935424 9191" className="primary-btn one gradient-bg white-color">
@@ -56,7 +56,7 @@ const PricingHomeFour = ({ }: any) => {
 
                 <div className="price">
                   <span className="from">Starting from</span>
-                  <span className="amount">$1,199</span><span className="term">/setup</span>
+                  <span className="amount">$499</span><span className="term">/setup</span>
                 </div>
 
                 <a href="tel:+91 935424 9191" className="primary-btn one gradient-bg white-color">
@@ -85,7 +85,7 @@ const PricingHomeFour = ({ }: any) => {
 
                 <div className="price">
                   <span className="from">Starting from</span>
-                  <span className="amount">$1,599</span><span className="term">/project</span>
+                  <span className="amount">$999</span><span className="term">/project</span>
                 </div>
 
                 <a href="tel:+91 935424 9191" className="primary-btn one gradient-bg white-color">
@@ -112,7 +112,7 @@ const PricingHomeFour = ({ }: any) => {
                 </ul>
                 <div className="price">
                   <span className="from">Starting from</span>
-                  <span className="amount">$499</span><span className="term">/setup</span>
+                  <span className="amount">$399</span><span className="term">/setup</span>
                 </div>
                 <a href="tel:+91 935424 9191" className="primary-btn one gradient-bg white-color">
                   <span>Book Free Consulting</span><i className="icon-1 gradient-color" />
@@ -135,7 +135,7 @@ const PricingHomeFour = ({ }: any) => {
               </ul>
               <div className="price">
                 <span className="from">Starting from</span>
-                <span className="amount">$499</span><span className="term">/setup</span>
+                <span className="amount">$399</span><span className="term">/setup</span>
               </div>
               <a href="tel:+91 935424 9191" className="primary-btn one gradient-bg white-color">
                 <span>Book Free Consulting</span><i className="icon-1 gradient-color" />
