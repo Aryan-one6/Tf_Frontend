@@ -1,5 +1,5 @@
-import { useState, useEffect, useMemo } from "react";
-import { useIsMobile } from "../../../hooks/useIsMobile";
+import { useState,  useMemo } from "react";
+// import { useIsMobile } from "../../../hooks/useIsMobile";
 
 const businessPartners = [
   { name: "Hertz", logo: "/partners/hertz.webp", route: "/hertz-rental" },

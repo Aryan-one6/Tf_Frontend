@@ -104,23 +104,23 @@ const AiAutomationsDetailsArea: FC = () => {
     "Weekly syncs with IT or compliance"
   ];
 
-  const businessWins = [
-    {
-      title: "Faster SLAs",
-      description: "Chatbots, RPA, and agents shave minutes off every ticket.",
-      icon: <Zap size={20} />
-    },
-    {
-      title: "Cleaner data",
-      description: "Automations keep CRM, ERP, and BI tools in sync.",
-      icon: <BarChart3 size={20} />
-    },
-    {
-      title: "Happier teams",
-      description: "Ops folks focus on creative work instead of swivel-chair tasks.",
-      icon: <Smile size={20} />
-    }
-  ];
+  // const businessWins = [
+  //   {
+  //     title: "Faster SLAs",
+  //     description: "Chatbots, RPA, and agents shave minutes off every ticket.",
+  //     icon: <Zap size={20} />
+  //   },
+  //   {
+  //     title: "Cleaner data",
+  //     description: "Automations keep CRM, ERP, and BI tools in sync.",
+  //     icon: <BarChart3 size={20} />
+  //   },
+  //   {
+  //     title: "Happier teams",
+  //     description: "Ops folks focus on creative work instead of swivel-chair tasks.",
+  //     icon: <Smile size={20} />
+  //   }
+  // ];
 
   const industryTiles = [
     { label: "B2B SaaS", icon: <Building2 size={18} />, note: "Demo prep, onboarding, renewals." },
