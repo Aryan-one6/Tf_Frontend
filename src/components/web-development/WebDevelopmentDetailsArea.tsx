@@ -45,12 +45,7 @@ const WebDevelopmentDetailsArea: FC = () => {
     brand: { "@type": "Brand", name: "Triad Flair" }
   };
 
-  const metrics = [
-    { label: "Sites & apps launched", value: "110+" },
-    { label: "Core Web Vitals green", value: "95%" },
-    { label: "CMS handoffs", value: "40+" },
-    { label: "Stakeholder CSAT", value: "4.9/5" }
-  ];
+  
 
   const heroPills = [
     { title: "Plan", text: "Product + content workshop", icon: <CalendarCheck2 size={18} /> },

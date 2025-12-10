@@ -14,7 +14,7 @@ import {
   ShieldCheck,
   Smartphone,
   Smile,
-  Zap,ShoppingBag
+  ShoppingBag
 } from "lucide-react";
 
 const ChatbotDetailsArea: FC = () => {
@@ -44,13 +44,7 @@ const ChatbotDetailsArea: FC = () => {
     brand: { "@type": "Brand", name: "Triad Flair" }
   };
 
-  const metrics = [
-    { label: "Convos automated", value: "2M+" },
-    { label: "Channels supported", value: "8" },
-    { label: "Containment lift", value: "35%" },
-    { label: "CSAT after handoff", value: "4.8/5" }
-  ];
-
+ 
   const heroPills = [
     { title: "Plan", text: "Intent + journey mapping", icon: <CalendarCheck2 size={18} /> },
     { title: "Build", text: "NLP + LLM + actions", icon: <Hammer size={18} /> },

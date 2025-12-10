@@ -46,6 +46,10 @@ const Header = () => {
                 <i className="icon-bar text-white"></i>
                 <i className="icon-bar text-white"></i>
               </div>
+              <a href="tel:+919354249191" className="mobile-call-btn" aria-label="Call Triad Flair">
+                <PhoneCall className="h-4 w-4" />
+                <span>+91 93542 49191</span>
+              </a>
               <nav className="main-menu navbar-expand-md navbar-light">
                 <div className="collapse navbar-collapse show" id="navbarSupportedContent">
                   <NavMenu />
@@ -72,6 +76,10 @@ const Header = () => {
                   </div>
 
                 </nav>
+                <a href="tel:+919354249191" className="mobile-call-btn" aria-label="Call Triad Flair">
+                  <PhoneCall className="h-4 w-4" />
+                  <span>+91 93542 49191</span>
+                </a>
               </div>
               <div className="btn-box">
                 <a href="tel:+91 935424 9191" className="primary-btn one gradient-bg white-color"><PhoneCall className="text-white h-4 w-4" />Call Now </a>

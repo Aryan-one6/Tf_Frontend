@@ -44,13 +44,7 @@ const AiAgentDetailsArea: FC = () => {
     brand: { "@type": "Brand", name: "Triad Flair" }
   };
 
-  const metrics = [
-    { label: "Projects delivered", value: "120+" },
-    { label: "Hours saved per team", value: "15+" },
-    { label: "Tools we connect", value: "50+" },
-    { label: "Happy partners", value: "4.9/5" }
-  ];
-
+ 
   const heroPills = [
     {
       title: "Plan",

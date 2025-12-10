@@ -1335,4 +1335,25 @@
   .ai-agent-process{
     grid-template-columns: 1fr;
   }
+
+  .mobile-call-btn{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    border-radius: 9999px;
+    background: linear-gradient(180deg, rgba(76, 211, 139, 1) 0%, rgba(51, 164, 225, 1) 70.63%);
+    color: white;
+    font-size: 12px;
+    line-height: 2;
+    margin-left: 12px;
+    font-weight:900;
+  }
+
+  .mobile-call-btn svg{
+    width: 18px;
+    height: 18px;
+        color: white;
+
+  }
 }

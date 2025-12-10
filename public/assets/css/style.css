@@ -8039,6 +8039,10 @@ div#mCSB_1_container{
   gap: 4px;
 }
 
+.mobile-call-btn{
+  display: none;
+}
+
 .ai-agent-engagement__media{
   display: flex;
   align-items: center;

@@ -45,12 +45,7 @@ const AiAutomationsDetailsArea: FC = () => {
     brand: { "@type": "Brand", name: "Triad Flair" }
   };
 
-  const metrics = [
-    { label: "Processes automated", value: "150+" },
-    { label: "Hours saved monthly", value: "200+" },
-    { label: "Systems integrated", value: "35+" },
-    { label: "Stakeholder CSAT", value: "4.9/5" }
-  ];
+ 
 
   const heroPills = [
     { title: "Plan", text: "Workflow mapping + ROI", icon: <CalendarCheck2 size={18} /> },
