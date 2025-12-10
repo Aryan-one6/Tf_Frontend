@@ -11,9 +11,7 @@ import {
   MessageSquare,
   Rocket,
   ShieldCheck,
-  ShoppingBag,
-  Smile,
-  Zap
+  ShoppingBag
 } from "lucide-react";
 import ClientsHomeTwo from "../homes/Home/ClientsHomeTwo";
 
