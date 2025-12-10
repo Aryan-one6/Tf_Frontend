@@ -14,6 +14,7 @@ import Wrapper from "../../../layouts/Wrapper";
 import Header from "../../../layouts/headers/Header";
 import FooterFour from "../../../layouts/footers/Footer";
 import Technologies from "./Technologies";
+// import PartnersCarousel from "./PartnersCarousel";
 
 const HomeTwo = () => {
   return (
@@ -24,6 +25,7 @@ const HomeTwo = () => {
         <AboutHomeTwo />
         <BrandsHomeTwo />
         <ClientsHomeTwo />
+        {/* <PartnersCarousel/> */}
         <ServiceHomeTwo />
         <ChoooseusHomeTwo />
         <Technologies />

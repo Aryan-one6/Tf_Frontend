@@ -24,10 +24,10 @@ const PricingHomeFour = ({ }: any) => {
                   <li><span className="check">✓</span><span className="text"><strong>2-week support</strong> post-launch</span></li>
                 </ul>
 
-                <div className="price">
+                {/* <div className="price">
                   <span className="from">Starting from</span>
                   <span className="amount">$699</span><span className="term">/sprint</span>
-                </div>
+                </div> */}
 
                 <a href="tel:+91 935424 9191" className="primary-btn one gradient-bg white-color">
                   <span>Book Free Consulting</span><i className="icon-1 gradient-color" />
@@ -54,10 +54,10 @@ const PricingHomeFour = ({ }: any) => {
                   <li><span className="check">✓</span><span className="text"><strong>Analytics</strong> (sessions, CTR)</span></li>
                 </ul>
 
-                <div className="price">
+                {/* <div className="price">
                   <span className="from">Starting from</span>
                   <span className="amount">$499</span><span className="term">/setup</span>
-                </div>
+                </div> */}
 
                 <a href="tel:+91 935424 9191" className="primary-btn one gradient-bg white-color">
                   <span>Book Free Consulting</span><i className="icon-1 gradient-color" />
@@ -83,10 +83,10 @@ const PricingHomeFour = ({ }: any) => {
                   <li><span className="check">✓</span><span className="text">Core Web Vitals-oriented build</span></li>
                 </ul>
 
-                <div className="price">
+                {/* <div className="price">
                   <span className="from">Starting from</span>
                   <span className="amount">$999</span><span className="term">/project</span>
-                </div>
+                </div> */}
 
                 <a href="tel:+91 935424 9191" className="primary-btn one gradient-bg white-color">
                   <span>Book Free Consulting</span><i className="icon-1 gradient-color" />
@@ -110,88 +110,88 @@ const PricingHomeFour = ({ }: any) => {
                   <li><span className="check">✓</span><span className="text">Data import & dedupe</span></li>
                   <li><span className="check">✓</span><span className="text">Lead capture → CRM</span></li>
                 </ul>
-                <div className="price">
+                {/* <div className="price">
                   <span className="from">Starting from</span>
                   <span className="amount">$399</span><span className="term">/setup</span>
-                </div>
+                </div> */}
                 <a href="tel:+91 935424 9191" className="primary-btn one gradient-bg white-color">
                   <span>Book Free Consulting</span><i className="icon-1 gradient-color" />
                 </a>
+              </div>
             </div>
-          </div>
 
-          {/* WhatsApp/SMS Automations */}
-          <div className="col-lg-4 col-md-6 col-sm-12 block-column">
-            <div className="pricing-block-one">
-                              <div className="shape" style={{ backgroundImage: `url(/assets/images/shape/shape-15.png)` }} />
+            {/* WhatsApp/SMS Automations */}
+            <div className="col-lg-4 col-md-6 col-sm-12 block-column">
+              <div className="pricing-block-one">
+                <div className="shape" style={{ backgroundImage: `url(/assets/images/shape/shape-15.png)` }} />
 
-              <div className="icon-box"><i className="icon-30" /></div>
-              <h3>WhatsApp / SMS Automations</h3>
-              <p>Twilio or WhatsApp Cloud for lead follow-ups, reminders, and alerts.</p>
-              <ul className="pointers">
-                <li><span className="check">✓</span><span className="text">Lead auto-reply & SLA routing</span></li>
-                <li><span className="check">✓</span><span className="text">Message templates & opt-in</span></li>
-                <li><span className="check">✓</span><span className="text">Basic reporting</span></li>
-              </ul>
-              <div className="price">
+                <div className="icon-box"><i className="icon-30" /></div>
+                <h3>WhatsApp / SMS Automations</h3>
+                <p>Twilio or WhatsApp Cloud for lead follow-ups, reminders, and alerts.</p>
+                <ul className="pointers">
+                  <li><span className="check">✓</span><span className="text">Lead auto-reply & SLA routing</span></li>
+                  <li><span className="check">✓</span><span className="text">Message templates & opt-in</span></li>
+                  <li><span className="check">✓</span><span className="text">Basic reporting</span></li>
+                </ul>
+                {/* <div className="price">
                 <span className="from">Starting from</span>
                 <span className="amount">$399</span><span className="term">/setup</span>
+              </div> */}
+                <a href="tel:+91 935424 9191" className="primary-btn one gradient-bg white-color">
+                  <span>Book Free Consulting</span><i className="icon-1 gradient-color" />
+                </a>
               </div>
-              <a href="tel:+91 935424 9191" className="primary-btn one gradient-bg white-color">
-                <span>Book Free Consulting</span><i className="icon-1 gradient-color" />
-              </a>
             </div>
-          </div>
 
-          {/* Monthly Care & Support */}
-          <div className="col-lg-4 col-md-6 col-sm-12 block-column">
-            <div className="pricing-block-one">
-                              <div className="shape" style={{ backgroundImage: `url(/assets/images/shape/shape-15.png)` }} />
+            {/* Monthly Care & Support */}
+            <div className="col-lg-4 col-md-6 col-sm-12 block-column">
+              <div className="pricing-block-one">
+                <div className="shape" style={{ backgroundImage: `url(/assets/images/shape/shape-15.png)` }} />
 
-              <div className="icon-box"><i className="icon-7" /></div>
-              <h3>Monthly Care & Support</h3>
-              <p>Monitoring, small fixes, and change requests to keep ops humming.</p>
-              <ul className="pointers">
-                <li><span className="check">✓</span><span className="text">Uptime & run-log checks</span></li>
-                <li><span className="check">✓</span><span className="text">Minor tweaks & updates</span></li>
-                <li><span className="check">✓</span><span className="text">Monthly report</span></li>
-              </ul>
-              <div className="price">
+                <div className="icon-box"><i className="icon-7" /></div>
+                <h3>Monthly Care & Support</h3>
+                <p>Monitoring, small fixes, and change requests to keep ops humming.</p>
+                <ul className="pointers">
+                  <li><span className="check">✓</span><span className="text">Uptime & run-log checks</span></li>
+                  <li><span className="check">✓</span><span className="text">Minor tweaks & updates</span></li>
+                  <li><span className="check">✓</span><span className="text">Monthly report</span></li>
+                </ul>
+                {/* <div className="price">
                 <span className="from">Starting from</span>
                 <span className="amount">$249</span><span className="term">/mo</span>
+              </div> */}
+                <a href="tel:+91 935424 9191" className="primary-btn one gradient-bg white-color">
+                  <span>Book Free Consulting</span><i className="icon-1 gradient-color" />
+                </a>
               </div>
-              <a href="tel:+91 935424 9191" className="primary-btn one gradient-bg white-color">
-                <span>Book Free Consulting</span><i className="icon-1 gradient-color" />
-              </a>
+            </div>
+          </div>
+
+
+          {/* Extra note about other services */}
+          <div className="row" style={{ marginTop: 20 }}>
+            <div className="col-12">
+              <div className="main-title" style={{ textAlign: "center" }}>
+                <p style={{ fontSize: "15px", color: "#ffffff" }}>
+                  Looking for <strong>Digital Marketing</strong>, <strong>Mobile App Development</strong>,
+                  or other services? You can get detailed pricing information by
+                  <a href="/contact" style={{ textDecoration: "underline", marginLeft: 4 }}>Contacting us </a> directly.
+                  We’ll be happy to provide a tailored quote.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Trust line */}
+          <div className="row" style={{ marginTop: 30 }}>
+            <div className="col-12">
+              <div className="main-title" style={{ textAlign: "center" }}>
+                <h3><strong>Transparent scopes</strong> • <strong>Flexible milestones</strong> • <strong>Reliability first</strong></h3>
+              </div>
             </div>
           </div>
         </div>
-
-
-{/* Extra note about other services */}
-<div className="row" style={{ marginTop: 20 }}>
-  <div className="col-12">
-    <div className="main-title" style={{ textAlign: "center" }}>
-      <p style={{ fontSize: "15px", color: "#ffffff" }}>
-        Looking for <strong>Digital Marketing</strong>, <strong>Mobile App Development</strong>, 
-        or other services? You can get detailed pricing information by 
-        <a href="/contact" style={{ textDecoration: "underline", marginLeft: 4 }}>Contacting us </a> directly. 
-        We’ll be happy to provide a tailored quote.
-      </p>
-    </div>
-  </div>
-</div>
-
-        {/* Trust line */}
-        <div className="row" style={{ marginTop: 30 }}>
-          <div className="col-12">
-            <div className="main-title" style={{ textAlign: "center" }}>
-              <h3><strong>Transparent scopes</strong> • <strong>Flexible milestones</strong> • <strong>Reliability first</strong></h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section >
+      </section >
     </>
   );
 };

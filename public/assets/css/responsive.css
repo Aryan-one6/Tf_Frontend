@@ -1254,3 +1254,85 @@
   visibility: visible;
   transition: opacity .3s ease;
 }
+
+@media only screen and (max-width: 1199px){
+  .ai-agent-hero{
+    padding: 40px;
+  }
+}
+
+@media only screen and (max-width: 991px){
+  .ai-agent-hero,
+  .ai-agent-case-study,
+  .ai-agent-cta{
+    flex-direction: column;
+  }
+
+  .ai-agent-hero__highlights{
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .ai-agent-hero{
+    padding: 32px;
+    gap: 28px;
+  }
+
+  .ai-agent-hero__card{
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 767px){
+  .ai-agent-hero,
+  .ai-agent-cta,
+  .ai-agent-case-study{
+    padding: 28px;
+  }
+
+  .ai-agent-btn{
+    width: 100%;
+  }
+
+  .ai-agent-section__header h3{
+    font-size: 28px;
+  }
+
+  .ai-agent-hero__content h2{
+    font-size: 32px;
+  }
+
+  .ai-agent-hero__pills{
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+
+  .ai-agent-hero__pill{
+    padding: 10px 12px;
+  }
+
+  .ai-agent-steps{
+    flex-direction: column;
+  }
+
+  .ai-agent-step{
+    flex-direction: column;
+  }
+
+  .ai-agent-step__icon{
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .ai-agent-step__connector{
+    width: calc(100% - 40px);
+    height: 2px;
+  }
+
+  .ai-agent-focus-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .ai-agent-process{
+    grid-template-columns: 1fr;
+  }
+}
