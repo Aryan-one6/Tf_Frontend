@@ -16,7 +16,7 @@ const ChoooseusHomeTwo = ({ style_2 }: any) => {
             </div>
             <div className="title-text">
               <p>
-Branding that works in the real world: a clear story, a distinctive look, and systems your team can run. We pair design craft with automation, SEO, and AI chatbots to turn brand moments into measurable growth.                </p>
+                Branding that works in the real world: a clear story, a distinctive look, and systems your team can run. We pair design craft with automation, SEO, and AI chatbots to turn brand moments into measurable growth.                </p>
             </div>
           </div>
           <div className="row">
@@ -29,29 +29,37 @@ Branding that works in the real world: a clear story, a distinctive look, and sy
               <div className="row">
                 <div className="col-lg-6 col-md-6 col-sm-12 block-column">
                   <div className="chooseus-block-one">
-                    <div className="icon-box"><i className="icon-57"></i></div>
-                    <h3><a href="#">Development</a></h3>
+                    <div className="chooseus-block-one__title">
+                      <div className="icon-box"><i className="icon-57"></i></div>
+                      <h3><a href="#">Development</a></h3>
+                    </div>
                     <p>Production-ready websites and internal tools with clean architecture, performance budgets, and CI/CD for predictable releases.</p>
                   </div>
                 </div>
                 <div className="col-lg-6 col-md-6 col-sm-12 block-column">
                   <div className="chooseus-block-one">
-                    <div className="icon-box"><i className="icon-57"></i></div>
-                    <h3><a href="#">Global Research</a></h3>
+                    <div className="chooseus-block-one__title">
+                      <div className="icon-box"><i className="icon-57"></i></div>
+                      <h3><a href="#">Global Research</a></h3>
+                    </div>
                     <p>Discovery workshops and stack audits to identify quick wins, integration paths, and the lowest-effort, highest-ROI automation opportunities.</p>
                   </div>
                 </div>
                 <div className="col-lg-6 col-md-6 col-sm-12 block-column">
                   <div className="chooseus-block-one">
-                    <div className="icon-box"><i className="icon-57"></i></div>
-                    <h3><a href="#">Advantage</a></h3>
+                    <div className="chooseus-block-one__title">
+                      <div className="icon-box"><i className="icon-57"></i></div>
+                      <h3><a href="#">Advantage</a></h3>
+                    </div>
                     <p>Operational advantage through dependable systems: monitoring, error handling, documentation, and training that keep teams moving.</p>
                   </div>
                 </div>
                 <div className="col-lg-6 col-md-6 col-sm-12 block-column">
                   <div className="chooseus-block-one">
-                    <div className="icon-box"><i className="icon-57"></i></div>
-                    <h3><a href="#">Strategy</a></h3>
+                    <div className="chooseus-block-one__title">
+                      <div className="icon-box"><i className="icon-57"></i></div>
+                      <h3><a href="#">Strategy</a></h3>
+                    </div>
                     <p>A strategy-led branding partner delivering standout identities, fast websites, and automated customer journeys—built to scale.</p>
                   </div>
                 </div>

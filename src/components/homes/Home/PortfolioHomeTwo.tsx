@@ -1,89 +1,54 @@
-import { Link } from "react-router-dom";
+import "swiper/css";
+import "swiper/css/free-mode";
+import { Autoplay, FreeMode } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
-
+const logos = [
+  { src: "/Partners/car.webp", alt: "Car Rentals" },
+  { src: "/Partners/Make.webp", alt: "Make" },
+  { src: "/Partners/n8n.webp", alt: "n8n" },
+  { src: "/Partners/Retell.webp", alt: "Retell" },
+  { src: "/Partners/Zoho.webp", alt: "Zoho" },
+  { src: "/Partners/Zapier.webp", alt: "Zapier Integration" },
+  { src: "/Partners/Make.webp", alt: "Make Automation" },
+  { src: "/Partners/Retell.webp", alt: "Retell Voice" },
+];
 
 const PortfolioHomeTwo = () => {
   return (
     <>
-      <section className="portfolio-section-three text-center">
+      <section className="portfolio-section-three text-center logo-slider">
         <div className="container">
           <div className="main-title">
             <h3>Brand Portfolio</h3>
-            <h2>Here’s Our Latest <span className="gradient-color">Project</span></h2>
-            <p>
-              Here are some of our recent projects—each one showcases a modern, 
-
- <br />responsive design built with best practices in mind.
-              </p>
+            <h2>Trusted by modern <span className="gradient-color">brands & platforms</span></h2>
+            <p>We build automations, chatbots, and product experiences for high-growth teams across SaaS, ecommerce, and services.</p>
           </div>
-          <div className="row">
-            <div className="col-lg-4 col-md-6 col-sm-12 block-column">
-              <div className="portfolio-block-three">
-                <figure className="image"><img src="assets/images/portfolio/portfolio-9.webp" alt="" /></figure>
-                <div className="content-box">
-                  <div className="link"><Link to="/portfolio-details"><i className="icon-52"></i></Link></div>
-                  <p>Web Design</p>
-                  <h3>Affluence Travel Booking</h3>
+          <Swiper
+            slidesPerView={2}
+            spaceBetween={20}
+            freeMode
+            loop
+            autoplay={{ delay: 0, disableOnInteraction: false }}
+            speed={4000}
+            breakpoints={{
+              576: { slidesPerView: 3 },
+              768: { slidesPerView: 4 },
+              1024: { slidesPerView: 5 },
+            }}
+            modules={[FreeMode, Autoplay]}
+            className="logo-slider__track"
+          >
+            {logos.map((logo) => (
+              <SwiperSlide key={logo.alt}>
+                <div className="logo-card">
+                  <img src={logo.src} alt={logo.alt} />
                 </div>
-              </div>
-            </div>
-           
-          
-            <div className="col-lg-4 col-md-6 col-sm-12 block-column">
-              <div className="portfolio-block-three">
-                <figure className="image"><img src="assets/images/portfolio/portfolio-11.jpg" alt="" /></figure>
-                <div className="content-box">
-                  <div className="link"><Link to="/portfolio-details"><i className="icon-52"></i></Link></div>
-                  <p>Web Design</p>
-                  <h3>Alta Technologies</h3>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6 col-sm-12 block-column">
-              <div className="portfolio-block-three">
-                <figure className="image"><img src="assets/images/portfolio/portfolio-8.webp" alt="" /></figure>
-                <div className="content-box">
-                  <div className="link"><Link to="/portfolio-details"><i className="icon-52"></i></Link></div>
-                  <p>Web Design</p>
-                  <h3>Book Your car Rental</h3>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6 col-sm-12 block-column">
-              <div className="portfolio-block-three">
-                <figure className="image"><img src="assets/images/portfolio/portfolio-13.jpg" alt="" /></figure>
-                <div className="content-box">
-                  <div className="link"><Link to="/portfolio-details"><i className="icon-52"></i></Link></div>
-                  <p>Web Design</p>
-                  <h3>Application Development</h3>
-                </div>
-              </div>
-            </div>
-              <div className="col-lg-4 col-md-6 col-sm-12 block-column">
-              <div className="portfolio-block-three">
-                <figure className="image"><img src="assets/images/portfolio/portfolio-10.jpg" alt="" /></figure>
-                <div className="content-box">
-                  <div className="link"><Link to="/portfolio-details"><i className="icon-52"></i></Link></div>
-                  <p>Web Design</p>
-                  <h3>Application Development</h3>
-                </div>
-              </div>
-            </div>
-             <div className="col-lg-4 col-md-6 col-sm-12 block-column">
-              <div className="portfolio-block-three">
-                <figure className="image"><img src="assets/images/portfolio/portfolio-10.webp" alt="" /></figure>
-                <div className="content-box">
-                  <div className="link"><Link to="/portfolio-details"><i className="icon-52"></i></Link></div>
-                  <p>Web Design</p>
-                  <h3>Wellmist</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-     
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </section>
-
     </>
   );
 };

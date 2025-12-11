@@ -1,5 +1,6 @@
 
 import { Link } from "react-router-dom";
+import { Settings2, Bot, MonitorSmartphone, MessageCircle, ArrowRight } from "lucide-react";
 
 
 const ServiceHomeTwo = () => {
@@ -21,7 +22,9 @@ const ServiceHomeTwo = () => {
                   We design and deploy custom AI workflows—data ingestion, model training, containerized deployment, continuous monitoring—to automate complex business processes and drive intelligent decision-making.
 
                 </p>
-                <div className="icon-box"><img src="assets/images/icons/icon-12.png" alt="" /></div>
+                <div className="icon-box">
+                  <Settings2 size={42} strokeWidth={1.5} aria-hidden="true" />
+                </div>
                 <div className="link-box"><Link to="/ai-automation"><i className="icon-13"></i></Link></div>
               </div>
             </div>
@@ -33,7 +36,9 @@ const ServiceHomeTwo = () => {
                   We build smart digital assistants called AI agents. These AI agents can chat, answer questions, solve problems, and even help run your business 24/7.
                   We create powerful tools that think, learn, and grow with you.
                 </p>
-                <div className="icon-box"><img src="assets/images/icons/icon-14.png" alt="Digital Marketing Icon" /></div>
+                <div className="icon-box">
+                  <Bot size={42} strokeWidth={1.5} aria-hidden="true" />
+                </div>
                 <div className="link-box"><Link to="/ai-agent-development"><i className="icon-13"></i></Link></div>
               </div>
             </div>
@@ -45,7 +50,9 @@ const ServiceHomeTwo = () => {
                   We craft responsive, SEO-optimized websites using React, Next.js, or WordPress, with performance tuning, accessibility compliance, and headless CMS integrations for seamless content management.
 
                 </p>
-                <div className="icon-box"><img src="assets/images/icons/icon-15.png" alt="" /></div>
+                <div className="icon-box">
+                  <MonitorSmartphone size={42} strokeWidth={1.5} aria-hidden="true" />
+                </div>
                 <div className="link-box"><Link to="/web-development"><i className="icon-13"></i></Link></div>
               </div>
             </div>
@@ -56,13 +63,15 @@ const ServiceHomeTwo = () => {
                 <p>
                   We build omnichannel chatbots with NLP, intent recognition, and seamless human handoff—available on web, WhatsApp, Messenger, and Slack—to streamline support and qualify leads 24/7.
                 </p>
-                <div className="icon-box"><img src="assets/images/icons/icon-13.png" alt="" /></div>
+                <div className="icon-box">
+                  <MessageCircle size={42} strokeWidth={1.5} aria-hidden="true" />
+                </div>
                 <div className="link-box"><Link to="/chatbot-development"><i className="icon-13"></i></Link></div>
               </div>
             </div>
           </div>
           <div className="extra-btn text-center">
-            <Link to="/service" className="primary-btn one gradient-bg white-color border-btn">See All Services</Link>
+            <Link to="/service" className="primary-btn one gradient-bg white-color border-btn">See All Services<ArrowRight className="h-5 w-5"/></Link>
           </div>
         </div>
       </section>
