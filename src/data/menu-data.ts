@@ -1,7 +1,14 @@
  
+export type MenuItem = {
+  id?: number;
+  title: string;
+  link?: string;
+  has_dropdown?: boolean;
+  sub_menus?: MenuItem[];
+};
 
 // menu data 
-const menu_data = [
+const menu_data: MenuItem[] = [
  
  
   {
@@ -10,11 +17,41 @@ const menu_data = [
     
     has_dropdown: true, 
     sub_menus: [
-      { link: "/ai-automation",              title: "AI Auomation" },
-      { link: "/ai-agent-development",      title: "AI Agent Development" },
+      { 
+        link: "/ai-automation",
+        title: "AI Automation",
+        has_dropdown: true,
+        sub_menus: [
+          { link: "/ai-automation#workflow-automation", title: "Workflow Automation" },
+          { link: "/ai-automation#crm-automation", title: "CRM & Lead Automation" },
+          { link: "/ai-automation#operations", title: "Operations & Back-Office Bots" },
+          { link: "/ai-automation#reporting", title: "Reporting & Dashboards" },
+        ]
+      },
+      { 
+        link: "/ai-agent-development",
+        title: "AI Agent Development",
+        has_dropdown: true,
+        sub_menus: [
+          { link: "/ai-agent-development#sales-agents", title: "Sales Enablement Agents" },
+          { link: "/ai-agent-development#support-agents", title: "Customer Support Agents" },
+          { link: "/ai-agent-development#productivity", title: "Internal Productivity Agents" },
+          { link: "/ai-agent-development#training", title: "Training & Knowledge Agents" },
+        ]
+      },
       { link: "/web-development",      title: "Website Development" },
       { link: "/chatbot-development",      title: "Chatbot Integration" },
-      { link: "/digital-marketing",      title: "Digital Marketing" },
+      { 
+        link: "/digital-marketing",
+        title: "Digital Marketing",
+        has_dropdown: true,
+        sub_menus: [
+          { link: "/digital-marketing#seo", title: "SEO" },
+          { link: "/digital-marketing#smo", title: "SMO" },
+          { link: "/digital-marketing#ppc", title: "PPC" },
+          { link: "/digital-marketing#graphic-design", title: "Graphic Designings" },
+        ]
+      },
     ],
   },
    {
