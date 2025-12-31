@@ -38,7 +38,7 @@ export async function listPosts(opts: ListOpts = {}): Promise<{ posts: any[]; to
     headers: authHeaders(),
     cache: "no-store",
   });
-  if (!res.ok) throw new Error(`CMS error ${res.status}`);
+  if (!res.ok) throw new Error(`CMS errors ${res.status}`);
 
   const data = await res.json();
   const posts = Array.isArray(data?.posts) ? data.posts : Array.isArray(data) ? data : [];
