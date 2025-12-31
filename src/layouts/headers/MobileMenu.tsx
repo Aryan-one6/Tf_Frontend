@@ -1,29 +1,91 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import menu_data from "../../data/menu-data";
+import menu_data, { MenuItem } from "../../data/menu-data";
 import { PhoneCall } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
 type Props = { isOpen: boolean; setIsOpen: (v: boolean) => void };
 
 const MobileMenu = ({ isOpen, setIsOpen }: Props) => {
-  const [open, setOpen] = useState<string | null>(null);
-  const toggle = (t: string) => setOpen(open === t ? null : t);
+  const [openMap, setOpenMap] = useState<Record<string, boolean>>({});
+  const toggle = (key: string) =>
+    setOpenMap((prev) => ({ ...prev, [key]: !prev[key] }));
   const closeMenu = () => setIsOpen(false);
+
+  const renderMobileMenu = (items: MenuItem[], parentKey = "root", depth = 0) =>
+    items.map((item, idx) => {
+      const key = `${parentKey}-${idx}`;
+      const hasChildren = Boolean(item.sub_menus?.length);
+      const expanded = Boolean(openMap[key]);
+      const liClass = [
+        depth === 0 || hasChildren ? "dropdown" : "",
+        expanded ? "current" : "",
+      ]
+        .filter(Boolean)
+        .join(" ");
+      const titleNode = item.link ? (
+        <Link to={item.link ?? "/"} onClick={closeMenu}>
+          {item.title}
+        </Link>
+      ) : (
+        <a
+          onClick={() => toggle(key)}
+          role="button"
+          aria-expanded={expanded}
+          aria-controls={`submenu-${key}`}
+        >
+          {item.title}
+        </a>
+      );
+
+      return (
+        <li key={key} className={liClass || undefined}>
+          {titleNode}
+          {hasChildren && (
+            <>
+              <div
+                className={`dropdown-btn ${expanded ? "open" : ""}`}
+                onClick={() => toggle(key)}
+                aria-label="Toggle submenu"
+                aria-controls={`submenu-${key}`}
+                aria-expanded={expanded}
+              >
+                <span className="fa fa-angle-right" />
+              </div>
+              <ul
+                id={`submenu-${key}`}
+                className={`submenu depth-${depth + 1}`}
+                style={{ display: expanded ? "block" : "none" }}
+              >
+                {renderMobileMenu(item.sub_menus ?? [], key, depth + 1)}
+              </ul>
+            </>
+          )}
+        </li>
+      );
+    });
 
   // 👉 Open "Services" by default on MOBILE each time the menu opens
   useEffect(() => {
-    if (!isOpen) return;
+    if (!isOpen) {
+      setOpenMap({});
+      return;
+    }
     if (typeof window === "undefined") return;
     const isMobile = window.matchMedia("(max-width: 767px)").matches;
 
     if (isMobile) {
-      const servicesTitle =
-        menu_data.find((m) => m.has_dropdown && /service/i.test(m.title))?.title ?? null;
-      setOpen(servicesTitle);
+      const servicesIndex = menu_data.findIndex(
+        (m) => m.has_dropdown && /service/i.test(m.title)
+      );
+      if (servicesIndex >= 0) {
+        setOpenMap({ [`root-${servicesIndex}`]: true });
+      } else {
+        setOpenMap({});
+      }
     } else {
       // on larger screens, don't pre-open anything
-      setOpen(null);
+      setOpenMap({});
     }
   }, [isOpen]);
 
@@ -49,55 +111,7 @@ const MobileMenu = ({ isOpen, setIsOpen }: Props) => {
         {/* Navigation */}
         <nav className="menu-outer">
           <ul className="navigation clearfix">
-            {menu_data.map((item, idx) => (
-              <li
-                key={item.title}
-                className={`dropdown ${open === item.title ? "current" : ""}`}
-              >
-                {!item.has_dropdown ? (
-                  <Link to={item.link ?? "/"} onClick={closeMenu}>
-  {item.title}
-</Link>
-                ) : (
-                  <>
-                    {/* Make the title toggle the submenu */}
-                    <a
-                      onClick={() => toggle(item.title)}
-                      aria-expanded={open === item.title}
-                      aria-controls={`submenu-${idx}`}
-                      role="button"
-                    >
-                      {item.title}
-                    </a>
-
-                    {/* Theme expects .dropdown-btn; keep it in sync */}
-                    <div
-                      className={`dropdown-btn ${open === item.title ? "open" : ""}`}
-                      onClick={() => toggle(item.title)}
-                      aria-label="Toggle submenu"
-                      aria-controls={`submenu-${idx}`}
-                      aria-expanded={open === item.title}
-                    >
-                      <span className="fa fa-angle-right" />
-                    </div>
-
-                    <ul
-                      id={`submenu-${idx}`}
-                      className="submenu"
-                      style={{ display: open === item.title ? "block" : "none" }}
-                    >
-                      {item.sub_menus?.map((sm) => (
-                        <li key={sm.title}>
-                          <Link to={sm.link ?? "/"} onClick={closeMenu}>
-  {sm.title}
-</Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </>
-                )}
-              </li>
-            ))}
+            {renderMobileMenu(menu_data)}
           </ul>
         </nav>
 
