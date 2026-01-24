@@ -8,7 +8,6 @@ import ServiceHomeTwo from "./ServiceHomeTwo";
 // import TeamHomeTwo from "./TeamHomeTwo";
 // import TestimonialHomeTwo from "./TestimonialHomeTwo";
 // import BlogHomeTwo from "./BlogHomeTwo";
-import ClientsHomeTwo from "./ClientsHomeTwo";
 // import ContactHomeTwo from "./ContactHomeTwo";
 import Wrapper from "../../../layouts/Wrapper";
 import Header from "../../../layouts/headers/Header";
@@ -26,15 +25,13 @@ const HomeTwo = () => {
         <HeroHomeTwo />
         <AboutHomeTwo />
         <BrandsHomeTwo />
-        <ClientsHomeTwo />
+        <ServiceHomeTwo />
                 <ProductShowcase />
 
-        <ServiceHomeTwo />
         {/* <ChoooseusHomeTwo /> */}
         <Technologies />
         {/* <PortfolioHomeTwo /> */}
-                <GoogleReviewsSlider />
-
+        <GoogleReviewsSlider />
         {/* <TestimonialHomeTwo /> */}
         <FooterFour />
       </div>

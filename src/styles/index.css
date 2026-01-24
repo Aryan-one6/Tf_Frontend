@@ -117,4 +117,22 @@
   border-color: rgba(255, 255, 255, 0.2);
 }
 
+/* Compact hero overrides */
+.compact-hero {
+  padding-top: 80px;
+  padding-bottom: 60px;
+}
+.compact-hero .hero-upper-content-three {
+  margin-bottom: 20px;
+}
+.compact-hero .hero-lower-content {
+  margin-top: 10px;
+  padding-top: 10px;
+}
+@media (max-width: 991.98px) {
+  .compact-hero {
+    padding-top: 60px;
+    padding-bottom: 50px;
+  }
+}
 

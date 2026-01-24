@@ -1,7 +1,15 @@
 
 import { PhoneCall } from "lucide-react";
+import "./about-home-two.css";
+// import ClientsHomeTwo from "./ClientsHomeTwo";
 
 const AboutHomeTwo = () => {
+  const logos = [
+    { src: "/Partners/Make.webp", alt: "Make" },
+    { src: "/Partners/n8n.webp", alt: "n8n" },
+    { src: "/Partners/Zapier.webp", alt: "Zapier" },
+    { src: "/Partners/Retell.webp", alt: "Retell" },
+  ];
 
   return (
     <>
@@ -39,19 +47,26 @@ const AboutHomeTwo = () => {
                   </div>
                   <div className="inner-box">
                     <p>
-                      Triad Flair is a boutique automation & creative studio. We craft conversion-focused websites, build custom RAG chatbots trained on your content, and wire up CRM, WhatsApp, and Zapier/Make workflows so leads move from click to customer—automatically. Clear strategy, clean code, and measurable outcomes on every project.
+                      Triad Flair is a boutique automation & creative studio. We craft conversion-focused websites, build custom RAG chatbots trained on your content, and wire up CRM, WhatsApp, and Zapier/Make workflows so leads move from click to customer—automatically. Clear strategy, clean code, and measurable outcomes on every project. These are Brands we work with most : 
                     </p>
-                    <div className="list-box">
-                      <ul className="text-list clearfix">
-                        <li><i className="icon-13"></i>AI Automation & Workflows</li>
-                        <li><i className="icon-13"></i>Custom Chatbots (RAG + multilingual)</li>
-                      </ul>
-                      <ul className="text-list clearfix">
-                        <li><i className="icon-13"></i>Websites & WordPress/Plugin Development</li>
-                        <li><i className="icon-13"></i>SEO, Performance & Analytics</li>
-                      </ul>
+
+                    <div className="list-box mt-4">
+                      {/* <p className=" text-white mb-3">Brands we work with most</p> */}
+                      <div className="brands-grid">
+                        {logos.map((logo, i) => (
+                          <div key={i} className="brand-card">
+                            <img
+                              src={logo.src}
+                              alt={logo.alt}
+                              className="brand-logo"
+                              loading="lazy"
+                            />
+                          </div>
+                        ))}
+                      </div>
                     </div>
                     <div className="btn-box"><a href="/about" className="primary-btn one gradient-bg white-color border-btn">Learn More</a></div>
+
                   </div>
                 </div>
               </div>

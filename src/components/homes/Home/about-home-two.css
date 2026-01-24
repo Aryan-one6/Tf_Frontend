@@ -1,0 +1,46 @@
+.brands-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  max-width: 260px;
+}
+
+.brand-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 12px;
+  /* background: rgba(255, 255, 255, 0.05); */
+  /* border: 1px solid rgba(255, 255, 255, 0.05); */
+  border-radius: 10px;
+}
+
+.brand-logo {
+  display: block;
+  max-height: 42px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (min-width: 640px) {
+  .brands-grid {
+    gap: 14px;
+    max-width: 360px;
+  }
+
+  .brand-logo {
+    max-height: 50px;
+  }
+}
+
+@media (min-width: 900px) {
+  .brands-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    max-width: none;
+  }
+
+  .brand-logo {
+    max-height: 56px;
+  }
+}

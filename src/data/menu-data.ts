@@ -67,6 +67,11 @@ const menu_data: MenuItem[] = [
     link: "/pricing",
     
   },  
+  {
+    id: 6,
+    title: "CMS",
+    link: "https://cms.triadflair.com/login",
+  },
 
    {
     id: 3,

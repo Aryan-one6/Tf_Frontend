@@ -52,8 +52,9 @@ const Footer = () => {
                         <div className="widget-content">
                           <ul className="links-list clearfix">
                             <li><a href="/ai-automation">Ai Automation & WorkFlow</a></li>
+                            <li><a href="https://cms.triadflair.com/login">Ai Powered CMS </a></li>
                             <li><a href="/web-development">Website Development</a></li>
-                            <li><a href="/mobile-app-development">Mobile Applications</a></li>
+                            {/* <li><a href="/mobile-app-development">Mobile Applications</a></li> */}
                             <li><a href="/digital-marketing">Digital Marketing </a></li>
                             <li><a href="/chatbot-development">Chatbot Integration</a></li>
                           </ul>

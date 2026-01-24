@@ -12,9 +12,17 @@ const renderMenuItems = (items: MenuItem[], depth = 0) =>
       .filter(Boolean)
       .join(" ");
 
+    const isExternal = item.link && item.link.startsWith("http");
+
     return (
       <li key={key} className={classes || undefined}>
-        <Link to={item.link ?? "#"}>{item.title}</Link>
+        {isExternal ? (
+          <a href={item.link} target="_blank" rel="noopener noreferrer">
+            {item.title}
+          </a>
+        ) : (
+          <Link to={item.link ?? "#"}>{item.title}</Link>
+        )}
         {hasChildren && (
           <ul className="submenu">
             {renderMenuItems(item.sub_menus as MenuItem[], depth + 1)}

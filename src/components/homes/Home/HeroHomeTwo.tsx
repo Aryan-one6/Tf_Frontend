@@ -6,7 +6,7 @@ const HeroHomeTwo = () => {
 
   return (
     <>
-      <section className="hero-section-three">
+      <section className="hero-section-three compact-hero">
         <div className="pattern" style={{ backgroundImage: `url(/assets/images/shape/shape-42.png)` }}></div>
         <div className="container">
           <div className="hero-upper-content-three">
