@@ -185,15 +185,6 @@ export default function GoogleReviewsSlider({
             </div>
             {subtitle ? <p className="gr-subtitle">{subtitle}</p> : null}
           </div>
-          {data?.rating && data?.total_reviews ? (
-            <div className="gr-summary" aria-label={`Overall rating ${data.rating} out of 5`}>
-              <div className="gr-summary-rating">
-                <StarRating rating={data.rating} />
-                <span className="gr-rating-number">{data.rating.toFixed(1)}/5</span>
-              </div>
-              <p className="gr-summary-text">Based on {data.total_reviews}+ reviews on Google</p>
-            </div>
-          ) : null}
         </div>
 
         {error ? <p className="gr-error">{error}</p> : null}
