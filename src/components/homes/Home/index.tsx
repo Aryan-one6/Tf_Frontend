@@ -2,11 +2,11 @@
 import HeroHomeTwo from "./HeroHomeTwo";
 import AboutHomeTwo from "./AboutHomeTwo";
 import BrandsHomeTwo from "./BrandsHomeTwo";
-import ServiceHomeTwo from "./ServiceHomeTwo";
+// import ServiceHomeTwo from "./ServiceHomeTwo";
 import ChoooseusHomeTwo from "./ChoooseusHomeTwo";
 import PortfolioHomeTwo from "./PortfolioHomeTwo";
 // import TeamHomeTwo from "./TeamHomeTwo";
-import TestimonialHomeTwo from "./TestimonialHomeTwo";
+// import TestimonialHomeTwo from "./TestimonialHomeTwo";
 // import BlogHomeTwo from "./BlogHomeTwo";
 import ClientsHomeTwo from "./ClientsHomeTwo";
 // import ContactHomeTwo from "./ContactHomeTwo";
@@ -28,7 +28,7 @@ const HomeTwo = () => {
         <ProductShowcase />
         <BrandsHomeTwo />
         <ClientsHomeTwo />
-        <ServiceHomeTwo />
+        {/* <ServiceHomeTwo /> */}
         <ChoooseusHomeTwo />
         <Technologies />
         <PortfolioHomeTwo />

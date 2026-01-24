@@ -105,11 +105,16 @@ const ReviewCard = ({ review }: { review: Review }) => {
     .slice(0, 2)
     .toUpperCase();
   return (
-    <div className="gr-card">
+    <a
+      className="gr-card"
+      href="https://www.google.com/search?sca_esv=eafcec971676a922&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOZAGVxZVv1f2gAorYnCWLQd6E-W3-zfKlmot4CMLI-JV0e4xw66EauwWH-BM1MnDO5o_dekp3ZBAknMDc8cqbEabcO-D&q=Triad+Flair+Reviews&sa=X&ved=2ahUKEwj80NmSuKSSAxVM4jgGHUalKdIQ0bkNegQIMhAH&biw=1710&bih=951&dpr=2&aic=0&zx=1769266750982&no_sw_cr=1"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <div className="gr-card-top">
-        <div className="gr-badge">
+        <div className="gr-chip">
           <GoogleIcon />
-          <span>Google Reviews</span>
+          <span>Google</span>
         </div>
         <StarRating rating={review.rating} />
       </div>
@@ -119,7 +124,7 @@ const ReviewCard = ({ review }: { review: Review }) => {
       <div className="gr-footer">
         <div className="gr-avatar">
           {review.author_photo_url ? (
-            <img src={review.author_photo_url} alt="" loading="lazy" />
+            <img src={review.author_photo_url} alt="" loading="lazy" referrerPolicy="no-referrer" />
           ) : (
             <span>{initials}</span>
           )}
@@ -129,7 +134,7 @@ const ReviewCard = ({ review }: { review: Review }) => {
           <span className="gr-time">{review.relative_time}</span>
         </div>
       </div>
-    </div>
+    </a>
   );
 };
 
@@ -203,7 +208,6 @@ export default function GoogleReviewsSlider({
               spaceBetween={18}
               loop
               autoplay={{ delay: 5200, disableOnInteraction: false, pauseOnMouseEnter: true }}
-              navigation
               pagination={{ clickable: true }}
               breakpoints={{
                 640: { slidesPerView: 1 },

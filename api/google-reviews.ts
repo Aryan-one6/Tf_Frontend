@@ -43,9 +43,15 @@ function rateLimit(req: any): boolean {
 function normalizeReviews(raw: any[]): NormalizedReview[] {
   return (raw || []).map((r) => {
     const text = r.text ?? r.snippet ?? "";
+    const photo =
+      r.user?.thumbnail ||
+      r.user?.photo ||
+      r.profile_photo_url ||
+      r.author_image ||
+      r.thumbnail;
     return {
       author_name: r.user?.name ?? r.author_name ?? "Anonymous",
-      author_photo_url: r.user?.photo ?? r.author_image,
+      author_photo_url: photo,
       rating: Number(r.rating) || 0,
       text,
       relative_time: r.time_ago ?? r.relative_time_description ?? "",
