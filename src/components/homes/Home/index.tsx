@@ -24,7 +24,6 @@ const HomeTwo = () => {
       <div className="boxed_wrapper home_three">
         <Header />
         <HeroHomeTwo />
-        <GoogleReviewsSlider />
         <AboutHomeTwo />
         <ProductShowcase />
         <BrandsHomeTwo />
@@ -33,7 +32,9 @@ const HomeTwo = () => {
         <ChoooseusHomeTwo />
         <Technologies />
         <PortfolioHomeTwo />
-        <TestimonialHomeTwo />
+                <GoogleReviewsSlider />
+
+        {/* <TestimonialHomeTwo /> */}
         <FooterFour />
       </div>
     </Wrapper>
