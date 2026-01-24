@@ -4,7 +4,7 @@ import AboutHomeTwo from "./AboutHomeTwo";
 import BrandsHomeTwo from "./BrandsHomeTwo";
 import ServiceHomeTwo from "./ServiceHomeTwo";
 // import ChoooseusHomeTwo from "./ChoooseusHomeTwo";
-import PortfolioHomeTwo from "./PortfolioHomeTwo";
+// import PortfolioHomeTwo from "./PortfolioHomeTwo";
 // import TeamHomeTwo from "./TeamHomeTwo";
 // import TestimonialHomeTwo from "./TestimonialHomeTwo";
 // import BlogHomeTwo from "./BlogHomeTwo";
@@ -25,13 +25,14 @@ const HomeTwo = () => {
         <Header />
         <HeroHomeTwo />
         <AboutHomeTwo />
-        <ProductShowcase />
         <BrandsHomeTwo />
         <ClientsHomeTwo />
+                <ProductShowcase />
+
         <ServiceHomeTwo />
         {/* <ChoooseusHomeTwo /> */}
         <Technologies />
-        <PortfolioHomeTwo />
+        {/* <PortfolioHomeTwo /> */}
                 <GoogleReviewsSlider />
 
         {/* <TestimonialHomeTwo /> */}
