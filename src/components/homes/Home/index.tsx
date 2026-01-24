@@ -14,6 +14,8 @@ import Wrapper from "../../../layouts/Wrapper";
 import Header from "../../../layouts/headers/Header";
 import FooterFour from "../../../layouts/footers/Footer";
 import Technologies from "./Technologies";
+import ProductShowcase from "./ProductShowcase";
+import GoogleReviewsSlider from "./GoogleReviewsSlider";
 // import PartnersCarousel from "./PartnersCarousel";
 
 const HomeTwo = () => {
@@ -22,18 +24,16 @@ const HomeTwo = () => {
       <div className="boxed_wrapper home_three">
         <Header />
         <HeroHomeTwo />
+        <GoogleReviewsSlider />
         <AboutHomeTwo />
+        <ProductShowcase />
         <BrandsHomeTwo />
         <ClientsHomeTwo />
-        {/* <PartnersCarousel/> */}
         <ServiceHomeTwo />
         <ChoooseusHomeTwo />
         <Technologies />
         <PortfolioHomeTwo />
-        {/* <TeamHomeTwo /> */}
         <TestimonialHomeTwo />
-        {/* <BlogHomeTwo /> */}
-        {/* <ContactHomeTwo /> */}
         <FooterFour />
       </div>
     </Wrapper>

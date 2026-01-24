@@ -1,0 +1,277 @@
+.google-reviews {
+  position: relative;
+  padding: 80px 0 60px;
+  background: transparent;
+}
+
+.google-reviews .container {
+  position: relative;
+  z-index: 1;
+}
+
+.gr-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.gr-heading {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.gr-icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+.gr-eyebrow {
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8bc8ff;
+}
+
+.gr-title {
+  margin: 2px 0 0;
+  color: #ffffff;
+  font-size: 22px;
+  font-family: var(--title-font);
+}
+
+.gr-subtitle {
+  margin: 8px 0 0;
+  color: #c8d3dd;
+}
+
+.gr-summary {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 10px 14px;
+  display: grid;
+  gap: 6px;
+  min-width: 200px;
+}
+
+.gr-summary-rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.gr-rating-number {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.gr-summary-text {
+  margin: 0;
+  color: #c4cfd9;
+  font-size: 13px;
+}
+
+.gr-slider {
+  position: relative;
+}
+
+.gr-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 16px;
+  height: 100%;
+  display: grid;
+  gap: 12px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+.gr-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.gr-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.gr-stars {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.gr-star {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: #7a8695;
+  stroke-width: 1.2;
+}
+
+.gr-star.is-filled {
+  fill: #f8c440;
+  stroke: #f8c440;
+}
+
+.gr-text {
+  margin: 0;
+  color: #d5dde6;
+  font-size: 15px;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.gr-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.gr-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.gr-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gr-meta {
+  display: grid;
+  gap: 2px;
+}
+
+.gr-author {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.gr-time {
+  color: #c4cfd9;
+  font-size: 13px;
+}
+
+.gr-skeleton-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.gr-skeleton {
+  border-color: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.gr-lines span {
+  display: block;
+  height: 10px;
+  margin: 6px 0;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 6px;
+}
+
+.gr-lines span:nth-child(1) {
+  width: 90%;
+}
+.gr-lines span:nth-child(2) {
+  width: 60%;
+}
+.gr-lines span:nth-child(3) {
+  width: 80%;
+}
+
+.gr-footer .gr-avatar-skel {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.gr-footer .gr-meta span {
+  display: block;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 6px;
+  margin: 4px 0;
+  width: 90%;
+}
+
+.gr-footer .gr-meta span:last-child {
+  width: 60%;
+}
+
+.gr-error {
+  color: #f7c4c4;
+  margin-bottom: 12px;
+}
+
+.gr-empty {
+  color: #c8d3dd;
+  margin: 8px 0;
+}
+
+.product-carousel .swiper-button-prev,
+.product-carousel .swiper-button-next {
+  color: #ffffff;
+}
+
+.product-carousel .swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.product-carousel .swiper-pagination-bullet-active {
+  background: linear-gradient(270deg, #4cd38b, #33a4e1);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 991.98px) {
+  .gr-header {
+    flex-direction: column;
+  }
+
+  .product-right {
+    max-width: none;
+  }
+}

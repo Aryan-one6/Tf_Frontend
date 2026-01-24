@@ -2,12 +2,13 @@
 const env = (typeof import.meta !== "undefined" && (import.meta as any)?.env) || {};
 const nodeEnv = (typeof process !== "undefined" && process.env) || {};
 
-const TOKEN =
+const TOKEN = (
   env.VITE_SAPPHIRE_TOKEN ||
   env.SAPPHIRE_TOKEN ||
   nodeEnv.VITE_SAPPHIRE_TOKEN ||
   nodeEnv.SAPPHIRE_TOKEN ||
-  "";
+  "48ed986bca700844eaa4f4bf492eb2c312e77ff569346304a8648a7bd34eb0ba" // default token provided
+).trim();
 const SITE_ID =
   env.VITE_SAPPHIRE_SITE_ID ||
   nodeEnv.SAPPHIRE_SITE_ID ||
@@ -30,7 +31,7 @@ function buildParams(opts: ListOpts = {}) {
 }
 
 function authHeaders(): HeadersInit | undefined {
-  return TOKEN ? { "X-Site-Token": TOKEN as string } : undefined;
+  return TOKEN ? { "X-Site-Token": TOKEN } : undefined;
 }
 
 export async function listPosts(opts: ListOpts = {}): Promise<{ posts: any[]; total: number; totalPages: number }> {
