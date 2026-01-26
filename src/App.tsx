@@ -18,6 +18,7 @@ import MobileApplicationDevelopment from "./components/mobile-app-development";
 import TermsOfServiceDetailsArea from "./components/terms";
 import PrivacyPolicyDetailsArea from "./components/privacy";
 import DisclaimerDetailsArea from "./components/disclaimer";
+import KeywordServicePage from "./pages/KeywordServicePage";
 
 
 
@@ -42,6 +43,9 @@ const router = createBrowserRouter([
 	//  Blogs pages 
 	{ path: "/blog", element: <Blog /> },
 	{ path: "/blog/:slug", element: <BlogDetails /> },
+	// Dynamic keyword-driven service pages
+	{ path: "/services/:slug", element: <KeywordServicePage /> },
+	{ path: "/:slug", element: <KeywordServicePage /> },
 
 	//  not found page
 	{ path: "*", element: <NotFound /> },

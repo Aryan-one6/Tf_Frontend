@@ -8060,11 +8060,11 @@ div#mCSB_1_container{
 .ai-agent-focus-grid{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 12px;
+  gap: 10px;
 }
 
 .ai-agent-focus-path{
-  padding: 12px;
+  padding: 10px 12px;
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(10, 10, 20, 0.5);
@@ -8112,6 +8112,10 @@ div#mCSB_1_container{
   color: #B0B7C3;
   font-size: 13px;
   margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .ai-agent-focus__item h4{
@@ -8145,13 +8149,13 @@ div#mCSB_1_container{
 
 .ai-agent-guardrail-box{
   margin-top: 20px;
-  padding: 18px;
-  border-radius: 18px;
+  padding: 14px;
+  border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: linear-gradient(135deg, rgba(74, 78, 158, 0.35), rgba(10, 14, 28, 0.9));
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 
 .ai-agent-guardrail-box__list{
