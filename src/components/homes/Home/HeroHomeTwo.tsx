@@ -34,7 +34,11 @@ const HeroHomeTwo = () => {
                   <div className="text-box">
                     <p >
 Launch a custom chatbot, automate your workflows, and ship a high‑converting website—typically within 30 days.                      </p>
-                    <a href="tel:+91 935424 9191" className="primary-btn one gradient-bg white-color border-btn">Book an Audit</a>
+
+                    <div className="hero-btns">
+                      <a href="tel:+91 935424 9191" className="primary-btn one gradient-bg white-color border-btn">Book an Audit</a>
+                      <a href="https://cms.triadflair.com/" className="secondary-btn   ">Explore AI CMS</a>
+                    </div>
                   </div>
                 </div>
 

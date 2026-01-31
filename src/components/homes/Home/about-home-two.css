@@ -7,9 +7,9 @@
 
 .brand-card {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 12px;
+  align-items: left;
+  justify-content: left;
+  padding: 0px 0px;
   /* background: rgba(255, 255, 255, 0.05); */
   /* border: 1px solid rgba(255, 255, 255, 0.05); */
   border-radius: 10px;

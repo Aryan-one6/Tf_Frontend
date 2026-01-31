@@ -275,7 +275,7 @@
   }
 
   .hero-section-three .content-box {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 
   .about-section-three .main-content-box {
@@ -402,6 +402,15 @@
     font-size: 50px;
     line-height: 60px;
   }
+      .hero-section-three {
+        padding-top: 120px;
+    }
+
+  /* Hide right hero visuals (image/border/curve text) on mobile */
+  .hero-section-three .hero-image-box-three,
+  .hero-section-three .col-lg-5 {
+    display: none !important;
+  }
 
   br {
     display: none !important;
@@ -474,7 +483,7 @@
   }
 
   .hero-section-three {
-    padding-top: 180px;
+    padding-top: 160px;
   }
 
   .about-section-three .main-content-box .shape {
@@ -871,6 +880,7 @@
 }
 
 @media only screen and (max-width: 499px) {
+  
   .mobile-menu {
     width: 100%;
   }
@@ -928,7 +938,7 @@
   }
 
   .about-section-three .main-content-box {
-    padding: 50px 30px;
+    padding: 20px 20px;
   }
 
   .brands-section .brands-content .fact-content .single-item {
