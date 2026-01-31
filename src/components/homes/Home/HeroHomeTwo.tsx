@@ -69,36 +69,26 @@ Launch a custom chatbot, automate your workflows, and ship a high‑converting w
             </div>
           </div>
           <div className="hero-lower-content">
-            <ul className="slide-text">
-
-              <li><img src="assets/images/icons/icon-11.png" alt="AI Automation Icon" /><span>AI Automation & Workflows</span></li>
-              <li><img src="assets/images/icons/icon-11.png" alt="Integrations Icon" /><span>Zapier / Make Integrations</span></li>
-              <li><img src="assets/images/icons/icon-11.png" alt="Lead Generation Icon" /><span>AI Lead Generation</span></li>
-              <li><img src="assets/images/icons/icon-11.png" alt="Chatbot Development Icon" /><span>Custom Chatbots </span></li>
-              <li><img src="assets/images/icons/icon-11.png" alt="Website Development Icon" /><span>Web App Development</span></li>
-              <li><img src="assets/images/icons/icon-11.png" alt="WordPress Plugin Icon" /><span>WordPress & Plugin</span></li>
-              <li><img src="assets/images/icons/icon-11.png" alt="AI Automation Icon" /><span>AI Automation & Workflows</span></li>
-              <li><img src="assets/images/icons/icon-11.png" alt="Integrations Icon" /><span>Zapier / Make Integrations</span></li>
-              <li><img src="assets/images/icons/icon-11.png" alt="Lead Generation Icon" /><span>AI Lead Generation</span></li>
-              <li><img src="assets/images/icons/icon-11.png" alt="Chatbot Development Icon" /><span>Custom Chatbots </span></li>
-              <li><img src="assets/images/icons/icon-11.png" alt="Website Development Icon" /><span>Web App Development</span></li>
-              <li><img src="assets/images/icons/icon-11.png" alt="WordPress Plugin Icon" /><span>WordPress & Plugin</span></li>
-              <li><img src="assets/images/icons/icon-11.png" alt="AI Automation Icon" /><span>AI Automation & Workflows</span></li>
-              <li><img src="assets/images/icons/icon-11.png" alt="Integrations Icon" /><span>Zapier / Make Integrations</span></li>
-              <li><img src="assets/images/icons/icon-11.png" alt="Lead Generation Icon" /><span>AI Lead Generation</span></li>
-              <li><img src="assets/images/icons/icon-11.png" alt="Chatbot Development Icon" /><span>Custom Chatbots </span></li>
-              <li><img src="assets/images/icons/icon-11.png" alt="Website Development Icon" /><span>Web App Development</span></li>
-              <li><img src="assets/images/icons/icon-11.png" alt="WordPress Plugin Icon" /><span>WordPress & Plugin</span></li>
-              <li><img src="assets/images/icons/icon-11.png" alt="AI Automation Icon" /><span>AI Automation & Workflows</span></li>
-              <li><img src="assets/images/icons/icon-11.png" alt="Integrations Icon" /><span>Zapier / Make Integrations</span></li>
-              <li><img src="assets/images/icons/icon-11.png" alt="Lead Generation Icon" /><span>AI Lead Generation</span></li>
-              <li><img src="assets/images/icons/icon-11.png" alt="Chatbot Development Icon" /><span>Custom Chatbots </span></li>
-              <li><img src="assets/images/icons/icon-11.png" alt="Website Development Icon" /><span>Web App Development</span></li>
-              <li><img src="assets/images/icons/icon-11.png" alt="WordPress Plugin Icon" /><span>WordPress & Plugin</span></li>
-              
-
-
-            </ul>
+            <div className="marquee" aria-label="Service highlights">
+              <div className="marquee-track">
+                <ul className="slide-text">
+                  <li><img src="assets/images/icons/icon-11.png" alt="AI Automation Icon" /><span>AI Automation & Workflows</span></li>
+                  <li><img src="assets/images/icons/icon-11.png" alt="Integrations Icon" /><span>Zapier / Make Integrations</span></li>
+                  <li><img src="assets/images/icons/icon-11.png" alt="Lead Generation Icon" /><span>AI Lead Generation</span></li>
+                  <li><img src="assets/images/icons/icon-11.png" alt="Chatbot Development Icon" /><span>Custom Chatbots </span></li>
+                  <li><img src="assets/images/icons/icon-11.png" alt="Website Development Icon" /><span>Web App Development</span></li>
+                  <li><img src="assets/images/icons/icon-11.png" alt="WordPress Plugin Icon" /><span>WordPress & Plugin</span></li>
+                </ul>
+                <ul className="slide-text" aria-hidden="true">
+                  <li><img src="assets/images/icons/icon-11.png" alt="AI Automation Icon" /><span>AI Automation & Workflows</span></li>
+                  <li><img src="assets/images/icons/icon-11.png" alt="Integrations Icon" /><span>Zapier / Make Integrations</span></li>
+                  <li><img src="assets/images/icons/icon-11.png" alt="Lead Generation Icon" /><span>AI Lead Generation</span></li>
+                  <li><img src="assets/images/icons/icon-11.png" alt="Chatbot Development Icon" /><span>Custom Chatbots </span></li>
+                  <li><img src="assets/images/icons/icon-11.png" alt="Website Development Icon" /><span>Web App Development</span></li>
+                  <li><img src="assets/images/icons/icon-11.png" alt="WordPress Plugin Icon" /><span>WordPress & Plugin</span></li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>

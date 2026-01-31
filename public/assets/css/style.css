@@ -5419,8 +5419,21 @@ div#mCSB_1_container{
       transform: translateX(0);
   }
   to {
-      transform: translateX(-100%);
+      transform: translateX(-50%);
   }
+}
+
+.hero-section-three .hero-lower-content .marquee{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.hero-section-three .hero-lower-content .marquee-track{
+  display: flex;
+  width: max-content;
+  gap: 48px;
+  animation: 90s marqueslide infinite linear;
 }
 
 .hero-section-three .hero-lower-content .slide-text{
@@ -5429,7 +5442,6 @@ div#mCSB_1_container{
   align-items: center;
   width: max-content;
   gap: 24px;
-  animation: 240s marqueslide infinite linear;
 }
 
 .hero-section-three .hero-lower-content .slide-text li{
