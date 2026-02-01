@@ -9,7 +9,7 @@ const useSticky = (): StickyState => {
   const [sticky, setSticky] = useState(false);
 
   const stickyHeader = (): void => {
-    if (window.scrollY > 200) {
+    if (window.scrollY > 64) {
       setSticky(true);
     } else {
       setSticky(false);

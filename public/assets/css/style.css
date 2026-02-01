@@ -418,7 +418,8 @@ img {
   top:0px;
   width:100%;
   z-index:0;
-  background-color: #121212;
+  background-color: rgba(18, 24, 32, 0.92);
+  backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.10);
   transition:all 500ms ease;
 }
@@ -427,6 +428,7 @@ img {
   z-index:999;
   opacity:1;
   visibility:visible;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.35);
   -ms-animation-timing-function: linear;
   -moz-animation-timing-function: linear;
   -op-animation-timing-function: linear;
@@ -444,6 +446,7 @@ img {
   left: 0px;
   top: 20px;
   width: 100%;
+  z-index: 10;
 }
 
 .main-header .header-nav{
@@ -5410,7 +5413,9 @@ div#mCSB_1_container{
 
 .hero-section-three .hero-lower-content{
   position: relative;
-  padding-bottom: 122px;
+  padding: 24px 0 122px;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
 }
 
 
@@ -5427,6 +5432,7 @@ div#mCSB_1_container{
   position: relative;
   overflow: hidden;
   width: 100%;
+  padding: 0 32px;
 }
 
 .hero-section-three .hero-lower-content .marquee-track{

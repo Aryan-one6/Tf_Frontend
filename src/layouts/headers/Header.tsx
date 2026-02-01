@@ -67,6 +67,11 @@ const Header = () => {
                 <figure className="logo"><Link to="/"><img src="/assets/images/triadflair_logo.webp" alt="" /></Link></figure>
               </div>
               <div className="menu-area">
+                <div className="mobile-nav-toggler" onClick={() => setIsOpen(true)}>
+                  <i className="icon-bar"></i>
+                  <i className="icon-bar"></i>
+                  <i className="icon-bar"></i>
+                </div>
                 <nav className="main-menu">
                   <div className="collapse navbar-collapse show" id="navbarSupportedContent">
                     <NavMenu />

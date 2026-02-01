@@ -6,17 +6,17 @@ const counter_data = [
   {
     symbol: "+",
     count: 5,
-    title: `Years Of<br /> Experience`,
+    title: `Years Of<br /> Delivery Experience`,
   },
   {
     symbol: "+",
-    count: 25,
-    title: `Projects <br />Worldwide`,
+    count: 120,
+    title: `Web & Brand<br />Launches Shipped`,
   },
   {
-    symbol: "+",
-    count: 99,
-    title: `Clients <br />Worldwide`,
+    symbol: "%",
+    count: 94,
+    title: `Client Retention<br />Across Engagements`,
   },
 ]
 const BrandsHomeTwo = ({style_2} : any) => {

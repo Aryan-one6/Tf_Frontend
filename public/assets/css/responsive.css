@@ -198,9 +198,31 @@
 
 @media only screen and (max-width: 991px) {
 
-  .main-menu,
-  .sticky-header {
+  .main-menu {
     display: none;
+  }
+
+  .main-header {
+    top: 0;
+  }
+
+  .sticky-header {
+    display: block;
+  }
+
+  .sticky-header .header-nav {
+    padding: 16px 20px;
+    border-radius: 18px;
+  }
+
+  .sticky-header .btn-box,
+  .sticky-header .mobile-call-btn {
+    display: none;
+  }
+
+  .sticky-header .mobile-nav-toggler {
+    display: block;
+    padding: 10px;
   }
 
   .menu-area .mobile-nav-toggler {
@@ -823,6 +845,10 @@
 
   .hero-section-three .hero-lower-content {
     padding-bottom: 0px;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .about-content-three .list-box {
