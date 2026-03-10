@@ -1,69 +1,105 @@
-"use client";
 import { Link, useParams } from "react-router-dom";
 import { useEffect, useMemo, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import DOMPurify from "dompurify";
-import { getPostBySlug, getPosts, getFeaturedMedia, getTerms, WPPost } from "../../lib/wp";
+import { getPost, listPosts, type CmsPost } from "../../lib/cms";
+
+const SITE_URL = "https://triadflair.com";
+const FALLBACK_IMAGE = "/assets/images/news/news-12.jpg";
 
 function stripHtml(html: string) {
   const div = document.createElement("div");
   div.innerHTML = html || "";
   return (div.textContent || div.innerText || "").trim();
 }
+
 function readingMinutes(text: string, wpm = 200) {
   const words = (text || "").trim().split(/\s+/).filter(Boolean).length;
   return Math.max(1, Math.round(words / wpm));
 }
 
+function formatPublishedDate(value?: string) {
+  if (!value) return "";
+  const parsed = new Date(value);
+  if (Number.isNaN(parsed.getTime())) return "";
+  return parsed.toLocaleDateString("en-US", {
+    month: "short",
+    day: "2-digit",
+    year: "numeric",
+  });
+}
+
 const BlogDetailsArea = () => {
   const { slug = "" } = useParams();
-  const [post, setPost] = useState<WPPost | null>(null);
-  const [latest, setLatest] = useState<WPPost[]>([]);
+  const [post, setPost] = useState<CmsPost | null>(null);
+  const [latest, setLatest] = useState<CmsPost[]>([]);
   const [loading, setLoading] = useState(true);
   const [err, setErr] = useState<string | null>(null);
 
   useEffect(() => {
     let ignore = false;
+
     async function load() {
       try {
         setLoading(true);
-        const _post = await getPostBySlug(slug);
-        if (!ignore) setPost(_post);
-        const { data: latestPosts } = await getPosts({ page: 1, per_page: 3 });
-        if (!ignore) setLatest(latestPosts as WPPost[]);
+        const currentPost = await getPost(slug);
+        const { posts } = await listPosts({ page: 1, limit: 4 });
+
+        if (ignore) return;
+        setPost(currentPost);
+        setLatest(posts.filter((entry) => entry.slug !== currentPost.slug).slice(0, 3));
         setErr(null);
-      } catch (e: any) {
-        if (!ignore) setErr(e?.message || "Unable to fetch post");
+      } catch (error: any) {
+        if (!ignore) setErr(error?.message || "Unable to fetch post");
       } finally {
         if (!ignore) setLoading(false);
       }
     }
+
     load();
-    return () => { ignore = true; };
+    return () => {
+      ignore = true;
+    };
   }, [slug]);
 
-  const safeTitle = useMemo(() => stripHtml(post?.title.rendered || ""), [post]);
+  const safeTitle = post?.title || "Blog Details";
+  const safeExcerpt = post?.excerpt || "";
   const safeContent = useMemo(
-    () => DOMPurify.sanitize(post?.content.rendered || ""),
-    [post]
+    () =>
+      DOMPurify.sanitize(post?.contentHtml || "", {
+        ADD_ATTR: ["target", "rel", "style", "data-name", "data-rte-button"],
+      }),
+    [post?.contentHtml],
   );
-  const authorName =
-    (post?._embedded?.author && post?._embedded?.author[0]?.name) || "—";
-  const minutes = readingMinutes(stripHtml(post?.content.rendered || ""));
-
-  const featured = post ? getFeaturedMedia(post) : undefined;
-  const hero =
-    featured?.source_url ||
-    featured?.media_details?.sizes?.large?.source_url ||
-    "/assets/images/news/news-12.jpg";
-
-  const categories = (post ? getTerms(post, "category") : []) as { id: number; name: string; slug: string }[];
-  const tags = (post ? getTerms(post, "post_tag") : []) as { id: number; name: string; slug: string }[];
+  const authorName = post?.authorName || "Triad Flair";
+  const authorEmail = post?.authorEmail || "";
+  const shareUrl = typeof window !== "undefined" ? window.location.href : `${SITE_URL}/blog/${slug}`;
+  const publishedDate = formatPublishedDate(post?.publishedAt || post?.createdAt || post?.updatedAt);
+  const minutes = readingMinutes(stripHtml(post?.contentHtml || post?.excerpt || ""));
+  const hero = post?.coverImageUrl || FALLBACK_IMAGE;
+  const tags = post?.tags || [];
+  const metaDescription = safeExcerpt || stripHtml(post?.contentHtml || "").slice(0, 160);
+  const canonical = `${SITE_URL}/blog/${post?.slug || slug}`;
 
   return (
     <section className="sidebar-page-container">
+      <Helmet>
+        <title>{post ? `${safeTitle} | Triad Flair` : "Blog Details | Triad Flair"}</title>
+        <meta name="description" content={metaDescription || "Latest insights from Triad Flair."} />
+        <link rel="canonical" href={canonical} />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={safeTitle} />
+        <meta property="og:description" content={metaDescription || "Latest insights from Triad Flair."} />
+        <meta property="og:url" content={canonical} />
+        {hero && <meta property="og:image" content={hero} />}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={safeTitle} />
+        <meta name="twitter:description" content={metaDescription || "Latest insights from Triad Flair."} />
+        {hero && <meta name="twitter:image" content={hero} />}
+      </Helmet>
+
       <div className="container">
         <div className="row">
-          {/* MAIN */}
           <div className="col-lg-8 col-md-12 col-sm-12 content-side">
             <div className="blog-details-content">
               {err && <p style={{ color: "#f66" }}>Error: {err}</p>}
@@ -76,46 +112,77 @@ const BlogDetailsArea = () => {
                       <ul className="post-info">
                         <li>
                           <img src="/assets/images/icons/icon-22.png" alt="" />
-                          <Link to="#">{authorName}</Link>
+                          <Link to="/blog">{authorName}</Link>
                         </li>
+                        {publishedDate && (
+                          <li>
+                            <img src="/assets/images/icons/icon-26.png" alt="" />
+                            <span>{publishedDate}</span>
+                          </li>
+                        )}
                         <li>
                           <img src="/assets/images/icons/icon-24.png" alt="" />
                           <span>{minutes} min Read</span>
                         </li>
                       </ul>
                       <h2>{safeTitle}</h2>
+                      {safeExcerpt && <p>{safeExcerpt}</p>}
+                      {authorEmail && (
+                        <p>
+                          <strong>Email:</strong> <a href={`mailto:${authorEmail}`}>{authorEmail}</a>
+                        </p>
+                      )}
                     </div>
 
                     <div className="image-box">
                       <figure className="image">
-                        <img src={hero} alt={featured?.alt_text || safeTitle} />
+                        <img src={hero} alt={safeTitle} />
                       </figure>
                     </div>
                   </div>
 
-                  {/* full content from WordPress */}
                   <div
-                    className="text-box"
-                    // WP returns HTML; we sanitize it above:
+                    className="text-box cms-blog-content"
                     dangerouslySetInnerHTML={{ __html: safeContent }}
                   />
 
-                  {/* Tags/Categories footer */}
                   <div className="post-share-option">
-                    <div className="text-box"><h2>Tags:</h2></div>
+                    <div className="text-box">
+                      <h2>Tags:</h2>
+                    </div>
                     <div className="inner-box">
                       <ul className="post-tags">
-                        {tags.length === 0 && <li><span>No tags</span></li>}
-                        {tags.map(t => (
-                          <li key={t.id}>
-                            <Link to={`/blog/${post.slug}`}>{t.name}</Link>
+                        {tags.length === 0 && (
+                          <li>
+                            <span>No tags</span>
+                          </li>
+                        )}
+                        {tags.map((tag) => (
+                          <li key={tag}>
+                            <Link to={`/blog?s=${encodeURIComponent(tag)}`}>{tag}</Link>
                           </li>
                         ))}
                       </ul>
 
                       <ul className="social-links">
-                        <li><a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(safeTitle)}&url=${encodeURIComponent(window?.location?.href || "")}`} target="_blank" rel="noopener noreferrer"><i className="icon-17"></i></a></li>
-                        <li><a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window?.location?.href || "")}`} target="_blank" rel="noopener noreferrer"><i className="icon-16"></i></a></li>
+                        <li>
+                          <a
+                            href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(safeTitle)}&url=${encodeURIComponent(shareUrl)}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <i className="icon-17"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <i className="icon-16"></i>
+                          </a>
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -124,62 +191,75 @@ const BlogDetailsArea = () => {
             </div>
           </div>
 
-          {/* SIDEBAR */}
           <div className="col-lg-4 col-md-12 col-sm-12 sidebar-side">
             <div className="blog-sidebar">
-              {/* Search widget: redirects to /blog?s=... so Blog list will use it */}
               <div className="sidebar-widget search-widget">
-                <div className="widget-title"><h3>Search Here</h3></div>
+                <div className="widget-title">
+                  <h3>Search Here</h3>
+                </div>
                 <div className="search-inner">
-                  <form onSubmit={(e) => {
-                    e.preventDefault();
-                    const form = e.currentTarget as HTMLFormElement;
-                    const input = form.querySelector("input[name='s']") as HTMLInputElement;
-                    if (input?.value) window.location.href = `/blog?s=${encodeURIComponent(input.value)}`;
-                  }}>
+                  <form
+                    onSubmit={(event) => {
+                      event.preventDefault();
+                      const form = event.currentTarget as HTMLFormElement;
+                      const input = form.querySelector("input[name='s']") as HTMLInputElement;
+                      if (input?.value) {
+                        window.location.href = `/blog?s=${encodeURIComponent(input.value)}`;
+                      }
+                    }}
+                  >
                     <div className="form-group">
                       <input name="s" type="search" placeholder="Search Here" />
-                      <button type="submit"><img src="/assets/images/icons/icon-25.png" alt="" /></button>
+                      <button type="submit">
+                        <img src="/assets/images/icons/icon-25.png" alt="" />
+                      </button>
                     </div>
                   </form>
                 </div>
               </div>
 
-              {/* Latest posts */}
               <div className="sidebar-widget post-widget">
-                <div className="widget-title"><h3>Latest Posts</h3></div>
+                <div className="widget-title">
+                  <h3>Latest Posts</h3>
+                </div>
                 <div className="post-box">
-                  {latest.map(p => {
-                    const media = getFeaturedMedia(p);
-                    const img = media?.media_details?.sizes?.thumbnail?.source_url || media?.source_url || "/assets/images/news/post-1.jpg";
-                    return (
-                      <article className="post" key={p.id}>
-                        <figure className="post-image">
-                          <Link to={`/blog/${p.slug}`}><img src={img} alt={media?.alt_text || stripHtml(p.title.rendered)} /></Link>
-                        </figure>
-                        <div className="post-content">
-                          <div className="post-date">
-                            <img src="/assets/images/icons/icon-26.png" alt="" />
-                            <span>{new Date(p.date).toLocaleDateString("en-US", { month: "short", day: "2-digit", year: "numeric" })}</span>
-                          </div>
-                          <h5><Link to={`/blog/${p.slug}`}>{stripHtml(p.title.rendered)}</Link></h5>
+                  {latest.map((entry) => (
+                    <article className="post" key={entry.id}>
+                      <figure className="post-image">
+                        <Link to={`/blog/${entry.slug}`}>
+                          <img src={entry.coverImageUrl || FALLBACK_IMAGE} alt={entry.title} />
+                        </Link>
+                      </figure>
+                      <div className="post-content">
+                        <div className="post-date">
+                          <img src="/assets/images/icons/icon-26.png" alt="" />
+                          <span>{formatPublishedDate(entry.publishedAt || entry.createdAt || entry.updatedAt)}</span>
                         </div>
-                      </article>
-                    );
-                  })}
+                        <h5>
+                          <Link to={`/blog/${entry.slug}`}>{entry.title}</Link>
+                        </h5>
+                      </div>
+                    </article>
+                  ))}
                 </div>
               </div>
 
-              {/* Categories */}
               <div className="sidebar-widget catagories-widget">
-                <div className="widget-title"><h3>Categories</h3></div>
+                <div className="widget-title">
+                  <h3>Topics</h3>
+                </div>
                 <div className="widget-content">
                   <ul className="catagories-list clearfix">
-                    {categories.length === 0 && <li><span className="text">Uncategorized</span><span className="number">—</span></li>}
-                    {categories.map(c => (
-                      <li key={c.id}>
-                        <Link to={`/blog/${post?.slug}`}>
-                          <span className="text">{c.name}</span>
+                    {tags.length === 0 && (
+                      <li>
+                        <span className="text">General</span>
+                        <span className="number">—</span>
+                      </li>
+                    )}
+                    {tags.map((tag) => (
+                      <li key={tag}>
+                        <Link to={`/blog?s=${encodeURIComponent(tag)}`}>
+                          <span className="text">{tag}</span>
                           <span className="number">•</span>
                         </Link>
                       </li>
@@ -188,20 +268,22 @@ const BlogDetailsArea = () => {
                 </div>
               </div>
 
-              {/* Tags */}
               <div className="sidebar-widget tags-widget">
-                <div className="widget-title"><h3>Popular Tags</h3></div>
+                <div className="widget-title">
+                  <h3>Popular Tags</h3>
+                </div>
                 <div className="widget-content">
                   <ul className="tags-list clearfix">
-                    {tags.map(t => (
-                      <li key={t.id}><Link to={`/blog/${post?.slug}`}>{t.name}</Link></li>
+                    {tags.map((tag) => (
+                      <li key={tag}>
+                        <Link to={`/blog?s=${encodeURIComponent(tag)}`}>{tag}</Link>
+                      </li>
                     ))}
                   </ul>
                 </div>
               </div>
             </div>
           </div>
-          {/* /SIDEBAR */}
         </div>
       </div>
     </section>

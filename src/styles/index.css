@@ -136,3 +136,34 @@
   }
 } */
 
+
+.cms-blog-content {
+  overflow-wrap: anywhere;
+}
+
+.cms-blog-content img,
+.cms-blog-content iframe,
+.cms-blog-content video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.cms-blog-content table {
+  width: 100%;
+  display: block;
+  overflow-x: auto;
+  border-collapse: collapse;
+  margin: 24px 0;
+}
+
+.cms-blog-content th,
+.cms-blog-content td {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  padding: 12px;
+}
+
+.cms-blog-content a {
+  color: #2d55ff;
+  text-decoration: underline;
+}

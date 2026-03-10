@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "npm run sitemap",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "sitemap": "node scripts/generate-sitemap.js",
+    "sitemap": "node scripts/generate-sitemap.cjs",
     "preview": "vite preview",
     "reviews:dev": "node scripts/google-reviews-server.cjs"
   },
