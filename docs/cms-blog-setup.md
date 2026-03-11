@@ -1,63 +1,81 @@
-# Triad Flair CMS Blog + Sitemap Setup
+# PPC CMS Blog Setup
 
-## Required Vercel Environment Variables
+This repo now treats the PPC CMS blog as build-time generated content:
 
-Set these in Vercel Project Settings -> Environment Variables:
+- `/blog` is emitted as a real static listing page.
+- `/blog/:slug` is emitted as a real static article page.
+- `/posts-sitemap.xml` is proxied live on Vercel and also emitted statically as a fallback artifact.
+- `robots.txt` includes both the main sitemap and the posts sitemap.
+
+That avoids the failure mode where a sitemap URL exists but the post URL resolves to the homepage shell.
+There is no WordPress blog source in the active pipeline anymore.
+
+## Required Environment Variables
+
+Set these on the deployment platform:
 
 | Name | Purpose |
 | --- | --- |
-| `SITE_URL` | Public site origin used in sitemap generation (`https://triadflair.com`) |
-| `CMS_BASE` | CMS origin or API base URL (`https://cms-backend.ppconsultings.com` or `https://cms-backend.ppconsultings.com/api`) |
-| `CMS_TOKEN` | Public site token sent as `X-Site-Token` |
-| `VERCEL_DEPLOY_HOOK_URL` | Vercel deploy hook URL triggered by `/api/cms-webhook` |
-| `CMS_WEBHOOK_SECRET` | Shared secret required by `/api/cms-webhook` |
+| `SITE_URL` | Public site origin, for example `https://triadflair.com` |
+| `SAPPHIRE_TOKEN` | Server-side PPC CMS site token sent as `X-Site-Token` |
 
-Optional Triadflair-specific names also supported:
+## Optional Environment Variables
 
 | Name | Purpose |
 | --- | --- |
-| `TRIADFLAIR_CMS_BASE` | Alternative CMS base URL for this repo |
-| `TRIADFLAIR_CMS_TOKEN` | Alternative CMS token for this repo |
-| `VITE_CMS_API_BASE_URL` | CMS API base URL used by browser fetches |
-| `VITE_CMS_SITE_TOKEN` | Site token used by browser fetches |
-| `VITE_TRIADFLAIR_CMS_API_BASE_URL` | Triadflair-specific API base exposed to Vite |
-| `VITE_TRIADFLAIR_CMS_TOKEN` | Triadflair-specific token exposed to Vite |
+| `SAPPHIRE_API_BASE` | Override the PPC CMS API base. Defaults to `https://cms-backend.ppconsultings.com/api/public` |
+| `CMS_TOKEN` | Backward-compatible fallback token variable |
+| `TRIADFLAIR_CMS_TOKEN` | Backward-compatible fallback token variable |
+| `CMS_BASE` | Backward-compatible fallback CMS base variable |
+| `TRIADFLAIR_CMS_BASE` | Backward-compatible fallback CMS base variable |
 
-## Current Token / Hook Values
+## Build Flow
 
-Use these values in Vercel:
+`npm run build` now does this before the Vite build:
 
-- `CMS_TOKEN=4cbc91718e6de67541730cb693b37bfa35a4eeb13ebad17e3df36dc18e69d774`
-- `VERCEL_DEPLOY_HOOK_URL=https://api.vercel.com/v1/integrations/deploy/prj_xmZRA59f2bnityqPticaEsJXSaV1/U5vhwwxdme`
-- `CMS_WEBHOOK_SECRET=9a52cae5c9c45706961526d464cab7d66eaa05c2d9d0f9bc3a7347c3dfdfbde9`
+1. `npm run cms-blog`
+2. `npm run sitemap`
 
-## Blog Endpoints in This App
+`cms-blog`:
 
-- `/blog`: all posts
-- `/blog/:slug`: single post
+- fetches PPC CMS posts server-side with `X-Site-Token`
+- writes static HTML for `/blog` and `/blog/:slug`
+- writes JSON payloads under `public/cms-blog/` for the SPA blog experience
+- writes `public/posts-sitemap.xml`
+- writes `public/robots.txt`
+- writes `public/404.html`
 
-Blog data is fetched directly from CMS using:
+If the CMS is temporarily unavailable during build, the script keeps the last generated blog output instead of wiping it.
+It does not regenerate anything from WordPress or from legacy `public/blog` content.
 
-- `GET /api/public/posts`
-- `GET /api/public/posts/:slug`
-- header: `X-Site-Token: <CMS_TOKEN>`
+## Hosting Behavior
 
-## Sitemap Behavior
+Two hosting configs are now in place:
 
-During every build, `prebuild` regenerates `public/sitemap.xml` with:
+- `public/_redirects` for Netlify-style static hosting
+- `vercel.json` for Vercel
 
-- static app routes
-- keyword landing page routes from `public/keywords.json`
-- live CMS blog post routes from the public posts API
+Both ensure:
 
-When a post is updated or deleted in CMS, the next webhook-triggered deploy rebuilds the sitemap from the current CMS post list, so deleted posts disappear automatically.
+- existing `/blog/:slug` files are served directly
+- missing `/blog/:slug` paths return `404`
+- non-blog app routes still fall back to `index.html`
 
-## Webhook Configuration in CMS
+On Vercel specifically:
 
-Configure your CMS webhook to call:
+- `/posts-sitemap.xml` is routed to `/api/posts-sitemap`
+- that API proxies the live PPC CMS sitemap endpoint using the current request host as the `domain` parameter
+- if the CMS route needs it, the proxy also falls back to `pathPrefix=/blog`
 
-`https://triadflair.com/api/cms-webhook?secret=9a52cae5c9c45706961526d464cab7d66eaa05c2d9d0f9bc3a7347c3dfdfbde9`
+## Content Updates
 
-Use method `POST`.
+This repo is SSG for blog content. A new deploy is required for updated blog HTML.
 
-When the endpoint validates the secret, it calls `VERCEL_DEPLOY_HOOK_URL` to trigger a rebuild/deploy. During build, `prebuild` regenerates `public/sitemap.xml` with current blog URLs.
+If PPC CMS already triggers the deploy hook for this project, no extra manual step is required.
+If it does not, trigger a redeploy after CMS changes so:
+
+- `/blog`
+- `/blog/:slug`
+- `/posts-sitemap.xml`
+
+all refresh together.

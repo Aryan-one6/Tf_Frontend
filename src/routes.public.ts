@@ -21,6 +21,4 @@ export const publicRoutes: RouteEntry[] = [
   { path: "/service" },
   { path: "/terms" },
   { path: "/web-development" },
-  { path: "/blog/:slug"},
-
 ];

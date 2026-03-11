@@ -3,3 +3,4 @@ Allow: /
 Disallow: /admin/
 Disallow: /api/private/
 Sitemap: https://triadflair.com/sitemap.xml
+Sitemap: https://triadflair.com/posts-sitemap.xml

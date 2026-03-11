@@ -1,6 +1,21 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "routes": [
-    { "handle": "filesystem" },
-    { "src": "/.*", "dest": "/index.html" }
+    {
+      "src": "/posts-sitemap.xml",
+      "dest": "/api/posts-sitemap"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/blog/(.*)",
+      "status": 404,
+      "dest": "/404.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
   ]
 }

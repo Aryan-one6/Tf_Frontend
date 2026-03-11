@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prebuild": "npm run sitemap",
+    "prebuild": "npm run cms-blog && npm run sitemap",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
+    "cms-blog": "node scripts/generate-cms-blog.cjs",
     "sitemap": "node scripts/generate-sitemap.cjs",
     "preview": "vite preview",
     "reviews:dev": "node scripts/google-reviews-server.cjs"

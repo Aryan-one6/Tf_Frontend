@@ -4,7 +4,10 @@ import { Helmet } from "react-helmet-async";
 import DOMPurify from "dompurify";
 import { getPost, listPosts, type CmsPost } from "../../lib/cms";
 
-const SITE_URL = "https://triadflair.com";
+const SITE_URL =
+  typeof window !== "undefined" && window.location?.origin
+    ? window.location.origin
+    : "https://triadflair.com";
 const FALLBACK_IMAGE = "/assets/images/news/news-12.jpg";
 
 function stripHtml(html: string) {
@@ -35,6 +38,7 @@ const BlogDetailsArea = () => {
   const [latest, setLatest] = useState<CmsPost[]>([]);
   const [loading, setLoading] = useState(true);
   const [err, setErr] = useState<string | null>(null);
+  const notFound = err === "Post not found";
 
   useEffect(() => {
     let ignore = false;
@@ -50,7 +54,11 @@ const BlogDetailsArea = () => {
         setLatest(posts.filter((entry) => entry.slug !== currentPost.slug).slice(0, 3));
         setErr(null);
       } catch (error: any) {
-        if (!ignore) setErr(error?.message || "Unable to fetch post");
+        if (!ignore) {
+          setPost(null);
+          setLatest([]);
+          setErr(error?.message || "Unable to fetch post");
+        }
       } finally {
         if (!ignore) setLoading(false);
       }
@@ -79,22 +87,50 @@ const BlogDetailsArea = () => {
   const hero = post?.coverImageUrl || FALLBACK_IMAGE;
   const tags = post?.tags || [];
   const metaDescription = safeExcerpt || stripHtml(post?.contentHtml || "").slice(0, 160);
-  const canonical = `${SITE_URL}/blog/${post?.slug || slug}`;
+  const canonical = notFound ? `${SITE_URL}/404` : `${SITE_URL}/blog/${post?.slug || slug}`;
 
   return (
     <section className="sidebar-page-container">
       <Helmet>
-        <title>{post ? `${safeTitle} | Triad Flair` : "Blog Details | Triad Flair"}</title>
-        <meta name="description" content={metaDescription || "Latest insights from Triad Flair."} />
+        <title>
+          {notFound
+            ? "404 Not Found | Triad Flair"
+            : post
+              ? `${safeTitle} | Triad Flair`
+              : "Blog Details | Triad Flair"}
+        </title>
+        <meta
+          name="description"
+          content={
+            notFound
+              ? "The requested blog post could not be found."
+              : metaDescription || "Latest insights from Triad Flair."
+          }
+        />
+        {notFound && <meta name="robots" content="noindex, nofollow" />}
         <link rel="canonical" href={canonical} />
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content={safeTitle} />
-        <meta property="og:description" content={metaDescription || "Latest insights from Triad Flair."} />
+        <meta property="og:type" content={notFound ? "website" : "article"} />
+        <meta property="og:title" content={notFound ? "404 Not Found | Triad Flair" : safeTitle} />
+        <meta
+          property="og:description"
+          content={
+            notFound
+              ? "The requested blog post could not be found."
+              : metaDescription || "Latest insights from Triad Flair."
+          }
+        />
         <meta property="og:url" content={canonical} />
         {hero && <meta property="og:image" content={hero} />}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={safeTitle} />
-        <meta name="twitter:description" content={metaDescription || "Latest insights from Triad Flair."} />
+        <meta name="twitter:title" content={notFound ? "404 Not Found | Triad Flair" : safeTitle} />
+        <meta
+          name="twitter:description"
+          content={
+            notFound
+              ? "The requested blog post could not be found."
+              : metaDescription || "Latest insights from Triad Flair."
+          }
+        />
         {hero && <meta name="twitter:image" content={hero} />}
       </Helmet>
 
@@ -104,6 +140,21 @@ const BlogDetailsArea = () => {
             <div className="blog-details-content">
               {err && <p style={{ color: "#f66" }}>Error: {err}</p>}
               {loading && <p>Loading…</p>}
+
+              {!loading && notFound && (
+                <div className="news-block-five">
+                  <div className="news-content-five">
+                    <h2>Post not found</h2>
+                    <p>The requested article does not exist anymore or the slug is invalid.</p>
+                    <div className="btn-box" style={{ marginTop: 24 }}>
+                      <Link to="/blog" className="primary-btn one gradient-bg white-color border-btn">
+                        <span>Browse blog</span>
+                        <i className="icon-1 gradient-color"></i>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              )}
 
               {post && (
                 <>
