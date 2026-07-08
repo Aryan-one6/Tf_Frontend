@@ -6,9 +6,9 @@ import Breacrumb from "../../common/Breacrumb";
 import FooterFour from "../../layouts/footers/Footer";
 
 const DisclaimerDetailsArea: FC = () => {
-  const title = "Disclaimer | Triad Flair";
+  const title = "Disclaimer | Triad Flair IT Solutions LLP";
   const description =
-    "Read Triad Flair’s website disclaimer regarding informational content, external links, warranties, liability limits, and testimonials.";
+    "Read Triad Flair IT Solutions LLP’s website disclaimer regarding informational content, external links, warranties, liability limits, and testimonials.";
   const canonical = "https://triadflair.com/disclaimer";
   const h1 = "Disclaimer";
   const lastUpdated = "August 29, 2025";
@@ -54,7 +54,7 @@ const DisclaimerDetailsArea: FC = () => {
                 <h3>General Information</h3>
                 <p>
                   The content on this website is provided for general informational purposes only.
-                  While we strive for accuracy, Triad Flair makes no representations or warranties
+                  While we strive for accuracy, Triad Flair IT Solutions LLP makes no representations or warranties
                   of any kind, express or implied, about completeness, reliability, suitability,
                   or availability of the information.
                 </p>
@@ -68,7 +68,7 @@ const DisclaimerDetailsArea: FC = () => {
 
                 <h3>External Links</h3>
                 <p>
-                  This website may contain links to third-party websites. Triad Flair does not
+                  This website may contain links to third-party websites. Triad Flair IT Solutions LLP does not
                   control or endorse, and is not responsible for, the content, policies, or
                   practices of third-party sites.
                 </p>
@@ -89,7 +89,7 @@ const DisclaimerDetailsArea: FC = () => {
 
                 <h3>Scope of Services</h3>
                 <p>
-                  Triad Flair provides <strong>software-based automations and digital solutions</strong>.
+                  Triad Flair IT Solutions LLP provides <strong>software-based automations and digital solutions</strong>.
                   We <u>do not</u> provide robotics or any other physical/industrial automation.
                 </p>
 

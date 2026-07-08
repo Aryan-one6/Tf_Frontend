@@ -82,7 +82,7 @@ const Footer = () => {
           </div>
           <div className="footer-bottom">
             <div className="footer-bottom-content">
-              <div className="copyright"><p>Copyright &copy; {new Date().getFullYear()} by <a href="#">Triad Flair</a></p></div>
+              <div className="copyright"><p> &copy; {new Date().getFullYear()} by <a href="#">Triad Flair IT Solutions LLP</a></p></div>
               <ul className="footer-nav">
                 <li><a href="/terms">Terms Of Services</a></li>
                 <li><a href="/privacy">Privacy Policy</a></li>

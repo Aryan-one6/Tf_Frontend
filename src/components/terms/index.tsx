@@ -7,9 +7,9 @@ import FooterFour from "../../layouts/footers/Footer";
 
 
 const TermsOfServiceDetailsArea: FC = () => {
-  const title = "Terms of Service | Triad Flair";
+  const title = "Terms of Service | Triad Flair IT Solutions LLP";
   const description =
-    "Read Triad Flair's Terms of Service covering eligibility, acceptable use, intellectual property, payments, termination, and dispute resolution.";
+    "Read Triad Flair IT Solutions LLP's Terms of Service covering eligibility, acceptable use, intellectual property, payments, termination, and dispute resolution.";
   const canonical = "https://triadflair.com/terms";
   const h1 = "Terms of Service";
   const lastUpdated = "August 29, 2025";
@@ -55,7 +55,7 @@ const TermsOfServiceDetailsArea: FC = () => {
 
                 <h3>1) Acceptance of Terms</h3>
                 <p>
-                  By accessing or using Triad Flair websites, apps, or services (“Services”), you
+                  By accessing or using Triad Flair IT Solutions LLP websites, apps, or services (“Services”), you
                   agree to these Terms. If you use the Services on behalf of an organization, you
                   represent that you have authority to bind that organization.
                 </p>
@@ -84,13 +84,13 @@ const TermsOfServiceDetailsArea: FC = () => {
                 <h3>5) Intellectual Property</h3>
                 <p>
                   The Services, including text, graphics, logos, code, and compilations, are owned
-                  by Triad Flair or its licensors and protected by applicable laws. Except as
+                  by Triad Flair IT Solutions LLP or its licensors and protected by applicable laws. Except as
                   expressly permitted, you may not copy, modify, or create derivative works.
                 </p>
 
                 <h3>6) Customer Content & Feedback</h3>
                 <p>
-                  You retain ownership of content you provide. You grant Triad Flair a worldwide,
+                  You retain ownership of content you provide. You grant Triad Flair IT Solutions LLP a worldwide,
                   non-exclusive license to host, process, and display such content solely to
                   operate, improve, and support the Services. Feedback may be used without
                   restriction or obligation to you.
@@ -114,7 +114,7 @@ const TermsOfServiceDetailsArea: FC = () => {
                   THE SERVICES ARE PROVIDED “AS IS” AND “AS AVAILABLE.” TO THE MAXIMUM EXTENT
                   PERMITTED BY LAW, TRIAD FLAIR DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED,
                   INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
-                  Triad Flair provides <strong>software-based solutions only</strong> and does not
+                  Triad Flair IT Solutions LLP provides <strong>software-based solutions only</strong> and does not
                   offer robotics or any physical/industrial automation.
                 </p>
 
@@ -127,7 +127,7 @@ const TermsOfServiceDetailsArea: FC = () => {
 
                 <h3>11) Indemnification</h3>
                 <p>
-                  You agree to defend, indemnify, and hold Triad Flair harmless from claims
+                  You agree to defend, indemnify, and hold Triad Flair IT Solutions LLP harmless from claims
                   arising out of your content, use of the Services, or violation of these Terms.
                 </p>
 
@@ -147,7 +147,7 @@ const TermsOfServiceDetailsArea: FC = () => {
 
                 <h3>14) Contact</h3>
                 <p>
-                  Questions? Email <a href="mailto:hello@triadflair.com">Connect@triadflair.com</a>.
+                  Questions? Email <a href="mailto:connect@triadflair.com">connect@triadflair.com</a>.
                 </p>
 
                 <p style={{ marginTop: "10px" }}>

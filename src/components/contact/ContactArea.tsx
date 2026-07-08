@@ -13,6 +13,10 @@ const ContactArea = () => {
                   <h2>Let’s start the <br /><span className="gradient-color">Productive Work.</span></h2>
                 </div>
                 <div className="inner-box">
+                  <p className="mb-4">
+                    Reach out to <strong>Triad Flair IT Solutions LLP</strong> for project inquiries, partnerships,
+                    support, and service-related communication.
+                  </p>
                   <div className="single-item">
                     <div className="icon-box"><i className="icon-55"></i></div>
                     <h3>Say Hello</h3>
@@ -21,7 +25,7 @@ const ContactArea = () => {
                   <div className="single-item">
                     <div className="icon-box"><i className="icon-56"></i></div>
                     <h3>Location</h3>
-                    <p>123 king Street, London W8 9JG <br />United Kingdom</p>
+                    <p>H-65, H Block, Sector 63, Noida, Uttar Pradesh 201301 <br />India</p>
                   </div>
                 </div>
               </div>

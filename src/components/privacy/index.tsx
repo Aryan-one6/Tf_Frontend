@@ -6,9 +6,9 @@ import Breacrumb from "../../common/Breacrumb";
 import FooterFour from "../../layouts/footers/Footer";
 
 const PrivacyPolicyDetailsArea: FC = () => {
-  const title = "Privacy Policy | Triad Flair";
+  const title = "Privacy Policy | Triad Flair IT Solutions LLP";
   const description =
-    "Learn how Triad Flair collects, uses, shares, and protects your personal information, and review your privacy choices and rights.";
+    "Learn how Triad Flair IT Solutions LLP collects, uses, shares, and protects your personal information, and review your privacy choices and rights.";
   const canonical = "https://triadflair.com/privacy";
   const h1 = "Privacy Policy";
   const lastUpdated = "August 29, 2025";
@@ -53,7 +53,7 @@ const PrivacyPolicyDetailsArea: FC = () => {
 
                 <h3>Scope</h3>
                 <p>
-                  This Privacy Policy explains how Triad Flair (“we”, “us”) collects, uses,
+                  This Privacy Policy explains how Triad Flair IT Solutions LLP (“we”, “us”) collects, uses,
                   discloses, and safeguards personal information when you visit our websites,
                   contact us, or use our Services.
                 </p>

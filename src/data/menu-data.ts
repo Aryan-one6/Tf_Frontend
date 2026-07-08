@@ -69,8 +69,17 @@ const menu_data: MenuItem[] = [
   },  
   {
     id: 6,
-    title: "CMS",
-    link: "https://cms.triadflair.com/login",
+    title: "Products",
+    link: "#",
+    has_dropdown: true, 
+    sub_menus: [
+      { link: "https://Travellersin.com",              title: "Travellers India" },
+      { link: "https://email.triadflair.com/",                title: "Email & Automation tool" },
+      { link: "https://seopilot.ppconsultings.com",              title: "SEO Pilot" },
+      { link: "https://chat.ppconsultings.com",      title: "Multi Channel Chatbot" },
+      { link: "https://cms.ppconsultings.com",      title: "Ai Powered CMS" },
+
+    ],
   },
 
    {
